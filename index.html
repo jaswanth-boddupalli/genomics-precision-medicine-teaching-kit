@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🧬 The Complete Genomics to Precision Medicine Atlas &amp; Interview Arena</title>
+  
+  <!-- KaTeX for Scientific / Mathematical Formulas -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+
+  <!-- Marked.js for Rich Specification Rendering -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.0/marked.min.js"></script>
+
+  <!-- Application Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="view-atlas">
+
+  <div id="app-container">
+    <!-- Fullscreen Graph Canvas Workspace -->
+    <div id="graph-canvas-container"></div>
+
+    <!-- Floating HUD Elements on Fullscreen Canvas -->
+    <div class="floating-hud hud-top-left">
+      <!-- Toggle / Expand Sidebar Button -->
+      <button id="btn-floating-sidebar" class="btn-floating-pill" title="Toggle Options & Layers Sidebar (Press Esc to minimize)">
+        <span>☰</span>
+        <span>Controls &amp; Layers</span>
+        <kbd>Esc</kbd>
+      </button>
+
+      <!-- View Switcher Segmented Control -->
+      <div class="view-switcher-bar">
+        <button class="btn-view-mode active" data-view="atlas" title="Full 10-Layer Visual Knowledge Graph">
+          <span>🗺️ Atlas Map</span>
+        </button>
+        <button class="btn-view-mode coach-active" data-view="coach" title="Split Screen: Interview Card on Left + Live Graph on Right">
+          <span>⚡ Coach View</span>
+        </button>
+        <button class="btn-view-mode arena-active" data-view="arena" title="Fullscreen Gamified Flashcard Deck & Question Bank">
+          <span>🎮 Interview Arena</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="floating-hud hud-top-right">
+      <!-- Gamified Progress Strip -->
+      <div class="gamified-hud-strip" title="Your Simulated Laboratory Readiness & Series A Valuation">
+        <div class="hud-rank-pill">
+          <span id="hud-rank-icon">🧬</span>
+          <span id="hud-rank-title">Genomics Explorer</span>
+        </div>
+        <div class="hud-stat-pill" title="Diagnostic Yield Rate">Yield: <b id="hud-yield-pct">15%</b></div>
+        <div class="hud-stat-pill" title="Series A Simulated Valuation">Valuation: <b id="hud-valuation-amt">$1.5M</b></div>
+        <div class="hud-stat-pill" title="Questions Mastered" style="color:#a78bfa;">Mastered: <b id="hud-mastered-count" style="color:#c084fc;">0/27</b></div>
+      </div>
+
+      <!-- Quick Pathfinder Button -->
+      <button id="btn-hud-pathfinder" class="btn-floating-icon btn-pathfinder-pill" title="Trace Translational Pathway between any 2 nodes">
+        <span>🧭 Pathfinder</span>
+      </button>
+      <!-- Fit View Button -->
+      <button id="btn-hud-fit" class="btn-floating-icon" title="Fit Entire Graph on Screen">
+        <span>⛶ Fit</span>
+      </button>
+      <!-- Fullscreen Toggle -->
+      <button id="btn-hud-fullscreen" class="btn-floating-icon" title="Toggle Browser Fullscreen">
+        <span>🖥️</span>
+      </button>
+    </div>
+
+    <!-- Floating Canvas Zoom & View Controls (Bottom Left) -->
+    <div class="floating-hud hud-bottom-left">
+      <div class="floating-control-group">
+        <button id="btn-zoom-in" class="btn-canvas" title="Zoom In">+</button>
+        <button id="btn-zoom-out" class="btn-canvas" title="Zoom Out">−</button>
+      </div>
+      <div class="floating-control-group">
+        <button id="btn-toggle-labels" class="btn-canvas" title="Toggle Concept Labels">🏷️</button>
+        <button id="btn-toggle-flow" class="btn-canvas" title="Toggle Animated Pathway Particles">⚡</button>
+      </div>
+    </div>
+
+    <!-- Floating Mini Status (Bottom Right) -->
+    <div class="floating-hud hud-bottom-right">
+      <div class="floating-mini-status">
+        <span class="live-pulse"></span>
+        <span>10 Layers · 39 Nodes · 27 Interview Qs</span>
+      </div>
+    </div>
+
+    <!-- Hover Tooltip -->
+    <div id="graph-tooltip" class="graph-tooltip"></div>
+
+    <!-- Backdrop overlay for Sidebar (closes sidebar when clicked) -->
+    <div id="sidebar-backdrop"></div>
+
+    <!-- Collapsible Options & Layers Sidebar (Left) -->
+    <aside id="app-sidebar" class="app-sidebar">
+      <!-- Sidebar Header -->
+      <div class="sidebar-header">
+        <div class="sidebar-brand">
+          <div class="sidebar-logo">🧬</div>
+          <div class="sidebar-title">
+            <h2>Genomics Atlas</h2>
+            <p><span class="live-pulse" style="display:inline-block; margin-right:4px;"></span>Precision Medicine &amp; Arena</p>
+          </div>
+        </div>
+        <button id="btn-collapse-sidebar" class="btn-collapse-sidebar" title="Collapse Sidebar (Esc)">
+          <span>◀ Collapse</span>
+          <kbd style="font-size:9px; background:rgba(0,0,0,0.3); padding:1px 4px; border-radius:3px;">Esc</kbd>
+        </button>
+      </div>
+
+      <!-- Sidebar Scrollable Body -->
+      <div class="sidebar-body">
+        <!-- Section: View Modes -->
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">🕹️ Learning &amp; View Modes</div>
+          <div style="display:flex; flex-direction:column; gap:6px;">
+            <button class="sidebar-preset-item btn-sidebar-mode-atlas" style="justify-content:space-between;">
+              <span>🗺️ Interactive Atlas Map</span>
+              <span style="font-size:10px; color:#38bdf8;">Full View</span>
+            </button>
+            <button class="sidebar-preset-item btn-sidebar-mode-coach" style="justify-content:space-between;">
+              <span>⚡ Coach View (Split Screen)</span>
+              <span style="font-size:10px; color:#10b981;">Quiz + Live Map</span>
+            </button>
+            <button class="sidebar-preset-item btn-sidebar-mode-arena" style="justify-content:space-between;">
+              <span>🎮 Interview Arena Deck</span>
+              <span style="font-size:10px; color:#a855f7;">27 Cards</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Section: Search -->
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">🔍 Global Concept Search</div>
+          <div class="sidebar-search-wrap">
+            <span class="sidebar-search-icon">🔎</span>
+            <input type="text" id="global-search" class="sidebar-search-input" placeholder="Search 500+ genes, tools, keywords..." autocomplete="off">
+            <div id="search-results-dropdown" class="search-results-dropdown"></div>
+          </div>
+        </div>
+
+        <!-- Section: Graph Topology Layouts -->
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">📊 Graph Layout Topology</div>
+          <div class="sidebar-layout-grid">
+            <button class="btn-sidebar-layout active" data-layout="pipeline" title="10-Layer Biological-to-Clinical Pipeline Flow">
+              <span style="font-size:14px;">📊</span>
+              <span>Pipeline</span>
+            </button>
+            <button class="btn-sidebar-layout" data-layout="force" title="Organic Force-Directed Physics Cluster">
+              <span style="font-size:14px;">🌐</span>
+              <span>Network</span>
+            </button>
+            <button class="btn-sidebar-layout" data-layout="concentric" title="Concentric Hierarchical Rings">
+              <span style="font-size:14px;">🎯</span>
+              <span>Rings</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Section: Pathfinder Mode -->
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">🧭 Translational Pathfinder</div>
+          <button id="btn-sidebar-pathfinder" class="btn-sidebar-pathfinder" title="Trace step-by-step translational path between any 2 concepts">
+            <span>🧭 Trace Translation Pathway</span>
+          </button>
+          <div class="sidebar-presets-list" style="margin-top:6px;">
+            <div style="font-size:10px; color:var(--text-muted); font-weight:700; margin-bottom:2px;">POPULAR PATHWAYS:</div>
+            <div class="sidebar-preset-item" data-start="N01" data-target="N36">🧬 DNA ➔ CRISPR Editing (N01➔N36)</div>
+            <div class="sidebar-preset-item" data-start="N01" data-target="N30">💊 DNA ➔ PGx Drug Dosing (N01➔N30)</div>
+            <div class="sidebar-preset-item" data-start="N05" data-target="N31">🩸 cfDNA ➔ Liquid Biopsy &amp; MRD (N05➔N31)</div>
+            <div class="sidebar-preset-item" data-start="N08" data-target="N23">📊 NGS ➔ ACMG Clinical Reports (N08➔N23)</div>
+            <div class="sidebar-preset-item" data-start="N16" data-target="N28">🏥 Raw FASTQ ➔ EHR Integration (N16➔N28)</div>
+            <div class="sidebar-preset-item" data-start="N25" data-target="N35">🤖 Foundation AI ➔ Small Molecules (N25➔N35)</div>
+          </div>
+        </div>
+
+        <!-- Section: Layer Filters -->
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">🧬 Filter by Biological Layer</div>
+          <div id="sidebar-layers-container" class="sidebar-layers-list">
+            <!-- Dynamically populated by app.js -->
+          </div>
+        </div>
+
+        <!-- Section: Display & Canvas Tools -->
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">⚙️ Canvas View &amp; Display</div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px;">
+            <button id="btn-sidebar-fit" class="sidebar-preset-item" style="justify-content:center;">⛶ Fit Entire Graph</button>
+            <button id="btn-sidebar-fullscreen" class="sidebar-preset-item" style="justify-content:center;">🖥️ Fullscreen</button>
+          </div>
+        </div>
+
+        <!-- Section: Pathway Legend -->
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">🎨 Pathway Color Legend</div>
+          <div class="sidebar-legend">
+            <div class="legend-item">
+              <div class="edge-legend-line" style="background:#06b6d4;"></div>
+              <span>Upstream Biological Input</span>
+            </div>
+            <div class="legend-item">
+              <div class="edge-legend-line" style="background:#10b981;"></div>
+              <span>Downstream Clinical Impact</span>
+            </div>
+            <div class="legend-item">
+              <div class="edge-legend-line" style="background:#f59e0b;"></div>
+              <span>Active Pathfinder Trail</span>
+            </div>
+            <div class="legend-item">
+              <div class="edge-legend-line" style="background:rgba(100, 116, 139, 0.4);"></div>
+              <span>Translational Association</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Footer -->
+      <div class="sidebar-footer">
+        <button id="btn-sidebar-collapse-footer" class="btn-sidebar-collapse-footer">
+          <span>◀ Collapse Options (Esc)</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- ==========================================================================
+         INTERVIEW ARENA CONTAINER (Coach Split View / Fullscreen Arena Deck)
+         ========================================================================== -->
+    <div id="interview-arena-container">
+      <!-- Arena Top Header Bar -->
+      <div class="arena-top-bar">
+        <div class="arena-top-row-1">
+          <div class="arena-brand-area">
+            <span class="arena-brand-logo">🎮</span>
+            <div class="arena-brand-text">
+              <h2>Interview Arena</h2>
+              <p>27 Real-World Questions across 10 Layers &amp; 3 Personas</p>
+            </div>
+          </div>
+
+          <div class="arena-actions-group">
+            <button id="btn-arena-matrix" class="btn-arena-header" title="View all 27 questions in a grid">
+              <span>🗺️ Matrix (27)</span>
+            </button>
+            <button id="btn-arena-boss" class="btn-arena-header" style="border-color:#f59e0b; color:#fbbf24;" title="Take on a 5-question boss challenge">
+              <span>⚔️ Boss Battles</span>
+            </button>
+            <button id="btn-arena-hubs" class="btn-arena-header" title="Master directory of literature & business hubs">
+              <span>🌐 Hubs</span>
+            </button>
+            <button id="btn-arena-exit" class="btn-arena-header" title="Return to full Atlas map">
+              <span>🗺️ Back to Map</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Gamified Progress Bar Strip -->
+        <div class="arena-gamified-strip">
+          <div id="arena-rank-badge" class="rank-badge-large">
+            <span id="arena-rank-icon">🧬</span>
+            <span id="arena-rank-title">Genomics Explorer</span>
+          </div>
+
+          <div class="progress-metric-box">
+            <div class="progress-metric-labels">
+              <span>Diagnostic Yield Readiness: <b id="arena-yield-pct">15%</b></span>
+              <span id="arena-mastered-text">0 / 27 Mastered</span>
+            </div>
+            <div class="progress-bar-track">
+              <div id="arena-progress-bar-fill" class="progress-bar-fill" style="width: 0%;"></div>
+            </div>
+          </div>
+
+          <div class="valuation-tag">
+            <span>Series A:</span>
+            <b id="arena-valuation-amt">$1.5M</b>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filter Strip: Difficulty, Persona, Node, Search -->
+      <div class="arena-filter-strip">
+        <div class="arena-filter-group" id="arena-diff-filters">
+          <span style="font-size:10px; color:var(--text-muted); font-weight:700;">LEVEL:</span>
+          <button class="arena-filter-pill active" data-level="all">All</button>
+          <button class="arena-filter-pill" data-level="beginner">🟢 Beginner</button>
+          <button class="arena-filter-pill" data-level="medium">🟡 Medium</button>
+          <button class="arena-filter-pill" data-level="expert">🔴 Expert</button>
+        </div>
+
+        <div class="filter-divider"></div>
+
+        <div class="arena-filter-group" id="arena-persona-filters">
+          <span style="font-size:10px; color:var(--text-muted); font-weight:700;">PERSONA:</span>
+          <button class="arena-filter-pill active" data-persona="all">All</button>
+          <button class="arena-filter-pill" data-persona="scientist">🧬 Scientist</button>
+          <button class="arena-filter-pill" data-persona="troubleshooter">🛠️ Troubleshooter</button>
+          <button class="arena-filter-pill" data-persona="investor">💼 Investor</button>
+        </div>
+
+        <!-- Node filter indicator if active -->
+        <div id="arena-active-node-filter" style="display:none;" class="arena-filter-group">
+          <div class="filter-divider"></div>
+          <span id="arena-node-filter-pill" class="card-node-pill" style="display:flex; align-items:center; gap:5px;">
+            <span>Node: <b id="arena-filtered-node-id">N01</b></span>
+            <span id="btn-clear-node-filter" style="cursor:pointer; font-weight:bold;">✕</span>
+          </span>
+        </div>
+
+        <div class="filter-divider"></div>
+
+        <!-- Search Input -->
+        <input type="text" id="arena-question-search" class="arena-search-input" placeholder="Search questions..." autocomplete="off">
+      </div>
+
+      <!-- Question Card Deck Scroll Area -->
+      <div class="arena-deck-body">
+        <div class="arena-card-wrapper">
+          <!-- Card Navigation Header -->
+          <div class="card-nav-row">
+            <button id="btn-card-prev" class="btn-card-nav" title="Previous Question (Left Arrow or P)">
+              <span>◀ Prev</span>
+            </button>
+            <div class="card-step-indicator">
+              <span id="card-current-num">1</span> of <span id="card-total-num">27</span>
+              <span id="card-filter-matched-text" style="font-size:10px; color:var(--text-muted); margin-left:6px;"></span>
+            </div>
+            <div style="display:flex; gap:6px;">
+              <button id="btn-card-random" class="btn-card-nav" title="Jump to Random Question">
+                <span>🎲 Random</span>
+              </button>
+              <button id="btn-card-next" class="btn-card-nav" title="Next Question (Right Arrow or N)">
+                <span>Next ▶</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- The Main Question Card -->
+          <div id="active-interview-card" class="interview-card persona-scientist">
+            <!-- Badges Row -->
+            <div class="card-header-badges">
+              <div class="card-badges-left">
+                <span id="card-qid-badge" class="card-id-tag">Q01</span>
+                <span id="card-primary-node-pill" class="card-node-pill" title="Click to view node on Atlas">🔵 N01: DNA Architecture</span>
+                <span id="card-layer-tag" style="font-size:10px; color:var(--text-muted);">Layer 1</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:6px;">
+                <span id="card-persona-badge" class="card-persona-badge scientist">🧬 The Chief Scientist (CSO)</span>
+                <span id="card-difficulty-badge" class="card-difficulty-badge beginner">🟢 Beginner</span>
+                <span id="card-mastered-indicator" style="display:none;" class="card-difficulty-badge beginner">✅ Mastered</span>
+              </div>
+            </div>
+
+            <!-- Question Text -->
+            <div id="card-question-text" class="card-question-text">
+              "If the human exome is only ~1.5% of the genome, why do we ever pay extra for Whole Genome Sequencing?"
+            </div>
+
+            <!-- Action Buttons: Think vs Reveal -->
+            <div class="card-action-row">
+              <button id="btn-card-think" class="btn-card-action btn-card-think" title="Test yourself before revealing">
+                <span>🤔 Think / Self-Check</span>
+              </button>
+              <button id="btn-card-reveal" class="btn-card-action btn-card-reveal" title="Show high-signal hire-me answer and connect to Atlas">
+                <span>💡 I Don't Know — Reveal &amp; Connect</span>
+              </button>
+            </div>
+
+            <!-- Reveal Section (Expands on Click) -->
+            <div id="card-reveal-section" class="card-reveal-section">
+              <!-- 15-Second Hire-Me Answer -->
+              <div class="hire-me-answer-box">
+                <div class="hire-me-header">
+                  <span>💡 The 15-Second "Hire-Me" Answer</span>
+                </div>
+                <div id="card-hire-me-content" class="hire-me-content">
+                  <!-- Formatted answer with KaTeX -->
+                </div>
+              </div>
+
+              <!-- Clickable Internal Atlas Nodes -->
+              <div class="internal-atlas-connect-box">
+                <div class="internal-connect-title">
+                  <span>🔗 Connect the Dots on the Atlas Map (Click any to inspect):</span>
+                </div>
+                <div id="card-internal-pills" class="internal-pills-wrap">
+                  <!-- Clickable pills -->
+                </div>
+              </div>
+
+              <!-- Curated Landmark Papers & Business Links -->
+              <div class="external-links-box">
+                <div class="external-links-title">
+                  <span>🌐 Landmark Research &amp; Commercial Analysis:</span>
+                </div>
+                <div id="card-external-links" style="display:flex; flex-direction:column; gap:6px;">
+                  <!-- External links -->
+                </div>
+              </div>
+
+              <!-- Mastery Decision Row -->
+              <div class="card-mastery-decision-row">
+                <button id="btn-mark-mastered" class="btn-mastery btn-mastered" title="Mark this question as mastered (+Diagnostic Yield, +Valuation)">
+                  <span>✅ Got It! Mastered (+Yield, +Valuation)</span>
+                </button>
+                <button id="btn-mark-review" class="btn-mastery btn-review-later" title="Mark for spaced repetition review">
+                  <span>🔁 Review Later</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Concept Deep-Dive Inspector Drawer (Right Side) -->
+    <aside id="inspector-drawer">
+      <div class="drawer-header">
+        <div class="drawer-title-area">
+          <div class="drawer-meta-badges">
+            <span id="drawer-node-id" class="node-id-badge">N01</span>
+            <span id="drawer-layer-badge" class="drawer-layer-badge">Layer 1</span>
+          </div>
+          <h2 id="drawer-title" class="drawer-title">DNA, Chromosomes &amp; Genome Architecture</h2>
+        </div>
+        <button id="drawer-close-btn" class="drawer-close-btn" title="Close Concept Inspector (Esc)">✕</button>
+      </div>
+
+      <!-- Quick Action Bar -->
+      <div class="drawer-quick-actions">
+        <!-- New "Quiz Me On This Dot" Button -->
+        <button id="btn-drawer-quiz-node" class="btn-quiz-this-dot" title="Challenge yourself with interview questions related to this node">
+          <span>🎯 Quiz Me on This Dot</span>
+        </button>
+        <button id="btn-drawer-trace" class="btn-drawer-action" title="Open translation pathfinder starting from this concept">
+          <span>🧭 Trace Translation</span>
+        </button>
+      </div>
+
+      <!-- Inspector Body -->
+      <div class="drawer-body">
+        <!-- Core Biological Concept Callout -->
+        <div class="drawer-section">
+          <div class="section-heading">📖 Core Biological &amp; Clinical Concept</div>
+          <div id="drawer-core-concept" class="concept-callout"></div>
+        </div>
+
+        <!-- Formulas & Formulations -->
+        <div id="drawer-formulas-section" class="drawer-section" style="display:none;">
+          <div class="section-heading">📐 Mathematical &amp; Scientific Formulations</div>
+          <div id="drawer-formulas-container" style="display:flex; flex-direction:column; gap:8px;"></div>
+        </div>
+
+        <!-- Translational Connections (Upstream & Downstream Pills) -->
+        <div class="drawer-section">
+          <div class="section-heading">🔗 Translational Pipeline Connections</div>
+          <div class="connection-group">
+            <div class="connection-subtitle upstream">⬆️ Upstream Inputs &amp; Technologies:</div>
+            <div id="drawer-upstream-pills" class="connection-pills-list"></div>
+          </div>
+          <div class="connection-group" style="margin-top:10px;">
+            <div class="connection-subtitle downstream">⬇️ Downstream Clinical &amp; Engineering Impacts:</div>
+            <div id="drawer-downstream-pills" class="connection-pills-list"></div>
+          </div>
+        </div>
+
+        <!-- Key Tools & Standards Badges -->
+        <div class="drawer-section">
+          <div class="section-heading">⚙️ Key Bioinformatics Tools, Standards &amp; Databases</div>
+          <div id="drawer-tools-wrap" class="badges-wrap"></div>
+        </div>
+
+        <!-- Commercial Entities & Companies Badges -->
+        <div class="drawer-section">
+          <div class="section-heading">🏢 Real-World Commercial Landscape &amp; Biotechs</div>
+          <div id="drawer-companies-wrap" class="badges-wrap"></div>
+        </div>
+
+        <!-- Key Keywords Badges -->
+        <div class="drawer-section">
+          <div class="section-heading">🏷️ Technical Keywords &amp; Concepts</div>
+          <div id="drawer-keywords-wrap" class="badges-wrap"></div>
+        </div>
+
+        <!-- Full Specification Markdown Section -->
+        <div class="drawer-section">
+          <div class="section-heading">🔬 Comprehensive Specification Breakdown</div>
+          <div id="drawer-rich-body" class="rich-markdown-content"></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Pathfinder Modal -->
+    <div id="pathfinder-modal" class="modal-overlay">
+      <div class="pathfinder-modal">
+        <div class="modal-header">
+          <div class="modal-title">
+            <span>🧭</span>
+            <span>Genomic Translation Pathfinder</span>
+          </div>
+          <button id="btn-close-pathfinder" class="drawer-close-btn" title="Close Modal (Esc)">✕</button>
+        </div>
+
+        <div class="modal-body">
+          <p style="font-size:12px; color:var(--text-secondary); line-height:1.5;">
+            Discover how basic biological molecules translate step-by-step through wet-lab assays, dry-lab algorithms, and regulatory frameworks into precision therapeutics and commercial medicines.
+          </p>
+
+          <!-- Node Selectors -->
+          <div class="path-selector-grid">
+            <div class="path-select-box">
+              <label class="path-select-label">Starting Molecular Concept:</label>
+              <select id="path-start-select" class="path-dropdown"></select>
+            </div>
+            <div class="path-arrow-divider">➔</div>
+            <div class="path-select-box">
+              <label class="path-select-label">Target Clinical / Therapeutic Endpoint:</label>
+              <select id="path-target-select" class="path-dropdown"></select>
+            </div>
+          </div>
+
+          <!-- Quick Presets -->
+          <div class="path-presets-container">
+            <span style="font-size:11px; font-weight:700; color:var(--text-muted); text-transform:uppercase;">Popular Translational Pathways:</span>
+            <div class="preset-pills-wrap">
+              <button class="preset-pill" data-start="N01" data-target="N36">🧬 DNA ➔ CRISPR Gene Editing (N01➔N36)</button>
+              <button class="preset-pill" data-start="N01" data-target="N30">💊 DNA ➔ PGx Drug Dosing (N01➔N30)</button>
+              <button class="preset-pill" data-start="N05" data-target="N31">🩸 cfDNA ➔ Liquid Biopsy &amp; MRD (N05➔N31)</button>
+              <button class="preset-pill" data-start="N08" data-target="N23">📊 NGS ➔ ACMG Clinical Reports (N08➔N23)</button>
+              <button class="preset-pill" data-start="N16" data-target="N28">🏥 Raw FASTQ ➔ EHR Integration (N16➔N28)</button>
+              <button class="preset-pill" data-start="N25" data-target="N35">🤖 Foundation AI ➔ Targeted Therapies (N25➔N35)</button>
+            </div>
+          </div>
+
+          <!-- Path Result View -->
+          <div id="path-result-box" class="path-result-box">
+            <div id="path-stats-summary" class="path-stats-header"></div>
+            <div id="path-steps-flow" class="path-steps-flow"></div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button id="btn-run-pathfinder" class="btn-primary" style="background:#f59e0b; border-color:#d97706; color:#000; padding:8px 18px; border-radius:8px; cursor:pointer;">
+            <b>Illuminate Translation Pathway</b>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Question Matrix Modal (Grid of 27 Questions) -->
+    <div id="question-matrix-modal" class="modal-overlay">
+      <div class="pathfinder-modal" style="width: 760px;">
+        <div class="modal-header">
+          <div class="modal-title">
+            <span>🗺️</span>
+            <span>Interview Question Matrix (27 Topics)</span>
+          </div>
+          <button id="btn-close-matrix" class="drawer-close-btn" title="Close Modal (Esc)">✕</button>
+        </div>
+        <div class="modal-body">
+          <p style="font-size:12px; color:var(--text-secondary); margin-bottom:10px;">
+            Click any question card to jump directly to it in Coach View or Arena View.
+          </p>
+          <div id="matrix-grid-container" class="matrix-grid-container">
+            <!-- 27 Cards populated by app.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Boss Battles Modal -->
+    <div id="boss-battles-modal" class="modal-overlay">
+      <div class="pathfinder-modal" style="width: 650px;">
+        <div class="modal-header">
+          <div class="modal-title" style="color:#f59e0b;">
+            <span>⚔️</span>
+            <span>Interviewer Boss Battles (Rapid-Fire Challenge)</span>
+          </div>
+          <button id="btn-close-boss" class="drawer-close-btn" title="Close Modal (Esc)">✕</button>
+        </div>
+        <div class="modal-body" style="gap:14px;">
+          <p style="font-size:12px; color:var(--text-secondary);">
+            Test your skills under realistic pressure with 5 curated scenario-driven interview questions!
+          </p>
+          <div class="boss-battle-card" data-battle="clia">
+            <div class="boss-battle-title">🏥 Scenario 1: Survive a Clinical Lab CLIA/CAP Audit</div>
+            <div class="boss-battle-desc">
+              Focuses on GATK/DeepVariant pipeline validation, orientation bias in FFPE blocks, VCF normalization, and analytical bridging studies. (Questions: Q02, Q05, Q11, Q12, Q21)
+            </div>
+          </div>
+          <div class="boss-battle-card" data-battle="investor">
+            <div class="boss-battle-title">💼 Scenario 2: Pitch a Liquid Biopsy Startup to a Tier-1 VC</div>
+            <div class="boss-battle-desc">
+              Focuses on Tumor-Informed vs. Tumor-Naive MRD, CHIP filtering, sequencing platform moats, and non-coding targets. (Questions: Q03, Q06, Q09, Q23, Q24)
+            </div>
+          </div>
+          <div class="boss-battle-card" data-battle="cso">
+            <div class="boss-battle-title">👑 Scenario 3: Chief Scientific Officer (CSO) Defense</div>
+            <div class="boss-battle-desc">
+              Expert first-principles defense on ACMG PVS1 criteria, AlphaMissense limits, Evo 2 vs AlphaFold 3, and gene therapy delivery bottlenecks. (Questions: Q15, Q16, Q17, Q25, Q27)
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- External Hubs Directory Modal -->
+    <div id="external-hubs-modal" class="modal-overlay">
+      <div class="pathfinder-modal" style="width: 780px;">
+        <div class="modal-header">
+          <div class="modal-title" style="color:#38bdf8;">
+            <span>🌐</span>
+            <span>Master Directory of Literature &amp; Business Hubs</span>
+          </div>
+          <button id="btn-close-hubs" class="drawer-close-btn" title="Close Modal (Esc)">✕</button>
+        </div>
+        <div class="modal-body" id="external-hubs-body" style="gap:18px;">
+          <!-- Populated from interview_data.js metadata -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Data and Application Scripts -->
+  <script src="atlas_data.js"></script>
+  <script src="interview_data.js"></script>
+  <script src="graph_engine.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

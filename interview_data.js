@@ -1,0 +1,628 @@
+/**
+ * interview_data.js
+ * The Complete Genomics & Precision Medicine Interview Arena Question Bank
+ * 27 High-Signal Questions across all 10 Layers, 3 Skill Levels, and 3 Personas
+ */
+
+window.INTERVIEW_DATA = {
+  metadata: {
+    title: "The Genomics & Precision Medicine Interview Arena",
+    totalQuestions: 27,
+    personas: {
+      scientist: {
+        id: "scientist",
+        name: "The Chief Scientist (CSO)",
+        icon: "🧬",
+        badge: "Chief Scientist",
+        color: "#38bdf8",
+        desc: "First-principles biology, clinical validity, molecular mechanisms, and assay design."
+      },
+      troubleshooter: {
+        id: "troubleshooter",
+        name: "The Troubleshooter (Lead Eng)",
+        icon: "🛠️",
+        badge: "Lead Engineer",
+        color: "#f59e0b",
+        desc: "Production bugs, corrupt files, artifact filtering, edge-cases, and cloud crashes."
+      },
+      investor: {
+        id: "investor",
+        name: "The Biotech Investor (VC / BD)",
+        icon: "💼",
+        badge: "Biotech Investor",
+        color: "#10b981",
+        desc: "Cost per genome, turnaround time (TAT), reimbursement, IP moats, and unit economics."
+      }
+    },
+    difficulties: {
+      beginner: { id: "beginner", name: "Beginner (Explorer)", icon: "🟢", color: "#10b981" },
+      medium: { id: "medium", name: "Medium (Practitioner)", icon: "🟡", color: "#eab308" },
+      expert: { id: "expert", name: "Expert (Principal / Exec)", icon: "🔴", color: "#ef4444" }
+    },
+    externalHubs: [
+      {
+        category: "Scientific Literature & Preprints",
+        icon: "📄",
+        items: [
+          { name: "PubMed / NCBI LitVar2", desc: "Semantic search matching genetic variants (rsID/HGVS) to published papers", url: "https://www.ncbi.nlm.nih.gov/research/litvar2/" },
+          { name: "Mastermind Genomic Search (Genomenon)", desc: "Clinical-grade ACMG literature evidence finder", url: "https://mastermind.genomenon.com/" },
+          { name: "bioRxiv Bioinformatics & Genomics", desc: "Preprints for foundation models, aligners, and callers 6–12 months ahead", url: "https://www.biorxiv.org/collection/bioinformatics" }
+        ]
+      },
+      {
+        category: "Bioinformatics & Engineering Forums",
+        icon: "🛠️",
+        items: [
+          { name: "Biostars (Bioinformatics Q&A)", desc: "#1 forum for debugging GATK, bcftools, Pysam, BAM/VCF edge cases", url: "https://www.biostars.org/" },
+          { name: "nf-core Community", desc: "Curated Nextflow pipelines (sarek, raredisease, rnaseq)", url: "https://nf-co.re/" },
+          { name: "Broad GATK Support Forum", desc: "Official troubleshooting for HaplotypeCaller, Mutect2, and WDL", url: "https://gatk.broadinstitute.org/hc/en-us/community/topics" },
+          { name: "Bits in Bio Community", desc: "Global Slack for software engineers in AI, cloud pipelines, and biology", url: "https://www.bitsinbio.org/" }
+        ]
+      },
+      {
+        category: "Biotech Markets, VC & Regulatory",
+        icon: "💼",
+        items: [
+          { name: "GenomeWeb", desc: "Commercial trade publication for sequencing, liquid biopsy, CLIA & reimbursement", url: "https://www.genomeweb.com/" },
+          { name: "Endpoints News & STAT News", desc: "Daily biopharma deals, CRISPR clinical readouts, and FDA approvals", url: "https://endpts.com/" },
+          { name: "Century of Bio & Biotechomat", desc: "Deep technical & commercial teardowns of chemistries, spatial, and AI", url: "https://www.centuryofbio.com/" }
+        ]
+      }
+    ]
+  },
+
+  questions: [
+    // LAYER 1: Molecular & Biological Foundations (N01-N04)
+    {
+      id: "Q01",
+      layer: 1,
+      layerName: "Molecular & Biological Foundations",
+      primaryNode: "N01",
+      nodeIds: ["N01", "N10", "N03"],
+      level: "beginner",
+      persona: "scientist",
+      question: "If the human exome is only ~1.5% of the genome, why do we ever pay extra for Whole Genome Sequencing?",
+      hireMeAnswer: "Because ~85% of known high-impact Mendelian mutations sit in coding exons, **but** the remaining 98.5% non-coding genome harbors deep-intronic splice mutations, enhancer/promoter variants, structural variants ($SVs$), and tandem repeat expansions—plus, PCR-free WGS gives far more uniform coverage for Copy Number Variants ($CNVs$) than capture-based exomes.",
+      internalLinks: [
+        { id: "N01", title: "DNA, Chromosomes & Genome Architecture" },
+        { id: "N10", title: "Assay Modalities (Panels, WES, WGS)" },
+        { id: "N03", title: "Spectrum of Genetic Variation" }
+      ],
+      externalLinks: [
+        { type: "research", title: "Belkadi et al., PNAS — WGS vs WES for exome variant detection", url: "https://www.pnas.org/doi/10.1073/pnas.1418631112" },
+        { type: "commercial", title: "GenomeWeb — Clinical WGS vs. WES Reimbursement & Yield", url: "https://www.genomeweb.com/" }
+      ]
+    },
+    {
+      id: "Q02",
+      layer: 1,
+      layerName: "Molecular & Biological Foundations",
+      primaryNode: "N03",
+      nodeIds: ["N03", "N04", "N17", "N18"],
+      level: "medium",
+      persona: "troubleshooter",
+      question: "A variant in your cohort violates Hardy-Weinberg Equilibrium (p^2 + 2pq + q^2 = 1) with an extreme excess of heterozygotes (P < 10^-20). What broke?",
+      hireMeAnswer: "An extreme excess of heterozygotes almost never reflects real biology—it is a classic red flag for an **unannotated paralogous sequence or segmental duplication** where reads from two different genomic loci are collapsing onto one reference coordinate, creating artificial 50/50 heterozygous calls in every sample.",
+      internalLinks: [
+        { id: "N04", title: "Inheritance Patterns & Population Genetics" },
+        { id: "N17", title: "Reference Genomes, Pangenomes & Alignment" },
+        { id: "N18", title: "Variant Calling Ecosystem" }
+      ],
+      externalLinks: [
+        { type: "research", title: "Graffelman et al., Genome Research — Hardy-Weinberg equilibrium in WGS", url: "https://genome.cshlp.org/content/27/3/478" },
+        { type: "tool", title: "Biostars — Why excess heterozygosity filters out segmental duplications", url: "https://www.biostars.org/" }
+      ]
+    },
+    {
+      id: "Q03",
+      layer: 1,
+      layerName: "Molecular & Biological Foundations",
+      primaryNode: "N02",
+      nodeIds: ["N02", "N03", "N11", "N37"],
+      level: "expert",
+      persona: "investor",
+      question: "Why are biotech VCs suddenly pouring hundreds of millions into 'non-coding dark genome' and 'RNA splicing' startups instead of traditional coding-gene targets?",
+      hireMeAnswer: "The ~20,000 protein-coding genes are heavily patented and ~80% lack small-molecule binding pockets ('undruggable'). Targeting non-coding regulatory enhancers, cryptic splice sites (via ASOs/small molecules), and transposable elements unlocks 98.5% of the genome and allows up-regulating haploinsufficient genes using the patient's own intact wild-type allele.",
+      internalLinks: [
+        { id: "N02", title: "The Central Dogma of Molecular Biology" },
+        { id: "N11", title: "Transcriptomics & Isoform RNA-Seq" },
+        { id: "N37", title: "RNA Medicines (ASO/siRNA/mRNA)" }
+      ],
+      externalLinks: [
+        { type: "research", title: "ENCODE Project Consortium, Nature — Encyclopaedias of DNA elements", url: "https://www.nature.com/articles/s41586-020-2493-4" },
+        { type: "commercial", title: "Endpoints News — Investing in RNA Splicing & Dark Genome", url: "https://endpts.com/" }
+      ]
+    },
+
+    // LAYER 2: Wet-Lab & Sequencing Technologies (N05-N10)
+    {
+      id: "Q04",
+      layer: 2,
+      layerName: "Wet-Lab & Sequencing Technologies",
+      primaryNode: "N06",
+      nodeIds: ["N06", "N17", "N31"],
+      level: "beginner",
+      persona: "scientist",
+      question: "What is the difference between a Sample Barcode (Index) and a Unique Molecular Identifier (UMI), and why do we need both?",
+      hireMeAnswer: "A **Sample Index** tags all DNA from *Patient A* vs. *Patient B* so you can pool 96 patients on one sequencing lane; a **UMI** tags each *individual starting DNA molecule* inside Patient A's tube *before* PCR, allowing bioinformatics software (like `fgbio`) to collapse PCR duplicates and distinguish a true 0.1% tumor mutation from a polymerase error.",
+      internalLinks: [
+        { id: "N06", title: "Library Prep, UMIs & Target Enrichment" },
+        { id: "N17", title: "Alignment & UMI Duplex Consensus" },
+        { id: "N31", title: "Liquid Biopsy & MRD" }
+      ],
+      externalLinks: [
+        { type: "research", title: "Schmitt et al., PNAS — Ultra-rare mutation detection (Duplex Sequencing)", url: "https://www.pnas.org/doi/10.1073/pnas.1208715109" },
+        { type: "tool", title: "fgbio — Fulcrum Genomics UMI Consensus Toolkit", url: "https://github.com/fulcrumgenomics/fgbio" }
+      ]
+    },
+    {
+      id: "Q05",
+      layer: 2,
+      layerName: "Wet-Lab & Sequencing Technologies",
+      primaryNode: "N05",
+      nodeIds: ["N05", "N08", "N18", "N31"],
+      level: "medium",
+      persona: "troubleshooter",
+      question: "Your oncology panel run on 10-year-old FFPE tumor blocks shows thousands of low-allele-frequency C -> T / G -> A mutations. Is the tumor hypermutated?",
+      hireMeAnswer: "Almost certainly **no**—formalin fixation thermally deaminates cytosine into uracil, which DNA polymerase reads as thymine ($C \\rightarrow T$ transitions, typically at $\\text{VAF} < 5\\%$ with strong read-orientation bias). You must treat the DNA with **Uracil-DNA Glycosylase (UDG)** in the wet lab and run `GATK LearnReadOrientationModel` in the dry lab.",
+      internalLinks: [
+        { id: "N05", title: "Biospecimen Collection, cfDNA/ctDNA & Extraction" },
+        { id: "N18", title: "Somatic Variant Calling (Mutect2)" },
+        { id: "N31", title: "Precision Oncology" }
+      ],
+      externalLinks: [
+        { type: "research", title: "Do & Dobrovic, Clinical Chemistry — Sequence Artifacts in FFPE DNA", url: "https://academic.oup.com/clinchem/article/61/1/64/5611461" },
+        { type: "tool", title: "GATK Best Practices — Filtering Somatic Orientation Bias", url: "https://gatk.broadinstitute.org/" }
+      ]
+    },
+    {
+      id: "Q06",
+      layer: 2,
+      layerName: "Wet-Lab & Sequencing Technologies",
+      primaryNode: "N08",
+      nodeIds: ["N08", "N09", "N38", "N39"],
+      level: "expert",
+      persona: "investor",
+      question: "With Illumina's core SBS patents expired and Element ($Q40+$), Ultima (~$80 WGS), PacBio HiFi, and Oxford Nanopore competing, where is the real commercial moat in sequencing today?",
+      hireMeAnswer: "Raw sequencing chemistry is rapidly commoditizing toward $100/genome. The durable commercial moat has shifted **upstream** to proprietary sample-prep/enrichment chemistry (e.g., high-conversion liquid biopsy cfDNA capture) and **downstream** to FDA-approved clinical workflows, EHR integration, and proprietary clinico-genomic data lakes (like Tempus or Guardant).",
+      internalLinks: [
+        { id: "N08", title: "Second-Gen Short-Read NGS" },
+        { id: "N09", title: "Third-Gen Long-Read Sequencing" },
+        { id: "N38", title: "Commercial Landscape Matrix" },
+        { id: "N39", title: "Landmark Patents & Consortia" }
+      ],
+      externalLinks: [
+        { type: "commercial", title: "NHGRI — The Cost of Sequencing a Human Genome", url: "https://www.genome.gov/about-genomics/fact-sheets/Sequencing-Human-Genome-cost" },
+        { type: "commercial", title: "Biotechomat — Next-Gen Sequencing Platform Wars & Analysis", url: "https://biotechomat.substack.com/" }
+      ]
+    },
+
+    // LAYER 3: Multi-Omics, Single-Cell & Spatial Biology (N11-N15)
+    {
+      id: "Q07",
+      layer: 3,
+      layerName: "Multi-Omics, Single-Cell & Spatial Biology",
+      primaryNode: "N13",
+      nodeIds: ["N13", "N14", "N31"],
+      level: "beginner",
+      persona: "scientist",
+      question: "When would you choose Spatial Transcriptomics over Single-Cell RNA-Seq (scRNA-Seq)?",
+      hireMeAnswer: "scRNA-Seq dissolves the tissue into a cell suspension, destroying physical location. You choose **Spatial Transcriptomics** (e.g., 10x Xenium, Visium HD, CosMx) when *neighborhood architecture dictates clinical outcome*—such as proving whether cytotoxic T-cells have actually infiltrated inside a tumor core or are trapped outside in the stroma.",
+      internalLinks: [
+        { id: "N13", title: "Single-Cell Multi-Omics" },
+        { id: "N14", title: "Spatial Omics & Digital Histopathology" },
+        { id: "N31", title: "Precision Oncology TME Biomarkers" }
+      ],
+      externalLinks: [
+        { type: "research", title: "Method of the Year: Spatially Resolved Transcriptomics, Nature Methods", url: "https://www.nature.com/articles/s41592-020-01042-x" },
+        { type: "commercial", title: "FierceBiotech — The Spatial Biology Patent & Platform Battle", url: "https://www.fiercebiotech.com/" }
+      ]
+    },
+    {
+      id: "Q08",
+      layer: 3,
+      layerName: "Multi-Omics, Single-Cell & Spatial Biology",
+      primaryNode: "N11",
+      nodeIds: ["N11", "N23", "N32"],
+      level: "medium",
+      persona: "troubleshooter",
+      question: "A rare disease patient's Whole Genome Sequencing came back negative, yet you strongly suspect a Mendelian disorder in a known gene. How can RNA-Seq rescue the diagnosis?",
+      hireMeAnswer: "WGS frequently detects deep-intronic or synonymous variants that computational predictors miss. Running **RNA-Seq** on an accessible tissue (blood, skin fibroblasts, or transdifferentiated myotubes) directly reveals **aberrant splicing** (exon skipping, cryptic exon inclusion via `FRASER`) or **monoallelic expression loss** (`OUTRIDER`), upgrading a VUS to Pathogenic (`PS3`).",
+      internalLinks: [
+        { id: "N11", title: "Transcriptomics & Bulk/Isoform RNA-Seq" },
+        { id: "N23", title: "ACMG/AMP Variant Classification (PS3)" },
+        { id: "N32", title: "Rare Disease Diagnosis" }
+      ],
+      externalLinks: [
+        { type: "research", title: "Cummings et al., Sci Transl Med — Improving Mendelian diagnosis with RNA-Seq", url: "https://www.science.org/doi/10.1126/scitranslmed.aal5209" },
+        { type: "tool", title: "DROP — Detection of RNA Outliers Pipeline (Gagneur Lab)", url: "https://github.com/gagneurlab/drop" }
+      ]
+    },
+    {
+      id: "Q09",
+      layer: 3,
+      layerName: "Multi-Omics, Single-Cell & Spatial Biology",
+      primaryNode: "N15",
+      nodeIds: ["N15", "N21", "N33", "N35"],
+      level: "expert",
+      persona: "investor",
+      question: "Why did pharma consortia fund high-throughput plasma proteomics (Olink / SomaScan) across 50,000+ UK Biobank genomes, and how does that make money?",
+      hireMeAnswer: "Mapping **protein Quantitative Trait Loci (pQTLs)** links genetic variants directly to circulating blood protein levels and clinical outcomes. Using **Mendelian Randomization**, pharma companies can mathematically prove whether a protein *causes* a disease or is just a bystander *before* spending $1B on Phase III clinical trials—doubling clinical success rates.",
+      internalLinks: [
+        { id: "N15", title: "Proteomics, Metabolomics & Microbiome" },
+        { id: "N21", title: "Population Biobanks (UK Biobank)" },
+        { id: "N33", title: "GWAS & Mendelian Randomization" },
+        { id: "N35", title: "Genetically Validated Drug Targets" }
+      ],
+      externalLinks: [
+        { type: "research", title: "Sun et al., Nature — Plasma proteomic associations in UK Biobank", url: "https://www.nature.com/articles/s41586-023-06592-6" },
+        { type: "commercial", title: "GenomeWeb — Thermo Fisher $3.1B Acquisition of Olink", url: "https://www.genomeweb.com/" }
+      ]
+    },
+
+    // LAYER 4: Dry-Lab Bioinformatics & Pipeline Engineering (N16-N19)
+    {
+      id: "Q10",
+      layer: 4,
+      layerName: "Dry-Lab Bioinformatics & Pipeline Engineering",
+      primaryNode: "N16",
+      nodeIds: ["N16", "N17", "N18"],
+      level: "beginner",
+      persona: "troubleshooter",
+      question: "What is the exact difference between FASTQ, BAM, CRAM, and VCF, and why do cloud architects ban storing uncompressed BAM files long-term?",
+      hireMeAnswer: "`FASTQ` holds raw unaligned reads + Phred quality scores; `BAM` holds binary aligned reads; `VCF` holds only the called genetic variants. Cloud architects convert `BAM` to **`CRAM`** because `CRAM` uses reference-based differential compression—storing only the bases that *differ* from the reference genome—slashing AWS S3 storage costs by 50%–60% lossless.",
+      internalLinks: [
+        { id: "N16", title: "Raw Data Formats (FASTQ) & QC" },
+        { id: "N17", title: "Reference Genomes & Alignment (BAM/CRAM)" },
+        { id: "N18", title: "Variant Calling (VCF)" }
+      ],
+      externalLinks: [
+        { type: "spec", title: "GA4GH / SAMtools — SAM/BAM/CRAM & VCF Official Specifications", url: "https://samtools.github.io/hts-specs/" },
+        { type: "commercial", title: "AWS HealthOmics — Optimizing Genomic Storage Costs", url: "https://aws.amazon.com/healthomics/" }
+      ]
+    },
+    {
+      id: "Q11",
+      layer: 4,
+      layerName: "Dry-Lab Bioinformatics & Pipeline Engineering",
+      primaryNode: "N18",
+      nodeIds: ["N18", "N17", "N27"],
+      level: "medium",
+      persona: "troubleshooter",
+      question: "You are using Pysam and bcftools to merge two clinical VCF files, and the same indel appears at two different coordinates. Why, and how do you fix it?",
+      hireMeAnswer: "Indels in repetitive homopolymers or microsatellites are mathematically ambiguous—one caller right-aligned the deletion while another left-aligned it or represented it as a multi-allelic block. Before comparing or annotating any VCF, you **must** run `bcftools norm -f ref.fa -m -any` to left-align and parsimoniously normalize all indels against the exact reference FASTA.",
+      internalLinks: [
+        { id: "N18", title: "Variant Calling & bcftools Normalization" },
+        { id: "N17", title: "Reference Genomes & Pysam" },
+        { id: "N27", title: "GA4GH VRS Allele Normalization" }
+      ],
+      externalLinks: [
+        { type: "research", title: "Tan et al., Bioinformatics — Unified representation of genetic variants", url: "https://academic.oup.com/bioinformatics/article/31/13/2202/196142" },
+        { type: "tool", title: "bcftools norm Manual & Usage", url: "https://samtools.github.io/bcftools/bcftools.html#norm" }
+      ]
+    },
+    {
+      id: "Q12",
+      layer: 4,
+      layerName: "Dry-Lab Bioinformatics & Pipeline Engineering",
+      primaryNode: "N19",
+      nodeIds: ["N19", "N29"],
+      level: "expert",
+      persona: "troubleshooter",
+      question: "In a clinical Nextflow or WDL pipeline running on AWS Spot instances, how do you guarantee 100% deterministic reproducibility for a CAP/CLIA audit while keeping cloud compute costs low?",
+      hireMeAnswer: "1. Pin every process to an immutable **Docker container digest (`@sha256:...`)**, never `:latest`.\n2. Version-lock Git commit tags, reference checksums, and annotation DB release dates.\n3. Enable Nextflow `-resume` with automated retry strategies that fall back from Spot to On-Demand on exit codes 137/143, and archive the execution provenance manifest (`trace.txt`).",
+      internalLinks: [
+        { id: "N19", title: "Workflow Orchestration (Nextflow/WDL), Docker & Cloud" },
+        { id: "N29", title: "Clinical Regulations (CLIA/CAP) & GIAB" }
+      ],
+      externalLinks: [
+        { type: "research", title: "Di Tommaso et al., Nat Biotech — Nextflow enables reproducible workflows", url: "https://www.nature.com/articles/nbt.3820" },
+        { type: "commercial", title: "Seqera Labs Blog — Clinical Nextflow Pipelines at Scale", url: "https://seqera.io/blog/" }
+      ]
+    },
+
+    // LAYER 5: Tertiary Analysis, Databases & Clinical Standards (N20-N23)
+    {
+      id: "Q13",
+      layer: 5,
+      layerName: "Tertiary Analysis, Databases & Clinical Standards",
+      primaryNode: "N20",
+      nodeIds: ["N20", "N23"],
+      level: "beginner",
+      persona: "scientist",
+      question: "Why did clinical labs adopt MANE Select transcripts when annotating variants with Ensembl VEP?",
+      hireMeAnswer: "Previously, Hospital A using NCBI RefSeq (`NM_...`) and Hospital B using Ensembl (`ENST...`) could report the exact same genomic mutation as two completely different HGVS cDNA/protein changes! **MANE Select** provides a single, 100% identical canonical transcript agreed upon by both NCBI and Ensembl for every human protein-coding gene.",
+      internalLinks: [
+        { id: "N20", title: "Variant Annotation Engines, HGVS & MANE Transcripts" },
+        { id: "N23", title: "Clinical Variant Classification (ACMG/AMP)" }
+      ],
+      externalLinks: [
+        { type: "research", title: "Morales et al., Nature — MANE: Joint NCBI and EMBL-EBI transcript set", url: "https://www.nature.com/articles/s41586-022-04558-8" },
+        { type: "tool", title: "Ensembl VEP & MANE Documentation Portal", url: "https://www.ensembl.org/info/genome/genebuild/mane.html" }
+      ]
+    },
+    {
+      id: "Q14",
+      layer: 5,
+      layerName: "Tertiary Analysis, Databases & Clinical Standards",
+      primaryNode: "N21",
+      nodeIds: ["N21", "N22", "N23"],
+      level: "medium",
+      persona: "scientist",
+      question: "A variant has a 1-Star 'Pathogenic' entry in ClinVar from 2014, but appears at 1.2% allele frequency in South Asians in gnomAD v4 and GenomeIndia. How do you classify it under ACMG guidelines?",
+      hireMeAnswer: "You classify it as **Benign (`BA1` or `BS1`)**, overriding the outdated 1-star ClinVar submission. A 1.2% population frequency is orders of magnitude too common for a rare penetrant Mendelian disorder; early Western-biased databases misclassified ancestry-specific benign polymorphisms as pathogenic simply because non-European controls were missing.",
+      internalLinks: [
+        { id: "N21", title: "Population Reference Databases (gnomAD, GenomeIndia)" },
+        { id: "N22", title: "Clinical Knowledgebases (ClinVar)" },
+        { id: "N23", title: "ACMG/AMP Guidelines (BA1/BS1)" }
+      ],
+      externalLinks: [
+        { type: "research", title: "Manrai et al., NEJM — Genetic Misdiagnoses and Health Disparities", url: "https://www.nejm.org/doi/full/10.1056/NEJMsa1507092" },
+        { type: "guideline", title: "Richards et al., Genet Med — ACMG/AMP sequence variant interpretation", url: "https://www.nature.com/articles/gim201530" }
+      ]
+    },
+    {
+      id: "Q15",
+      layer: 5,
+      layerName: "Tertiary Analysis, Databases & Clinical Standards",
+      primaryNode: "N23",
+      nodeIds: ["N23", "N02", "N21"],
+      level: "expert",
+      persona: "scientist",
+      question: "Why can't you automatically apply ACMG PVS1 (Very Strong Pathogenicity) to every nonsense or frameshift variant?",
+      hireMeAnswer: "Because `PVS1` requires three strict checks:\n1. Loss-of-Function must be an established disease mechanism (`pLI` $\\ge 0.9$ / `LOEUF` $< 0.35$, not a gain-of-function oncogene).\n2. The stop codon must not fall in the **last exon** or **last 50 bp of penultimate exon**, where it escapes **Nonsense-Mediated Decay (NMD)**.\n3. The exon must be biologically expressed in the disease-relevant MANE transcript.",
+      internalLinks: [
+        { id: "N23", title: "ACMG/AMP Variant Classification (PVS1)" },
+        { id: "N02", title: "Central Dogma & Nonsense-Mediated Decay" },
+        { id: "N21", title: "Gene Constraint (LOEUF / pLI)" }
+      ],
+      externalLinks: [
+        { type: "guideline", title: "Abou Tayoun et al., Hum Mutat — Recommendations for ACMG PVS1 criterion", url: "https://onlinelibrary.wiley.com/doi/10.1002/humu.23626" }
+      ]
+    },
+
+    // LAYER 6: AI, Deep Learning & Foundation Models (N24-N26)
+    {
+      id: "Q16",
+      layer: 6,
+      layerName: "AI, Deep Learning & Foundation Models",
+      primaryNode: "N24",
+      nodeIds: ["N24", "N23"],
+      level: "beginner",
+      persona: "scientist",
+      question: "Why can't a doctor prescribe surgery or chemotherapy based solely on a high AlphaMissense pathogenicity score?",
+      hireMeAnswer: "`AlphaMissense` predicts *evolutionary and structural protein disruption*, not clinical penetrance or disease phenotype. Under ACMG/ClinGen rules, *in silico* AI predictors only count as computational evidence (`PP3`—at most Supporting to Strong); clinical action requires orthogonal human genetic, segregation, or functional evidence to reach **Likely Pathogenic / Pathogenic**.",
+      internalLinks: [
+        { id: "N24", title: "Variant Effect Predictors (AlphaMissense, SpliceAI)" },
+        { id: "N23", title: "ACMG PP3/BP4 Evidence Calibration" }
+      ],
+      externalLinks: [
+        { type: "research", title: "Cheng et al., Science — Proteome-wide missense prediction with AlphaMissense", url: "https://www.science.org/doi/10.1126/science.adg7492" },
+        { type: "guideline", title: "Pejaver et al., AJHG — ClinGen Calibration of computational tools", url: "https://www.cell.com/ajhg/fulltext/S0002-9297(22)00461-X" }
+      ]
+    },
+    {
+      id: "Q17",
+      layer: 6,
+      layerName: "AI, Deep Learning & Foundation Models",
+      primaryNode: "N25",
+      nodeIds: ["N25", "N36"],
+      level: "medium",
+      persona: "scientist",
+      question: "How does a Genomic Language Model like Evo 2 differ architecturally from AlphaFold 3, and what can Evo 2 generate that AlphaFold 3 cannot?",
+      hireMeAnswer: "`AlphaFold 3` is a diffusion-based **3D biomolecular structure predictor** operating on proteins and ligand complexes, whereas `Evo 2` is a 40B-parameter **StripedHyena sequence model** trained at single-nucleotide resolution across a 1 Mb DNA context window. Because `Evo 2` models both coding and non-coding regulatory DNA, it can *generatively design* complete synthetic operons, promoters, and novel CRISPR-Cas systems at genome scale.",
+      internalLinks: [
+        { id: "N25", title: "Genomic & Protein Foundation Models (Evo 2, AlphaFold 3)" },
+        { id: "N36", title: "Programmable Gene Editing" }
+      ],
+      externalLinks: [
+        { type: "research", title: "Arc Institute / Stanford — Genome modeling and design with Evo 2", url: "https://arcinstitute.org/tools/evo" },
+        { type: "research", title: "Abramson et al., Nature — Biomolecular structure with AlphaFold 3", url: "https://www.nature.com/articles/s41586-024-07487-w" }
+      ]
+    },
+    {
+      id: "Q18",
+      layer: 6,
+      layerName: "AI, Deep Learning & Foundation Models",
+      primaryNode: "N26",
+      nodeIds: ["N26", "N14", "N31"],
+      level: "expert",
+      persona: "investor",
+      question: "Hospital systems are slow to adopt new tests. How do AI Digital Pathology foundation models (Virchow, UNI) solve the 'cold-start' bottleneck for commercial NGS oncology testing?",
+      hireMeAnswer: "Every cancer biopsy already gets a cheap, routine H&E glass slide scanned in pathology. AI pathology models run instantaneously on that digital slide to flag likely `MSI-H`, `HRD`, or $EGFR/FGFR$ mutations with zero extra wet-lab tissue consumption—acting as an automated, high-margin **triage funnel** that triggers reflex confirmatory NGS orders (`FoundationOne`, `Tempus`) before the patient leaves the clinic.",
+      internalLinks: [
+        { id: "N26", title: "Multi-Modal Clinical AI & Computational Pathology" },
+        { id: "N14", title: "Spatial Omics & Digital Histopathology" },
+        { id: "N31", title: "Precision Oncology" }
+      ],
+      externalLinks: [
+        { type: "research", title: "Vorontsov et al., Nat Med — Clinical-grade computational pathology (Virchow)", url: "https://www.nature.com/articles/s41591-024-03141-0" },
+        { type: "commercial", title: "STAT News — Health Tech & AI in Oncology Diagnostics", url: "https://www.statnews.com/category/health-tech/" }
+      ]
+    },
+
+    // LAYER 7: Healthcare Interoperability, ETL & Governance (N27-N29)
+    {
+      id: "Q19",
+      layer: 7,
+      layerName: "Healthcare Interoperability, ETL & Governance",
+      primaryNode: "N27",
+      nodeIds: ["N27", "N28", "N30"],
+      level: "beginner",
+      persona: "troubleshooter",
+      question: "Why is faxing or uploading a PDF genomic report into a hospital EHR considered a patient safety failure in precision medicine?",
+      hireMeAnswer: "An unstructured PDF is 'dead data'—the EHR's prescribing engine cannot read it. If a patient's PDF says they are a `DPYD` Poor Metabolizer and an oncologist orders 5-Fluorouracil 3 years later, no automated **Clinical Decision Support (CDS)** alert will fire. Delivering discrete **HL7 FHIR Genomics Observation** resources linked to `LOINC` and `HGVS` codes enables lifelong, automated EHR drug-safety alerts.",
+      internalLinks: [
+        { id: "N27", title: "Healthcare Interoperability (HL7, FHIR, GA4GH)" },
+        { id: "N28", title: "Clinical ETL & EHR Integration (Epic Aura)" },
+        { id: "N30", title: "Pharmacogenomics (DPYD, CPIC)" }
+      ],
+      externalLinks: [
+        { type: "spec", title: "HL7 FHIR Genomics Reporting Implementation Guide", url: "https://hl7.org/fhir/uv/genomics-reporting/" },
+        { type: "commercial", title: "AMIA — Clinical Genomics Interoperability Standards", url: "https://amia.org/" }
+      ]
+    },
+    {
+      id: "Q20",
+      layer: 7,
+      layerName: "Healthcare Interoperability, ETL & Governance",
+      primaryNode: "N28",
+      nodeIds: ["N28", "N19", "N20"],
+      level: "medium",
+      persona: "troubleshooter",
+      question: "Your Python ETL pipeline enriches 50,000 variants per patient by calling NCBI ClinVar and Ensembl REST APIs one variant at a time, and it keeps getting HTTP 429 Too Many Requests errors. How do you re-architect it?",
+      hireMeAnswer: "Never make synchronous per-variant HTTP calls inside production!\n1. For bulk annotation, mirror local snapshots (`ClinVar VCF`, `gnomAD`, `VEP cache`) or query a columnar lakehouse (`Parquet` / `TileDB-VCF`).\n2. For live API enrichment, use **batch POST endpoints** (Ensembl accepts 200 variants/call), async token-bucket rate limiting (`asyncio`), and a Redis cache keyed by normalized `GA4GH VRS` allele digest.",
+      internalLinks: [
+        { id: "N28", title: "Clinical ETL Pipelines, REST APIs & LIMS" },
+        { id: "N19", title: "Workflow Orchestration & Cloud Lakehouses" },
+        { id: "N20", title: "Variant Annotation Engines" }
+      ],
+      externalLinks: [
+        { type: "tool", title: "Ensembl REST API Batch POST Endpoints Docs", url: "https://rest.ensembl.org/" },
+        { type: "tool", title: "MyVariant.info High-Performance BioThings API", url: "https://myvariant.info/" }
+      ]
+    },
+    {
+      id: "Q21",
+      layer: 7,
+      layerName: "Healthcare Interoperability, ETL & Governance",
+      primaryNode: "N29",
+      nodeIds: ["N29", "N18"],
+      level: "expert",
+      persona: "scientist",
+      question: "You upgraded DeepVariant in your clinical pipeline and your overall GIAB HG002 F1 score improved from 99.4% to 99.7%, yet your CAP/CLIA Medical Director refuses to deploy it immediately. Why?",
+      hireMeAnswer: "Genome-wide $F_1$ scores are dominated by easy-to-sequence regions. Under **CAP/CLIA and AMP guidelines**, any software upgrade requires a formal **Analytical Validation & Bridging Study** stratified specifically across clinically difficult regions (**NIST GIAB CMRG**—Challenging Medically Relevant Genes, homopolymers, high-GC exons, segmental duplications) plus verification that zero previously reported patient positive controls drop out.",
+      internalLinks: [
+        { id: "N29", title: "Clinical Regulations (CLIA/CAP, FDA CDx) & GIAB" },
+        { id: "N18", title: "Variant Calling Ecosystem (DeepVariant)" }
+      ],
+      externalLinks: [
+        { type: "guideline", title: "Roy et al., J Mol Diagn — Standards for Validating NGS Pipelines", url: "https://www.jmdjournal.org/article/S1525-1578(17)30373-2/fulltext" },
+        { type: "research", title: "Wagner et al., Nat Biotech — Benchmarking challenging small variants (CMRG)", url: "https://www.nature.com/articles/s41587-021-01158-1" }
+      ]
+    },
+
+    // LAYER 8: Translation to Precision Medicine (N30-N34)
+    {
+      id: "Q22",
+      layer: 8,
+      layerName: "Translation to Precision Medicine (Clinical Specialties)",
+      primaryNode: "N30",
+      nodeIds: ["N30", "N27"],
+      level: "beginner",
+      persona: "scientist",
+      question: "Why is a CYP2D6 Ultrarapid Metabolizer in danger when prescribed Codeine for pain, while a CYP2C19 Poor Metabolizer is in danger when prescribed Clopidogrel after a heart stent?",
+      hireMeAnswer: "Both are inactive **prodrugs** requiring liver enzymes for activation:\n* **Codeine -> Morphine:** A **CYP2D6 Ultrarapid Metabolizer** (with extra gene copies) converts codeine into a toxic flood of morphine, risking fatal respiratory depression.\n* **Clopidogrel -> Active Thiol:** A **CYP2C19 Poor Metabolizer** cannot activate the drug at all, leaving platelets uninhibited and risking fatal stent thrombosis!",
+      internalLinks: [
+        { id: "N30", title: "Pharmacogenomics (PGx: CPIC, PharmGKB)" },
+        { id: "N27", title: "FHIR CDS Hooks Prescribing Alerts" }
+      ],
+      externalLinks: [
+        { type: "guideline", title: "CPIC (Clinical Pharmacogenetics Implementation Consortium) Dosing Guidelines", url: "https://cpicpgx.org/guidelines/" },
+        { type: "tool", title: "PharmGKB / ClinPGx Interactive Pathways", url: "https://www.pharmgkb.org/" }
+      ]
+    },
+    {
+      id: "Q23",
+      layer: 8,
+      layerName: "Translation to Precision Medicine (Clinical Specialties)",
+      primaryNode: "N31",
+      nodeIds: ["N31", "N05", "N18"],
+      level: "medium",
+      persona: "troubleshooter",
+      question: "A 72-year-old lung cancer patient's plasma liquid biopsy (ctDNA) detects a TP53 and DNMT3A mutation at 1.5% VAF, but the solid tumor biopsy lacks both. Where did those mutations come from?",
+      hireMeAnswer: "They are almost certainly **Clonal Hematopoiesis of Indeterminate Potential (CHIP)**—benign, age-related somatic mutations in the patient's own white blood cells ($DNMT3A, TET2, ASXL1, TP53$). Because WBCs shed the majority of cell-free DNA in plasma, clinical liquid biopsy pipelines must sequence the **matched buffy coat (WBCs)** and subtract CHIP variants to avoid false-positive oncology decisions.",
+      internalLinks: [
+        { id: "N31", title: "Precision Oncology, Liquid Biopsy, MRD & CHIP" },
+        { id: "N05", title: "Biospecimen Collection (cfDNA/ctDNA)" },
+        { id: "N18", title: "Somatic Variant Calling" }
+      ],
+      externalLinks: [
+        { type: "research", title: "Razavi et al., Nat Med — High-intensity sequencing reveals sources of cfDNA", url: "https://www.nature.com/articles/s41591-019-0652-7" },
+        { type: "commercial", title: "DeciBio — Liquid Biopsy & MRD Commercial Market Analysis", url: "https://www.decibio.com/insights" }
+      ]
+    },
+    {
+      id: "Q24",
+      layer: 8,
+      layerName: "Translation to Precision Medicine (Clinical Specialties)",
+      primaryNode: "N31",
+      nodeIds: ["N31", "N12", "N38"],
+      level: "expert",
+      persona: "investor",
+      question: "Compare the commercial economics and clinical trade-offs of 'Tumor-Informed' vs. 'Tumor-Naive' Minimal Residual Disease (MRD) liquid biopsy tests.",
+      hireMeAnswer: "* **Tumor-Informed MRD (Natera Signatera, Personalis NeXT):** Sequences patient's surgical tumor first to build a custom 16–1,800 variant panel. Ultra-deep sensitivity (LoD $\\approx 10^{-5}$–$10^{-6}$) and high recurring revenue, but higher upfront COGS, 2–4 week initial TAT, and requires tissue.\n* **Tumor-Naive MRD (Guardant Reveal):** Uses fixed off-the-shelf somatic + epigenomic methylation blood panel. Fast TAT (7–10 days) and zero tissue need, but historically faces a higher limit of detection floor ($\\sim 10^{-4}$).",
+      internalLinks: [
+        { id: "N31", title: "Precision Oncology, Liquid Biopsy & MRD" },
+        { id: "N12", title: "Epigenomics & cfDNA Methylation" },
+        { id: "N38", title: "Global Commercial Landscape" }
+      ],
+      externalLinks: [
+        { type: "research", title: "Moding et al., Nat Rev Clin Oncol — Detecting and targeting MRD in solid tumors", url: "https://www.nature.com/nrclinonc/" },
+        { type: "commercial", title: "GenomeWeb — Natera vs. Guardant Health MRD Clinical & Patent Battles", url: "https://www.genomeweb.com/" }
+      ]
+    },
+
+    // LAYERS 9 & 10: Precision Therapeutics, Commercial Ecosystem & IP (N35-N39)
+    {
+      id: "Q25",
+      layer: 9,
+      layerName: "Precision Therapeutics (Acting on the Genome)",
+      primaryNode: "N36",
+      nodeIds: ["N36", "N37"],
+      level: "beginner",
+      persona: "scientist",
+      question: "Why do 2nd-Generation Base Editors and 3rd-Generation Prime Editors have a major safety advantage over 1st-Generation CRISPR-Cas9 nucleases?",
+      hireMeAnswer: "1st-generation `CRISPR-Cas9` cuts **both** strands of the DNA helix (a Double-Strand Break, DSB), which can trigger p53 cell death, uncontrolled indels, chromothripsis, or translocations. **Base Editors** and **Prime Editors** use a **Cas9 nickase (nCas9)** to nick only *one* strand while chemically deaminating a base or reverse-transcribing a new sequence—fixing point mutations without double-strand breaks.",
+      internalLinks: [
+        { id: "N36", title: "Programmable Gene Editing (CRISPR, Base, Prime, Epigenome)" },
+        { id: "N37", title: "Gene Therapy Delivery (AAV/LNP)" }
+      ],
+      externalLinks: [
+        { type: "research", title: "Anzalone et al., Nature — Search-and-replace Prime Editing without DSBs", url: "https://www.nature.com/articles/s41586-019-1711-4" },
+        { type: "commercial", title: "FierceBiotech — Gene Editing Clinical Pipeline Tracker", url: "https://www.fiercebiotech.com/" }
+      ]
+    },
+    {
+      id: "Q26",
+      layer: 9,
+      layerName: "Precision Therapeutics (Acting on the Genome)",
+      primaryNode: "N31",
+      nodeIds: ["N31", "N37", "N19"],
+      level: "medium",
+      persona: "scientist",
+      question: "Walk me through the 4-week bioinformatics-to-manufacturing loop of an individualized mRNA cancer neoantigen vaccine (like Moderna/Merck mRNA-4157).",
+      hireMeAnswer: "1. Sequence patient's surgical tumor WES + RNA-Seq and matched blood normal WES.\n2. Call somatic nonsynonymous mutations and type patient's exact **HLA Class I/II alleles**.\n3. Run deep-learning MHC presentation models (`NetMHCpan`) to rank the top 20–34 immunogenic **neoantigens**.\n4. Synthesize a single bespoke concatemer mRNA in Lipid Nanoparticles (LNPs) and ship back to clinic to prime patient T-cells against microscopic recurrence.",
+      internalLinks: [
+        { id: "N31", title: "Precision Oncology & Neoantigens" },
+        { id: "N37", title: "RNA Medicines (mRNA) & Cell Therapy" },
+        { id: "N19", title: "Cloud Pipeline Turnaround Time" }
+      ],
+      externalLinks: [
+        { type: "research", title: "Weber et al., The Lancet — Individualised neoantigen therapy mRNA-4157 (KEYNOTE-942)", url: "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(23)02268-7/fulltext" }
+      ]
+    },
+    {
+      id: "Q27",
+      layer: 10,
+      layerName: "Commercial Ecosystem, Patents & Conferences",
+      primaryNode: "N38",
+      nodeIds: ["N36", "N37", "N38", "N39"],
+      level: "expert",
+      persona: "investor",
+      question: "One-time curative gene therapies (Casgevy, Zolgensma) price at $2M–$3M per patient, yet several gene therapy biotechs have struggled commercially. What are the two biggest bottlenecks—and how are next-gen startups solving them?",
+      hireMeAnswer: "1. **Delivery & Conditioning Toxicity:** *Ex vivo* stem-cell therapies (`Casgevy`) require weeks of hospitalization and toxic busulfan chemotherapy. Next-gen startups are developing **targeted *in vivo* LNPs** conjugated to CD117/HSC antibodies (a 1-hour outpatient IV infusion).\n2. **Ultra-Rare Market Size vs. CMC Cost:** Platform companies are moving to **programmable multi-kilobase gene insertion** (replacing entire genes regardless of mutation) and **FDA Platform Technology Designations** to reuse validated LNP/AAV backbones across diseases.",
+      internalLinks: [
+        { id: "N36", title: "Programmable Gene Editing" },
+        { id: "N37", title: "Delivery Vectors (AAV/LNP) & ASOs" },
+        { id: "N38", title: "Global Commercial Landscape" },
+        { id: "N39", title: "Landmark Patents & Regulatory Frameworks" }
+      ],
+      externalLinks: [
+        { type: "research", title: "Breda et al., Science — In vivo hematopoietic stem cell modification (CD117-LNP)", url: "https://www.science.org/doi/10.1126/science.ade6967" },
+        { type: "commercial", title: "a16z Bio + Health — The Future of Programmable Medicines", url: "https://a16z.com/bio-health/" }
+      ]
+    }
+  ]
+};
+

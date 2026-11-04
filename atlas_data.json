@@ -1,0 +1,3262 @@
+{
+  "metadata": {
+    "title": "The Complete Genomics to Precision Medicine Atlas",
+    "subtitle": "Interactive Knowledge Graph, Conceptual Encyclopedia & Navigation Atlas",
+    "totalLayers": 10,
+    "totalNodes": 39,
+    "totalEdges": 130,
+    "layers": {
+      "1": {
+        "name": "Molecular & Biological Foundations",
+        "color": "#3B82F6",
+        "badge": "Layer 1",
+        "icon": "🧬"
+      },
+      "2": {
+        "name": "Wet-Lab & Sequencing Technologies",
+        "color": "#10B981",
+        "badge": "Layer 2",
+        "icon": "🧪"
+      },
+      "3": {
+        "name": "Multi-Omics, Single-Cell & Spatial Biology",
+        "color": "#8B5CF6",
+        "badge": "Layer 3",
+        "icon": "🔬"
+      },
+      "4": {
+        "name": "Dry-Lab Bioinformatics & Pipeline Engineering",
+        "color": "#F97316",
+        "badge": "Layer 4",
+        "icon": "💻"
+      },
+      "5": {
+        "name": "Tertiary Analysis, Databases & Clinical Standards",
+        "color": "#EAB308",
+        "badge": "Layer 5",
+        "icon": "📊"
+      },
+      "6": {
+        "name": "AI, Deep Learning & Foundation Models",
+        "color": "#EF4444",
+        "badge": "Layer 6",
+        "icon": "🤖"
+      },
+      "7": {
+        "name": "Healthcare Interoperability, ETL & Governance",
+        "color": "#06B6D4",
+        "badge": "Layer 7",
+        "icon": "🏥"
+      },
+      "8": {
+        "name": "Translation to Precision Medicine (Clinical Specialties)",
+        "color": "#EC4899",
+        "badge": "Layer 8",
+        "icon": "🩺"
+      },
+      "9": {
+        "name": "Precision Therapeutics (Acting on the Genome)",
+        "color": "#14B8A6",
+        "badge": "Layer 9",
+        "icon": "💊"
+      },
+      "10": {
+        "name": "Commercial Ecosystem, Patents & Conferences",
+        "color": "#94A3B8",
+        "badge": "Layer 10",
+        "icon": "🌐"
+      }
+    }
+  },
+  "nodes": [
+    {
+      "id": "N01",
+      "title": "DNA, Chromosomes & Genome Architecture",
+      "layer": 1,
+      "layerName": "Molecular & Biological Foundations",
+      "layerColor": "#3B82F6",
+      "layerBadge": "Layer 1",
+      "layerIcon": "🧬",
+      "coreConcept": "Deoxyribonucleic acid ($\\text{DNA}$) is a double-stranded antiparallel helix ($5' \\rightarrow 3'$ and $3' \\rightarrow 5'$) stabilized by hydrogen bonds between complementary purine-pyrimidine base pairs ($A=T$ with $2$ hydrogen bonds; $G \\equiv C$ with $3$ hydrogen bonds). In human somatic cells, diploid DNA ($2n = 46$ chromosomes: $22$ pairs of autosomes + $XX$ or $XY$ sex chromosomes) totals $\\sim 6.4 \\times 10^9$ base pairs, plus circular **mitochondrial DNA ($\\text{mtDNA}$)** ($16,569\\text{ bp}$, $37$ genes, maternally inherited, high copy number per cell).",
+      "rawBody": "* **Core Concept:** Deoxyribonucleic acid ($\\text{DNA}$) is a double-stranded antiparallel helix ($5' \\rightarrow 3'$ and $3' \\rightarrow 5'$) stabilized by hydrogen bonds between complementary purine-pyrimidine base pairs ($A=T$ with $2$ hydrogen bonds; $G \\equiv C$ with $3$ hydrogen bonds). In human somatic cells, diploid DNA ($2n = 46$ chromosomes: $22$ pairs of autosomes + $XX$ or $XY$ sex chromosomes) totals $\\sim 6.4 \\times 10^9$ base pairs, plus circular **mitochondrial DNA ($\\text{mtDNA}$)** ($16,569\\text{ bp}$, $37$ genes, maternally inherited, high copy number per cell).\n* **Functional Architecture:**\n  * **Exome ($\\sim 1.5\\%$ of genome):** Protein-coding **exons** ($\\sim 180,000$ exons across $\\sim 20,000$ genes).\n  * **Non-Coding Genome ($\\sim 98.5\\%$):** **Introns** (spliced out during RNA processing), **Promoters** (TATA box, CpG islands immediately upstream of Transcription Start Sites [TSS]), **Enhancers/Silencers** (distal cis-regulatory elements), **Insulators** (CTCF binding sites), **Untranslated Regions** ($5'\\text{ UTR}$ and $3'\\text{ UTR}$ regulating translation and mRNA stability), **Non-coding RNAs**, **Centromeres/Telomeres** (TTAGGG repeats protecting chromosome ends), and **Transposable Elements** (LINEs, SINEs/Alu, LTRs).\n* **How It Connects:**\n  * **Downstream to:** [N02: Central Dogma](#n02-the-central-dogma-of-molecular-biology) (provides template for transcription), [N03: Genetic Variation](#n03-spectrum-of-genetic-variation) (structural substrate where mutations occur), [N10: Assay Modalities](#n10-sequencing-assay-modalities-panels-wes-wgs-low-pass) (dictates whether a lab sequences only the $1.5\\%$ Exome [WES] or $100\\%$ Genome [WGS]), [N12: Epigenomics](#n12-epigenomics-methylation--3d-chromatin-architecture) (DNA wraps around histone octamers to form nucleosomes and chromatin).",
+      "upstream": [],
+      "downstream": [
+        "N12",
+        "N02",
+        "N03",
+        "N10",
+        "N36",
+        "N05"
+      ],
+      "tools": [
+        "STAR"
+      ],
+      "companies": [],
+      "keywords": [
+        "Centromeres/Telomeres",
+        "Enhancers/Silencers",
+        "Exome ($\\sim 1.5\\%$ of genome)",
+        "Functional Architecture",
+        "Insulators",
+        "Introns",
+        "Non-Coding Genome ($\\sim 98.5\\%$)",
+        "Non-coding RNAs",
+        "Promoters",
+        "Transposable Elements",
+        "Untranslated Regions",
+        "exons",
+        "mitochondrial DNA ($\\text{mtDNA}$)"
+      ],
+      "formulas": [
+        "\\text{DNA}",
+        "5' \\rightarrow 3'",
+        "3' \\rightarrow 5'"
+      ]
+    },
+    {
+      "id": "N02",
+      "title": "The Central Dogma of Molecular Biology",
+      "layer": 1,
+      "layerName": "Molecular & Biological Foundations",
+      "layerColor": "#3B82F6",
+      "layerBadge": "Layer 1",
+      "layerIcon": "🧬",
+      "coreConcept": "Formulated by Francis Crick, information flows directionally from $\\text{DNA} \\xrightarrow{\\text{Transcription}} \\text{RNA} \\xrightarrow{\\text{Translation}} \\text{Protein} \\rightarrow \\text{Cellular Phenotype}$ (with reverse transcription $\\text{RNA} \\rightarrow \\text{cDNA}$ mediated by reverse transcriptases/telomerase).",
+      "rawBody": "* **Core Concept:** Formulated by Francis Crick, information flows directionally from $\\text{DNA} \\xrightarrow{\\text{Transcription}} \\text{RNA} \\xrightarrow{\\text{Translation}} \\text{Protein} \\rightarrow \\text{Cellular Phenotype}$ (with reverse transcription $\\text{RNA} \\rightarrow \\text{cDNA}$ mediated by reverse transcriptases/telomerase).\n* **Key Sub-Processes & Keywords:**\n  * **Transcription:** RNA Polymerase II synthesizes precursor messenger RNA ($\\text{pre-mRNA}$) from the template DNA strand.\n  * **RNA Processing & Alternative Splicing:** Addition of $5'$ 7-methylguanosine cap, $3'$ poly-A tail, and spliceosome-mediated removal of introns at canonical splice donor ($GT$) and acceptor ($AG$) sites. Alternative splicing enables a single gene to produce multiple distinct protein **isoforms** across different tissues.\n  * **Translation & The Genetic Code:** Ribosomes read mRNA in triplet **codons** ($4^3 = 64$ codons: $61$ sense codons encoding $20$ standard amino acids via $\\text{tRNA}$ anticodons, starting at $AUG$ [Methionine], and $3$ stop/nonsense codons: $UAA, UAG, UGA$).\n  * **Post-Translational Modifications (PTMs):** Phosphorylation, ubiquitination, glycosylation, acetylation, and 3D folding into secondary ($\\alpha$-helix, $\\beta$-sheet), tertiary, and quaternary protein structures.\n* **How It Connects:**\n  * **Upstream from:** [N01: DNA Architecture](#n01-dna-chromosomes--genome-architecture).\n  * **Downstream to:** [N11: Transcriptomics](#n11-transcriptomics--bulkisoform-rna-seq) (measures the RNA layer), [N15: Proteomics](#n15-proteomics-metabolomics--microbiomemetagenomics) (measures the protein layer), [N20: Variant Annotation](#n20-variant-annotation-engines-hgvs--mane-transcripts) (predicts whether a DNA change causes a synonymous, missense, nonsense, frameshift, or splice-site defect), [N25: Foundation Models](#n25-genomic--protein-foundation-models-glms-plms--structural-ai) (AlphaFold 3 and ESM3 model the 3D protein folding step), [N37: RNA Medicines](#n37-gene-replacement-aavlnp-rna-medicines-asosirnamrna--car-t) (ASOs and siRNAs intercept mRNA before translation).",
+      "upstream": [
+        "N01"
+      ],
+      "downstream": [
+        "N25",
+        "N37",
+        "N20",
+        "N11",
+        "N15",
+        "N24",
+        "N05"
+      ],
+      "tools": [
+        "STAR",
+        "AlphaFold",
+        "AlphaFold 3",
+        "ESM3",
+        "MANE",
+        "HGVS",
+        "CAP"
+      ],
+      "companies": [],
+      "keywords": [
+        "Key Sub-Processes & Keywords",
+        "Post-Translational Modifications (PTMs)",
+        "RNA Processing & Alternative Splicing",
+        "Transcription",
+        "Translation & The Genetic Code",
+        "codons",
+        "isoforms"
+      ],
+      "formulas": [
+        "\\text{DNA} \\xrightarrow{\\text{Transcription}} \\text{RNA} \\xrightarrow{\\text{Translation}} \\text{Protein} \\rightarrow \\text{Cellular Phenotype}",
+        "\\text{RNA} \\rightarrow \\text{cDNA}",
+        "\\text{pre-mRNA}"
+      ]
+    },
+    {
+      "id": "N03",
+      "title": "Spectrum of Genetic Variation",
+      "layer": 1,
+      "layerName": "Molecular & Biological Foundations",
+      "layerColor": "#3B82F6",
+      "layerBadge": "Layer 1",
+      "layerIcon": "🧬",
+      "coreConcept": "Any difference in nucleotide sequence or chromosome structure compared to a reference genome.",
+      "rawBody": "* **Core Concept:** Any difference in nucleotide sequence or chromosome structure compared to a reference genome.\n* **Exhaustive Taxonomy of Variants:**\n  * **Single Nucleotide Variants (SNVs) / Single Nucleotide Polymorphisms (SNPs):** Substitution of a single base ($1\\text{ bp}$), including transitions ($A \\leftrightarrow G, C \\leftrightarrow T$) and transversions. Coding impacts include **Synonymous (Silent)**, **Missense** (amino acid swap), **Nonsense** (premature stop codon $\\rightarrow$ Nonsense-Mediated Decay [NMD]), and **Splice-Site** variants.\n  * **Indels (Insertions & Deletions $< 50\\text{ bp}$):** Can cause **In-frame** additions/deletions (multiples of $3\\text{ bp}$) or **Frameshift** mutations (non-multiples of $3\\text{ bp}$ that scramble the entire downstream reading frame).\n  * **Structural Variants (SVs $\\ge 50\\text{ bp}$):** Large deletions, insertions, tandem duplications, **Inversions** (paracentric/pericentric), **Translocations** (balanced or unbalanced chromosomal exchanges, e.g., $BCR\\text{-}ABL1$ Philadelphia chromosome $t(9;22)$ in CML), and **Complex chromosomal rearrangements (Chromothripsis)**.\n  * **Copy Number Variants (CNVs):** Gains (amplifications, e.g., $ERBB2/HER2$ amplification in breast cancer) or losses (hemizygous/homozygous deletions, e.g., $SMN1$ exon 7 deletion in Spinal Muscular Atrophy).\n  * **Short Tandem Repeats (STRs) / Microsatellites:** Repeating units of $1\\text{--}6\\text{ bp}$ whose pathogenic expansion causes >50 neurological disorders (e.g., $HTT$ CAG repeat in Huntington's disease, $FMR1$ CGG repeat in Fragile X, $C9orf72$ in ALS/FTD).\n  * **Origin & Zygosity:** **Germline** (inherited, present in every cell; heterozygous, homozygous, hemizygous, or compound heterozygous) vs. **Somatic** (acquired post-zygotically in tumors or clonal hematopoiesis [CHIP], measured by Variant Allele Frequency [$\\text{VAF}$]) vs. **De Novo** (arising in germ cells of parents, present in child) vs. **Mosaicism** (present in a subset of somatic/germline cells).\n* **How It Connects:**\n  * **Upstream from:** [N01: DNA Architecture](#n01-dna-chromosomes--genome-architecture).\n  * **Downstream to:** [N09: Long-Read Sequencing](#n09-third-gen-long-read--native-molecule-sequencing) (essential for resolving complex SVs and STRs), [N18: Variant Calling](#n18-variant-calling-ecosystem-germline-somatic-sv-cnv-str) (requires dedicated callers for SNVs vs. SVs vs. CNVs vs. STRs), [N23: ACMG Classification](#n23-clinical-variant-classification-acmgamp--ampascocap), [N31: Precision Oncology](#n31-precision-oncology-liquid-biopsy-mrd--neoantigens) (somatic mutations), [N32: Rare Disease](#n32-rare-disease-rwgs-reproductive-genetics--newborn-screening) (germline/de novo mutations).",
+      "upstream": [
+        "N01"
+      ],
+      "downstream": [
+        "N31",
+        "N32",
+        "N18",
+        "N23",
+        "N09",
+        "N04",
+        "N05"
+      ],
+      "tools": [
+        "CRAM",
+        "UNI",
+        "CAP"
+      ],
+      "companies": [],
+      "keywords": [
+        "Copy Number Variants (CNVs)",
+        "De Novo",
+        "Exhaustive Taxonomy of Variants",
+        "Frameshift",
+        "Germline",
+        "In-frame",
+        "Inversions",
+        "Missense",
+        "Mosaicism",
+        "Nonsense",
+        "Origin & Zygosity",
+        "Short Tandem Repeats (STRs) / Microsatellites",
+        "Somatic",
+        "Splice-Site",
+        "Structural Variants (SVs $\\ge 50\\text{ bp}$)",
+        "Synonymous (Silent)",
+        "Translocations"
+      ],
+      "formulas": [
+        "1\\text{ bp}",
+        "A \\leftrightarrow G, C \\leftrightarrow T",
+        "\\rightarrow"
+      ]
+    },
+    {
+      "id": "N04",
+      "title": "Inheritance Patterns & Population Genetics",
+      "layer": 1,
+      "layerName": "Molecular & Biological Foundations",
+      "layerColor": "#3B82F6",
+      "layerBadge": "Layer 1",
+      "layerIcon": "🧬",
+      "coreConcept": "Explains how alleles segregate within families and how allele frequencies evolve across global human populations.",
+      "rawBody": "* **Core Concept:** Explains how alleles segregate within families and how allele frequencies evolve across global human populations.\n* **Key Concepts & Mathematical Formulations:**\n  * **Mendelian / Monogenic Inheritance:** Autosomal Dominant ($AD$), Autosomal Recessive ($AR$), X-Linked Dominant/Recessive ($XLD/XLR$), Y-Linked, and Mitochondrial (maternal heteroplasmy/homoplasmy).\n  * **Modifiers of Phenotype:** **Incomplete Penetrance** (proportion of carriers showing the phenotype $< 100\\%$), **Variable Expressivity** (severity differs among carriers), **Epistasis** (gene-gene interaction), **Genomic Imprinting** (parent-of-origin silencing, e.g., Prader-Willi vs. Angelman syndrome on $15q11\\text{-}q13$), and **Uniparental Disomy (UPD)**.\n  * **Hardy-Weinberg Equilibrium (HWE):** For a biallelic locus with allele frequencies $p + q = 1$, genotype frequencies in an ideal population satisfy:\n    $$p^2 + 2pq + q^2 = 1$$\n    Deviations from HWE in sequencing cohorts flag genotyping errors, population stratification, or purifying selection.\n  * **Linkage Disequilibrium (LD) & Haplotypes:** Non-random association of alleles at nearby loci ($D' = D / D_{\\max}$ and $r^2$), forming haplotype blocks inherited together between recombination hotspots.\n  * **Population Dynamics:** Genetic drift, bottlenecks, **Founder Effects** (e.g., Ashkenazi Jewish, Finnish, or endogamous South Asian founder mutations), **Consanguinity** (Runs of Homozygosity [$\\text{ROH}$] / Coefficient of Inbreeding $F$), and **Admixture** (Local Ancestry Inference).\n* **How It Connects:**\n  * **Upstream from:** [N03: Genetic Variation](#n03-spectrum-of-genetic-variation).\n  * **Downstream to:** [N21: Population Biobanks](#n21-population-reference-databases--global-biobanks) (allele frequency cutoffs in gnomAD), [N32: Rare Disease](#n32-rare-disease-rwgs-reproductive-genetics--newborn-screening) (trio pedigree phasing and ROH mapping in consanguineous families), [N33: GWAS & PRS](#n33-complex-disease-gwas-polygenic-risk-scores-prs--preventive-genomics) (LD clumping and cross-ancestry PRS portability).\n\n---\n\n### Layer 2: Wet-Lab & Sequencing Technologies",
+      "upstream": [
+        "N03"
+      ],
+      "downstream": [
+        "N21",
+        "N33",
+        "N32"
+      ],
+      "tools": [
+        "Evo",
+        "UNI",
+        "gnomAD"
+      ],
+      "companies": [],
+      "keywords": [
+        "Admixture",
+        "Consanguinity",
+        "Epistasis",
+        "Founder Effects",
+        "Genomic Imprinting",
+        "Hardy-Weinberg Equilibrium (HWE)",
+        "Incomplete Penetrance",
+        "Key Concepts & Mathematical Formulations",
+        "Linkage Disequilibrium (LD) & Haplotypes",
+        "Mendelian / Monogenic Inheritance",
+        "Modifiers of Phenotype",
+        "Population Dynamics",
+        "Uniparental Disomy (UPD)",
+        "Variable Expressivity"
+      ],
+      "formulas": [
+        "p^2 + 2pq + q^2 = 1"
+      ]
+    },
+    {
+      "id": "N05",
+      "title": "Biospecimen Collection, cfDNA/ctDNA & Extraction",
+      "layer": 2,
+      "layerName": "Wet-Lab & Sequencing Technologies",
+      "layerColor": "#10B981",
+      "layerBadge": "Layer 2",
+      "layerIcon": "🧪",
+      "coreConcept": "The physical interface between the patient and the sequencer. Poor sample quality (\"garbage in, garbage out\") invalidates all downstream bioinformatics.",
+      "rawBody": "* **Core Concept:** The physical interface between the patient and the sequencer. Poor sample quality (\"garbage in, garbage out\") invalidates all downstream bioinformatics.\n* **Biospecimen Types:**\n  * **Germline Samples:** Peripheral whole blood (EDTA purple-top tubes, buffy coat / PBMCs), saliva/buccal swabs, dried blood spots (DBS for newborn screening), cultured fibroblasts, amniocytes/chorionic villi.\n  * **Solid Tumor Tissue:** **FFPE (Formalin-Fixed Paraffin-Embedded)** blocks/slides (causes DNA crosslinking and cytosine deamination $C \\rightarrow T$ artifacts requiring uracil-DNA glycosylase [UDG] repair) vs. **Fresh Frozen (FF)** tissue.\n  * **Liquid Biopsy Analytes:** **Cell-Free DNA ($\\text{cfDNA}$)** (fragments of $\\sim 166\\text{ bp}$ matching mononucleosome wrap length circulating in plasma, collected in Streck cell-stabilizing tubes), **Circulating Tumor DNA ($\\text{ctDNA}$)** (fraction of cfDNA shed by apoptotic/necrotic tumor cells, often $< 0.1\\%$ VAF), **Cell-Free Fetal DNA ($\\text{cffDNA}$)** (placental trophoblast DNA in maternal blood), **Circulating Tumor Cells (CTCs)**, and **Extracellular Vesicles / Exosomes**.\n* **Extraction & Pre-Analytical QC:** Magnetic bead-based (SPRI/AMPure XP) or silica column extraction; High-Molecular-Weight ($\\text{HMW}$) and Ultra-High-Molecular-Weight ($\\text{UHMW}$) DNA extraction ($> 100\\text{ kb}$) for long-read sequencing; fluorometric quantification (**Qubit**), spectrophotometric purity ($A_{260}/A_{280} \\approx 1.8$ for DNA, $2.0$ for RNA via **NanoDrop**), and electrophoretic integrity sizing (**Agilent TapeStation / Bioanalyzer / Femto Pulse**: **DIN** [DNA Integrity Number] and **RIN** [RNA Integrity Number] / $\\text{DV}_{200}$ for FFPE RNA).\n* **How It Connects:**\n  * **Upstream from:** [N01: DNA](#n01-dna-chromosomes--genome-architecture), [N02: Central Dogma](#n02-the-central-dogma-of-molecular-biology).\n  * **Downstream to:** [N06: Library Prep](#n06-library-preparation-umis--target-enrichment), [N31: Liquid Biopsy & MRD](#n31-precision-oncology-liquid-biopsy-mrd--neoantigens), [N32: NIPT & Newborn Screening](#n32-rare-disease-rwgs-reproductive-genetics--newborn-screening).",
+      "upstream": [
+        "N02",
+        "N01",
+        "N03"
+      ],
+      "downstream": [
+        "N31",
+        "N32",
+        "N06",
+        "N07",
+        "N09"
+      ],
+      "tools": [],
+      "companies": [
+        "Agilent",
+        "Streck"
+      ],
+      "keywords": [
+        "Biospecimen Types",
+        "Cell-Free DNA ($\\text{cfDNA}$)",
+        "Cell-Free Fetal DNA ($\\text{cffDNA}$)",
+        "Circulating Tumor Cells (CTCs)",
+        "Circulating Tumor DNA ($\\text{ctDNA}$)",
+        "DIN",
+        "Extracellular Vesicles / Exosomes",
+        "Extraction & Pre-Analytical QC",
+        "FFPE (Formalin-Fixed Paraffin-Embedded)",
+        "Fresh Frozen (FF)",
+        "Germline Samples",
+        "Liquid Biopsy Analytes",
+        "NanoDrop",
+        "Qubit",
+        "RIN",
+        "Solid Tumor Tissue"
+      ],
+      "formulas": [
+        "C \\rightarrow T",
+        "\\text{cfDNA}",
+        "\\sim 166\\text{ bp}"
+      ]
+    },
+    {
+      "id": "N06",
+      "title": "Library Preparation, UMIs & Target Enrichment",
+      "layer": 2,
+      "layerName": "Wet-Lab & Sequencing Technologies",
+      "layerColor": "#10B981",
+      "layerBadge": "Layer 2",
+      "layerIcon": "🧪",
+      "coreConcept": "Converts extracted native DNA or RNA into a sequencing-ready **library** flanked by synthetic oligonucleotide adapters compatible with a specific sequencing platform.",
+      "rawBody": "* **Core Concept:** Converts extracted native DNA or RNA into a sequencing-ready **library** flanked by synthetic oligonucleotide adapters compatible with a specific sequencing platform.\n* **Core Steps & Error-Suppression Chemistry:**\n  1. **Fragmentation:** Acoustic shearing (**Covaris**), enzymatic fragmentation, or **Tagmentation** (Tn5 transposase simultaneously cleaves DNA and ligates adapters—e.g., Illumina DNA Prep).\n  2. **End-Repair & A-Tailing:** Blunting overhangs, phosphorylating $5'$ ends, and adding a $3'$ adenine overhang.\n  3. **Adapter Ligation & Indexing:** Ligating platform flow-cell binding sequences ($P5/P7$), sequencing primer sites, **Sample Indexes / Dual Barcodes** (Unique Dual Indexes [UDIs] to prevent *index hopping* during multiplexed sequencing), and **Unique Molecular Identifiers (UMIs)** / **Duplex Molecular Barcodes** (random $8\\text{--}12\\text{ bp}$ tags attached to each original DNA duplex molecule *prior* to PCR so bioinformatics tools like `fgbio` can collapse PCR duplicates and achieve error rates $< 10^{-7}$ for ultra-rare $\\text{ctDNA}$ detection).\n  4. **PCR-Free vs. PCR-Amplified:** PCR-Free WGS eliminates GC-bias and polymerase stutter at STRs.\n  5. **Target Enrichment:** **Hybridization Capture** (biotinylated oligonucleotide probes/baits from **Twist Bioscience, IDT xGen, Agilent SureSelect, Roche KAPA** pulled down with streptavidin beads) vs. **Multiplex Amplicon PCR** (Ampliseq, QIAseq) vs. **CRISPR-Cas9 Targeted Cleavage** for native long-read enrichment.\n* **How It Connects:**\n  * **Upstream from:** [N05: Biospecimen Extraction](#n05-biospecimen-collection-cfdnactdna--extraction).\n  * **Downstream to:** [N08: Short-Read NGS](#n08-second-gen-short-read-high-throughput-sequencing-ngs), [N09: Long-Read Sequencing](#n09-third-gen-long-read--native-molecule-sequencing), [N10: Assay Modalities](#n10-sequencing-assay-modalities-panels-wes-wgs-low-pass), [N16: Demultiplexing & UMI Collapse](#n16-raw-data-formats-compression--pre-processing-qc).",
+      "upstream": [
+        "N05"
+      ],
+      "downstream": [
+        "N16",
+        "N10",
+        "N09",
+        "N08",
+        "N07"
+      ],
+      "tools": [
+        "fgbio",
+        "UNI",
+        "CAP"
+      ],
+      "companies": [
+        "Illumina",
+        "Twist Bioscience",
+        "IDT",
+        "Agilent",
+        "Roche",
+        "Covaris"
+      ],
+      "keywords": [
+        "Adapter Ligation & Indexing",
+        "CRISPR-Cas9 Targeted Cleavage",
+        "Core Steps & Error-Suppression Chemistry",
+        "Covaris",
+        "Duplex Molecular Barcodes",
+        "End-Repair & A-Tailing",
+        "Fragmentation",
+        "Hybridization Capture",
+        "Multiplex Amplicon PCR",
+        "PCR-Free vs. PCR-Amplified",
+        "Sample Indexes / Dual Barcodes",
+        "Tagmentation",
+        "Target Enrichment",
+        "Unique Molecular Identifiers (UMIs)",
+        "fgbio",
+        "library"
+      ],
+      "formulas": [
+        "8\\text{--}12\\text{ bp}",
+        "< 10^{-7}",
+        "\\text{ctDNA}"
+      ]
+    },
+    {
+      "id": "N07",
+      "title": "First-Gen Sequencing, PCR, Microarrays & Optical Mapping",
+      "layer": 2,
+      "layerName": "Wet-Lab & Sequencing Technologies",
+      "layerColor": "#10B981",
+      "layerBadge": "Layer 2",
+      "layerIcon": "🧪",
+      "coreConcept": "Foundational and orthogonal molecular diagnostic technologies used for targeted validation, rapid screening, cytogenetics, and high-throughput SNP genotyping.",
+      "rawBody": "* **Core Concept:** Foundational and orthogonal molecular diagnostic technologies used for targeted validation, rapid screening, cytogenetics, and high-throughput SNP genotyping.\n* **Key Modalities:**\n  * **Sanger Sequencing (Chain Termination):** Dideoxynucleotides ($\\text{ddNTPs}$) resolved via capillary electrophoresis (ABI Prism / SeqStudio); the historical gold standard for orthogonal clinical confirmation and single-exon sequencing.\n  * **Quantitative PCR (qPCR) & Droplet Digital PCR (ddPCR / dPCR):** Partitioning a reaction into $20,000+$ nanoliter droplets (**Bio-Rad, Stilla, Qiagen**) for absolute Poisson-statistics quantification of rare mutations (e.g., $EGFR$ T790M, $BCR\\text{-}ABL1$ monitoring) without standard curves.\n  * **DNA Microarrays (SNP Chips & aCGH):** High-density bead or oligonucleotide arrays (**Illumina Infinium Global Screening Array [GSA], Thermo Fisher Axiom**) interrogating $600\\text{k}\\text{--}2\\text{M}$ known SNPs for GWAS, PGx, and consumer genetics, plus **Array Comparative Genomic Hybridization (aCGH)** for clinical exon/chromosomal CNV detection.\n  * **Cytogenetics & MLPA:** **Karyotyping** (G-banding), **FISH** (Fluorescence In Situ Hybridization), **MLPA** (Multiplex Ligation-dependent Probe Amplification for exon-level CNVs in $BRCA1/2$, $DMD$, $SMN1$), and **Optical Genome Mapping (OGM — Bionano Saphyr/Stratys)** (fluorescently labeling ultra-long $>150\\text{ kb}$ DNA molecules in nanochannels to resolve balanced translocations, inversions, and repeat arrays invisible to short-read NGS).\n* **How It Connects:**\n  * **Upstream from:** [N05: Extraction](#n05-biospecimen-collection-cfdnactdna--extraction).\n  * **Downstream to:** [N30: Pharmacogenomics](#n30-pharmacogenomics-pgx--precision-drug-dosing) (clinical PGx arrays), [N32: Rare Disease](#n32-rare-disease-rwgs-reproductive-genetics--newborn-screening) (MLPA/OGM/aCGH), [N33: GWAS & PRS](#n33-complex-disease-gwas-polygenic-risk-scores-prs--preventive-genomics) (biobank SNP genotyping arrays + imputation).",
+      "upstream": [
+        "N05",
+        "N06"
+      ],
+      "downstream": [
+        "N32",
+        "N33",
+        "N30"
+      ],
+      "tools": [
+        "CAP"
+      ],
+      "companies": [
+        "Illumina",
+        "Qiagen",
+        "Bio-Rad"
+      ],
+      "keywords": [
+        "Bio-Rad, Stilla, Qiagen",
+        "Cytogenetics & MLPA",
+        "DNA Microarrays (SNP Chips & aCGH)",
+        "FISH",
+        "Karyotyping",
+        "Key Modalities",
+        "MLPA",
+        "Sanger Sequencing (Chain Termination)"
+      ],
+      "formulas": [
+        "\\text{ddNTPs}",
+        "BCR\\text{-}ABL1",
+        "600\\text{k}\\text{--}2\\text{M}"
+      ]
+    },
+    {
+      "id": "N08",
+      "title": "Second-Gen Short-Read High-Throughput Sequencing (NGS)",
+      "layer": 2,
+      "layerName": "Wet-Lab & Sequencing Technologies",
+      "layerColor": "#10B981",
+      "layerBadge": "Layer 2",
+      "layerIcon": "🧪",
+      "coreConcept": "Massively parallel sequencing of millions to billions of clonal DNA clusters ($50\\text{--}300\\text{ bp}$ paired-end reads), driving the cost of a $30\\times$ human genome from $\\$3\\text{ billion}$ (Human Genome Project) down to $\\$100\\text{--}\\$200$.",
+      "rawBody": "* **Core Concept:** Massively parallel sequencing of millions to billions of clonal DNA clusters ($50\\text{--}300\\text{ bp}$ paired-end reads), driving the cost of a $30\\times$ human genome from $\\$3\\text{ billion}$ (Human Genome Project) down to $\\$100\\text{--}\\$200$.\n* **Competing Short-Read Chemistries & Platforms:**\n  * **Sequencing by Synthesis (SBS — Illumina):** Bridge amplification on patterned flow cells + reversible fluorescent dye-terminator nucleotides (**NovaSeq X / X Plus, NextSeq 1000/2000, MiSeq i100**; XLEAP-SBS chemistry achieving $>85\\text{--}90\\%$ $\\ge Q30$).\n  * **Sequencing by Avidity (Element Biosciences — AVITI / AVITI24):** Separates nucleotide identification (multivalent **Avidite** polymers binding multiple copies of a polony via rolling circle amplification, dramatically lowering dye concentration and reagent cost) from single-base stepping, regularly achieving $Q40\\text{--}Q50$ accuracy ($1\\text{ error in } 10,000\\text{--}100,000\\text{ bp}$).\n  * **Sequencing by Binding (SBB — PacBio Onso):** Interrogates transient binding of native nucleotides prior to incorporation, achieving $>Q40$ ultra-high accuracy for liquid biopsy and rare somatic variant detection.\n  * **DNBSEQ (MGI / Complete Genomics — DNBSEQ-T7 / G400):** Rolling circle replication generates **DNA Nanoballs (DNBs)** with zero clonal PCR error accumulation and zero index hopping.\n  * **Wafer-Scale Mostly Natural Sequencing (Ultima Genomics — UG 100):** Open spinning silicon wafer + mostly natural unlabeled nucleotides + optical flow synthesis, delivering ultra-low-cost ($\\sim\\$80\\text{--}\\$100$) high-throughput genomes and single-cell atlases.\n  * **Semiconductor Sequencing (Thermo Fisher Ion Torrent Genexus):** Detects hydrogen ions ($H^+$/pH change) released during nucleotide incorporation; fast turnaround for targeted hospital oncology panels.\n* **How It Connects:**\n  * **Upstream from:** [N06: Library Prep](#n06-library-preparation-umis--target-enrichment).\n  * **Downstream to:** [N10: Assay Modalities](#n10-sequencing-assay-modalities-panels-wes-wgs-low-pass), [N16: Raw Data Formats (`BCL`/`FASTQ`)](#n16-raw-data-formats-compression--pre-processing-qc), [N38: Commercial Ecosystem](#n38-global-commercial-landscape--companies-matrix).",
+      "upstream": [
+        "N06"
+      ],
+      "downstream": [
+        "N16",
+        "N38",
+        "N10",
+        "N15",
+        "N11",
+        "N12",
+        "N30"
+      ],
+      "tools": [
+        "FASTQ",
+        "CAP"
+      ],
+      "companies": [
+        "Illumina",
+        "PacBio",
+        "Element Biosciences",
+        "Ultima Genomics",
+        "MGI",
+        "Complete Genomics"
+      ],
+      "keywords": [
+        "Avidite",
+        "BCL",
+        "Competing Short-Read Chemistries & Platforms",
+        "DNA Nanoballs (DNBs)",
+        "FASTQ",
+        "Sequencing by Binding (SBB — PacBio Onso)",
+        "Sequencing by Synthesis (SBS — Illumina)"
+      ],
+      "formulas": [
+        "50\\text{--}300\\text{ bp}",
+        "30\\times",
+        "\\"
+      ]
+    },
+    {
+      "id": "N09",
+      "title": "Third-Gen Long-Read & Native Molecule Sequencing",
+      "layer": 2,
+      "layerName": "Wet-Lab & Sequencing Technologies",
+      "layerColor": "#10B981",
+      "layerBadge": "Layer 2",
+      "layerIcon": "🧪",
+      "coreConcept": "Sequences single, unamplified native DNA or RNA molecules spanning $10,000\\text{ bp}$ to $>2,000,000\\text{ bp}$ ($10\\text{ kb}\\text{--}2\\text{ Mb}$), resolving dark regions of the genome (segmental duplications, centromeres, telomeres, paralogs like $CYP2D6$, $SMN1/SMN2$, $GBA1$, $HLA$), phasing haplotypes across entire genes, and simultaneously reading native epigenetic methylation ($5\\text{mC}$, $5\\text{hmC}$, $6\\text{mA}$) without bisulfite conversion.",
+      "rawBody": "* **Core Concept:** Sequences single, unamplified native DNA or RNA molecules spanning $10,000\\text{ bp}$ to $>2,000,000\\text{ bp}$ ($10\\text{ kb}\\text{--}2\\text{ Mb}$), resolving dark regions of the genome (segmental duplications, centromeres, telomeres, paralogs like $CYP2D6$, $SMN1/SMN2$, $GBA1$, $HLA$), phasing haplotypes across entire genes, and simultaneously reading native epigenetic methylation ($5\\text{mC}$, $5\\text{hmC}$, $6\\text{mA}$) without bisulfite conversion.\n* **Core Technologies:**\n  * **Single-Molecule Real-Time (SMRT) HiFi Sequencing (Pacific Biosciences — Revio, Vega):** DNA template is circularized with SMRTbell hairpin adapters inside $25\\text{M}$ Zero-Mode Waveguides (**ZMWs**). A polymerase circles the molecule repeatedly (**Circular Consensus Sequencing [CCS]**), averaging out stochastic subread errors to yield $15\\text{--}25\\text{ kb}$ **HiFi reads** at $>99.9\\%$ ($Q30+$) accuracy.\n  * **Nanopore Sequencing (Oxford Nanopore Technologies — PromethION, GridION, MinION, Flongle):** A motor protein ratchets a single strand of DNA or native RNA through a biological protein nanopore embedded in an electrically resistant membrane. Changes in ionic current ($\\text{pA}$ squiggle signals stored in `POD5`) are decoded in real time by deep learning recurrent/transformer basecallers (**Dorado**). Supports **Ultra-Long reads** ($>100\\text{ kb}\\text{--}4\\text{ Mb}$), **Real-Time Adaptive Sampling** (software-driven voltage reversal to reject off-target DNA molecules mid-read without wet-lab capture), and portable field/ICU diagnostics.\n* **How It Connects:**\n  * **Upstream from:** [N05: HMW DNA Extraction](#n05-biospecimen-collection-cfdnactdna--extraction), [N06: Library Prep](#n06-library-preparation-umis--target-enrichment).\n  * **Downstream to:** [N12: Native Epigenomics](#n12-epigenomics-methylation--3d-chromatin-architecture), [N17: T2T & Pangenome Alignment](#n17-reference-genomes-pangenomes--read-alignment), [N18: Structural Variant & STR Calling](#n18-variant-calling-ecosystem-germline-somatic-sv-cnv-str), [N30: Complex PGx ($CYP2D6$/$HLA$ phasing)](#n30-pharmacogenomics-pgx--precision-drug-dosing), [N32: Rapid NICU rWGS](#n32-rare-disease-rwgs-reproductive-genetics--newborn-screening), [N34: Real-Time Pathogen Surveillance](#n34-infectious-disease-genomics-clinical-mngs--amr-surveillance).",
+      "upstream": [
+        "N05",
+        "N06",
+        "N03"
+      ],
+      "downstream": [
+        "N12",
+        "N30",
+        "N32",
+        "N17",
+        "N34",
+        "N18",
+        "N10",
+        "N16",
+        "N11"
+      ],
+      "tools": [
+        "CAP"
+      ],
+      "companies": [
+        "Pacific Biosciences",
+        "Oxford Nanopore"
+      ],
+      "keywords": [
+        "Circular Consensus Sequencing [CCS]",
+        "Core Technologies",
+        "Dorado",
+        "HiFi reads",
+        "POD5",
+        "Real-Time Adaptive Sampling",
+        "Ultra-Long reads",
+        "ZMWs"
+      ],
+      "formulas": [
+        "10,000\\text{ bp}",
+        ">2,000,000\\text{ bp}",
+        "10\\text{ kb}\\text{--}2\\text{ Mb}"
+      ]
+    },
+    {
+      "id": "N10",
+      "title": "Sequencing Assay Modalities (Panels, WES, WGS, Low-Pass)",
+      "layer": 2,
+      "layerName": "Wet-Lab & Sequencing Technologies",
+      "layerColor": "#10B981",
+      "layerBadge": "Layer 2",
+      "layerIcon": "🧪",
+      "coreConcept": "Selecting the optimal breadth ($\\%$ of genome covered) vs. depth (average coverage $\\times$ per base) trade-off for a given clinical or research question.",
+      "rawBody": "* **Core Concept:** Selecting the optimal breadth ($\\%$ of genome covered) vs. depth (average coverage $\\times$ per base) trade-off for a given clinical or research question.\n* **Comparison Matrix:**\n  * **Targeted Gene Panels ($10\\text{--}600$ genes, $0.05\\text{--}2\\text{ Mb}$):** Sequenced at deep coverage ($500\\times\\text{--}5,000\\times$ for somatic tissue; $10,000\\times\\text{--}50,000\\times$ with UMIs for liquid biopsy $\\text{ctDNA}$). Examples: Comprehensive Genomic Profiling (CGP) oncology panels (FoundationOne CDx, Guardant360, MSK-IMPACT, Illumina TSO 500).\n  * **Whole Exome Sequencing (WES, $\\sim 35\\text{--}50\\text{ Mb}$):** Hybrid capture of all protein-coding exons + flanking splice junctions ($\\pm 20\\text{ bp}$) + optional mitochondrial/clinically relevant non-coding spikes at $80\\times\\text{--}150\\times$ germline coverage. High diagnostic yield per dollar for Mendelian disorders, though limited for non-coding variants, complex SVs, and uniform CNV calling.\n  * **Whole Genome Sequencing (WGS, $\\sim 3.2\\text{ Gb}$):** Unbiased coverage across $100\\%$ of coding and non-coding genome ($30\\times\\text{--}40\\times$ germline; $60\\times\\text{--}100\\times$ tumor / $30\\times$ normal). Captures SNVs, Indels, exons, deep intronic splice variants, enhancers, CNVs, balanced SVs, STRs, and $\\text{mtDNA}$ in a single test.\n  * **Low-Pass WGS (lpWGS, $0.5\\times\\text{--}4\\times$) + Genotype Imputation:** Ultra-low-cost sequencing paired with statistical haplotype imputation (`GLIMPSE2`, `Beagle`) against reference panels (`1000G`, `TOPMed`), rapidly replacing SNP microarrays for Polygenic Risk Scores (PRS) and genome-wide CNV/aneuploidy screening (NIPT).\n  * **Blended Genome-Exome (BGE):** Combines $1\\times\\text{--}3\\times$ WGS with $80\\times$ WES in a single sequencing tube.\n* **How It Connects:**\n  * **Upstream from:** [N08: Short-Read NGS](#n08-second-gen-short-read-high-throughput-sequencing-ngs), [N09: Long-Read Sequencing](#n09-third-gen-long-read--native-molecule-sequencing).\n  * **Downstream to:** [N16: Primary/Secondary Pipelines](#n16-raw-data-formats-compression--pre-processing-qc), [N31: Oncology CGP](#n31-precision-oncology-liquid-biopsy-mrd--neoantigens), [N32: Rare Disease Trio WES/WGS](#n32-rare-disease-rwgs-reproductive-genetics--newborn-screening), [N33: PRS via lpWGS](#n33-complex-disease-gwas-polygenic-risk-scores-prs--preventive-genomics).\n\n---\n\n### Layer 3: Multi-Omics, Single-Cell & Spatial Biology",
+      "upstream": [
+        "N09",
+        "N08",
+        "N01",
+        "N06"
+      ],
+      "downstream": [
+        "N31",
+        "N33",
+        "N32",
+        "N16"
+      ],
+      "tools": [
+        "UNI",
+        "CAP"
+      ],
+      "companies": [
+        "Illumina"
+      ],
+      "keywords": [
+        "1000G",
+        "Beagle",
+        "Blended Genome-Exome (BGE)",
+        "Comparison Matrix",
+        "GLIMPSE2",
+        "TOPMed"
+      ],
+      "formulas": [
+        "\\%",
+        "\\times",
+        "10\\text{--}600"
+      ]
+    },
+    {
+      "id": "N11",
+      "title": "Transcriptomics & Bulk/Isoform RNA-Seq",
+      "layer": 3,
+      "layerName": "Multi-Omics, Single-Cell & Spatial Biology",
+      "layerColor": "#8B5CF6",
+      "layerBadge": "Layer 3",
+      "layerIcon": "🔬",
+      "coreConcept": "While the genome is largely static across a person's cells, the **transcriptome** is dynamic—measuring which genes are actively transcribed into RNA, at what abundance, and in which splice isoform configuration in a specific tissue and disease state.",
+      "rawBody": "* **Core Concept:** While the genome is largely static across a person's cells, the **transcriptome** is dynamic—measuring which genes are actively transcribed into RNA, at what abundance, and in which splice isoform configuration in a specific tissue and disease state.\n* **Methodologies & Analytical Outputs:**\n  * **Poly-A Selection vs. Ribosomal RNA (rRNA) Depletion:** Poly-A enriches mature mRNAs; rRNA depletion (Ribo-Zero) captures non-polyadenylated transcripts, lncRNAs, nascent pre-mRNAs, and degraded FFPE RNA.\n  * **Gene Expression Quantification:** Aligning reads with splice-aware aligners (`STAR`, `HISAT2`) or pseudo-aligners (`Salmon`, `Kallisto`), normalizing counts ($\\text{TPM}$, $\\text{FPKM}$, $\\text{TMM}$), and testing **Differential Gene Expression (DGE)** (`DESeq2`, `edgeR`, `limma-voom`).\n  * **Clinical Diagnostics via RNA-Seq:**\n    1. **Oncogenic Gene Fusions:** Detecting chimeric transcripts ($ALK, ROS1, NTRK1/2/3, RET, FGFR2, TMPRSS2\\text{-}ERG$) using `STAR-Fusion` or `Arriba`, even when intronic genomic breakpoints are unknown.\n    2. **Aberrant Splicing in Rare Disease:** Resolving Variants of Uncertain Significance (VUS) by proving exon skipping, intron retention, or cryptic splice activation (`FRASER`, `LeafCutter`), increasing rare disease diagnostic yield by $10\\text{--}35\\%$ over WGS alone.\n    3. **Allele-Specific Expression (ASE):** Detecting monoallelic silencing caused by imprinting or regulatory mutations (`OUTRIDER`).\n  * **Full-Length Isoform Sequencing:** Long-read RNA-Seq (**PacBio Kinnex / Iso-Seq, ONT Direct RNA Sequencing**) reads complete transcripts $5' \\rightarrow 3'$ without assembly guesswork.\n* **How It Connects:**\n  * **Upstream from:** [N02: Central Dogma](#n02-the-central-dogma-of-molecular-biology), [N08: Short-Read NGS](#n08-second-gen-short-read-high-throughput-sequencing-ngs), [N09: Long-Read Sequencing](#n09-third-gen-long-read--native-molecule-sequencing).\n  * **Downstream to:** [N13: Single-Cell RNA-Seq](#n13-single-cell-multi-omics), [N23: ACMG Functional Evidence (`PS3`)](#n23-clinical-variant-classification-acmgamp--ampascocap), [N31: Precision Oncology Fusions](#n31-precision-oncology-liquid-biopsy-mrd--neoantigens).",
+      "upstream": [
+        "N02",
+        "N09",
+        "N08"
+      ],
+      "downstream": [
+        "N31",
+        "N23",
+        "N13",
+        "N37",
+        "N16",
+        "N14"
+      ],
+      "tools": [
+        "STAR",
+        "DESeq2",
+        "Salmon",
+        "CAP"
+      ],
+      "companies": [
+        "PacBio",
+        "ONT"
+      ],
+      "keywords": [
+        "Aberrant Splicing in Rare Disease",
+        "Allele-Specific Expression (ASE)",
+        "Arriba",
+        "Clinical Diagnostics via RNA-Seq",
+        "DESeq2",
+        "Differential Gene Expression (DGE)",
+        "FRASER",
+        "Full-Length Isoform Sequencing",
+        "Gene Expression Quantification",
+        "HISAT2",
+        "Kallisto",
+        "LeafCutter",
+        "Methodologies & Analytical Outputs",
+        "OUTRIDER",
+        "Oncogenic Gene Fusions",
+        "PS3",
+        "STAR",
+        "STAR-Fusion",
+        "Salmon",
+        "edgeR",
+        "limma-voom",
+        "transcriptome"
+      ],
+      "formulas": [
+        "\\text{TPM}",
+        "\\text{FPKM}",
+        "\\text{TMM}"
+      ]
+    },
+    {
+      "id": "N12",
+      "title": "Epigenomics, Methylation & 3D Chromatin Architecture",
+      "layer": 3,
+      "layerName": "Multi-Omics, Single-Cell & Spatial Biology",
+      "layerColor": "#8B5CF6",
+      "layerBadge": "Layer 3",
+      "layerIcon": "🔬",
+      "coreConcept": "The study of heritable, reversible chemical modifications to DNA and histone proteins—plus 3D nuclear folding—that regulate gene expression and cell identity *without* altering the underlying $A, T, C, G$ sequence.",
+      "rawBody": "* **Core Concept:** The study of heritable, reversible chemical modifications to DNA and histone proteins—plus 3D nuclear folding—that regulate gene expression and cell identity *without* altering the underlying $A, T, C, G$ sequence.\n* **Four Pillars of Epigenomics:**\n  1. **DNA Methylation ($5\\text{mC}$ & $5\\text{hmC}$):** Covalent addition of a methyl group to cytosine at **CpG dinucleotides** by DNA methyltransferases ($DNMT1, DNMT3A, DNMT3B$). Promoter CpG island hypermethylation silences tumor suppressor genes (e.g., $MLH1$ silencing causing sporadic MSI-H cancer; $MGMT$ promoter methylation predicting temozolomide response in glioblastoma). Measured via **Whole-Genome Bisulfite Sequencing (WGBS)**, **Enzymatic Methyl-Seq (EM-Seq)**, **Illumina Infinium MethylationEPIC v2 arrays**, **Cell-Free Methylated DNA Immunoprecipitation (cfMeDIP-Seq)**, or direct native calling via **PacBio/ONT**. Powers **Epigenetic Aging Clocks** (Horvath, GrimAge, DunedinPACE) and **CNS Tumor Methylation Classifiers** (Heidelberg classifier).\n  2. **Histone Modifications (Histone Code):** Post-translational modifications of histone tails ($H3K4me3$ = active promoters; $H3K27ac$ = active enhancers; $H3K27me3$ = Polycomb repression; $H3K9me3$ = heterochromatin) mapped via **ChIP-Seq**, **CUT&RUN**, and **CUT&Tag**.\n  3. **Chromatin Accessibility:** Mapping open, nucleosome-depleted regulatory DNA accessible to transcription factors via **ATAC-Seq** (Assay for Transposase-Accessible Chromatin using hyperactive Tn5) or **DNase-Seq**.\n  4. **3D Genome Topology:** Chromosome Conformation Capture (**Hi-C**, **Micro-C**, **ChIA-PET**) maps **Topologically Associating Domains (TADs)** and enhancer-promoter loops mediated by CTCF and cohesin. Structural variants that disrupt TAD boundaries cause **enhancer hijacking** in rare limb malformations and cancer.\n* **How It Connects:**\n  * **Upstream from:** [N01: Genome Architecture](#n01-dna-chromosomes--genome-architecture), [N08: NGS](#n08-second-gen-short-read-high-throughput-sequencing-ngs), [N09: Long-Read Native Methylation](#n09-third-gen-long-read--native-molecule-sequencing).\n  * **Downstream to:** [N13: Single-Cell Multiome (`scATAC` + `scRNA`)](#n13-single-cell-multi-omics), [N31: Liquid Biopsy Tissue-of-Origin Methylation](#n31-precision-oncology-liquid-biopsy-mrd--neoantigens), [N36: Epigenome Editing](#n36-programmable-gene-editing-crispr-base-prime--epigenome-editing).",
+      "upstream": [
+        "N01",
+        "N09",
+        "N08"
+      ],
+      "downstream": [
+        "N36",
+        "N31",
+        "N13"
+      ],
+      "tools": [
+        "CAP"
+      ],
+      "companies": [
+        "Illumina",
+        "PacBio",
+        "ONT"
+      ],
+      "keywords": [
+        "3D Genome Topology",
+        "ATAC-Seq",
+        "CNS Tumor Methylation Classifiers",
+        "CUT&RUN",
+        "CUT&Tag",
+        "ChIA-PET",
+        "ChIP-Seq",
+        "Chromatin Accessibility",
+        "CpG dinucleotides",
+        "DNase-Seq",
+        "Enzymatic Methyl-Seq (EM-Seq)",
+        "Epigenetic Aging Clocks",
+        "Four Pillars of Epigenomics",
+        "Hi-C",
+        "Histone Modifications (Histone Code)",
+        "Illumina Infinium MethylationEPIC v2 arrays",
+        "Micro-C",
+        "PacBio/ONT",
+        "Topologically Associating Domains (TADs)",
+        "Whole-Genome Bisulfite Sequencing (WGBS)",
+        "enhancer hijacking",
+        "scATAC",
+        "scRNA"
+      ],
+      "formulas": [
+        "5\\text{mC}",
+        "5\\text{hmC}"
+      ]
+    },
+    {
+      "id": "N13",
+      "title": "Single-Cell Multi-Omics",
+      "layer": 3,
+      "layerName": "Multi-Omics, Single-Cell & Spatial Biology",
+      "layerColor": "#8B5CF6",
+      "layerBadge": "Layer 3",
+      "layerIcon": "🔬",
+      "coreConcept": "Bulk sequencing averages signals across millions of cells (like blending a fruit salad into a smoothie). **Single-Cell Omics** isolates individual cells or nuclei (capturing every piece of fruit separately) to resolve cellular heterogeneity, rare stem/resistant tumor clones, developmental trajectories, and tumor-immune microenvironment interactions.",
+      "rawBody": "* **Core Concept:** Bulk sequencing averages signals across millions of cells (like blending a fruit salad into a smoothie). **Single-Cell Omics** isolates individual cells or nuclei (capturing every piece of fruit separately) to resolve cellular heterogeneity, rare stem/resistant tumor clones, developmental trajectories, and tumor-immune microenvironment interactions.\n* **Key Technologies & Modalities:**\n  * **Isolation Platforms:** Droplet microfluidics (**10x Genomics Chromium GEM-X**), picowell arrays (**BD Rhapsody, Honeycomb HIVE**), combinatorial split-pool barcoding without hardware (**Parse Biosciences Evercode, Scale Biosciences**), and gentle acoustic/fluent sorting (**Illumina / Fluent PIPseq**).\n  * **Modalities:**\n    * **scRNA-Seq & snRNA-Seq:** Single-cell or single-nucleus (for frozen/archival brain or tumor tissue) transcriptomics.\n    * **scATAC-Seq & 10x Multiome:** Simultaneous profiling of open chromatin + RNA inside the exact same nucleus.\n    * **CITE-Seq / REAP-Seq:** Oligonucleotide-barcoded antibodies quantify hundreds of cell-surface proteins alongside the transcriptome.\n    * **scTCR-Seq / scBCR-Seq:** Paired $\\alpha/\\beta$ T-cell receptor and heavy/light chain B-cell receptor repertoire sequencing for immunotherapy and autoimmune profiling.\n    * **Perturb-Seq / CRISPR Single-Cell Screens:** Pooling thousands of CRISPR guide RNAs across cells and reading out the full transcriptomic consequence of each genetic knockout in a single experiment.\n  * **Computational Ecosystem:** `Cell Ranger`, `STARsolo`, `Seurat` (R), `Scanpy` / `scverse` / `AnnData` (`.h5ad` in Python), ambient RNA removal (`CellBender`, `SoupX`), doublet detection (`Scrublet`, `DoubletFinder`), batch integration (`Harmony`, `scVI`), dimensionality reduction ($\\text{PCA}$, $\\text{UMAP}$, $\\text{t-SNE}$), pseudotime trajectory (`Monocle3`, `scVelo`, `CellRank`), and cell-cell communication (`CellChat`, `NicheNet`).\n* **How It Connects:**\n  * **Upstream from:** [N11: Transcriptomics](#n11-transcriptomics--bulkisoform-rna-seq), [N12: Epigenomics](#n12-epigenomics-methylation--3d-chromatin-architecture).\n  * **Downstream to:** [N14: Spatial Omics](#n14-spatial-omics--digital-histopathology), [N25: Single-Cell Foundation Models (`scGPT`, `Geneformer`, Virtual Cells)](#n25-genomic--protein-foundation-models-glms-plms--structural-ai), [N37: CAR-T & Immunotherapy Design](#n37-gene-replacement-aavlnp-rna-medicines-asosirnamrna--car-t).",
+      "upstream": [
+        "N12",
+        "N11"
+      ],
+      "downstream": [
+        "N25",
+        "N37",
+        "N14"
+      ],
+      "tools": [
+        "STAR",
+        "Cell Ranger",
+        "Seurat",
+        "Scanpy",
+        "AnnData",
+        "UNI",
+        "CAP"
+      ],
+      "companies": [
+        "Illumina",
+        "10x Genomics",
+        "Parse Biosciences",
+        "Scale Biosciences",
+        "BD"
+      ],
+      "keywords": [
+        ".h5ad",
+        "10x Genomics Chromium GEM-X",
+        "AnnData",
+        "BD Rhapsody, Honeycomb HIVE",
+        "CITE-Seq / REAP-Seq",
+        "Cell Ranger",
+        "CellBender",
+        "CellChat",
+        "CellRank",
+        "Computational Ecosystem",
+        "DoubletFinder",
+        "Geneformer",
+        "Harmony",
+        "Illumina / Fluent PIPseq",
+        "Isolation Platforms",
+        "Key Technologies & Modalities",
+        "Modalities",
+        "Monocle3",
+        "NicheNet",
+        "Parse Biosciences Evercode, Scale Biosciences",
+        "Perturb-Seq / CRISPR Single-Cell Screens",
+        "STARsolo",
+        "Scanpy",
+        "Scrublet",
+        "Seurat",
+        "Single-Cell Omics",
+        "SoupX",
+        "scATAC-Seq & 10x Multiome",
+        "scGPT",
+        "scRNA-Seq & snRNA-Seq"
+      ],
+      "formulas": [
+        "\\alpha/\\beta",
+        "\\text{PCA}",
+        "\\text{UMAP}"
+      ]
+    },
+    {
+      "id": "N14",
+      "title": "Spatial Omics & Digital Histopathology",
+      "layer": 3,
+      "layerName": "Multi-Omics, Single-Cell & Spatial Biology",
+      "layerColor": "#8B5CF6",
+      "layerBadge": "Layer 3",
+      "layerIcon": "🔬",
+      "coreConcept": "Single-cell dissociation destroys a tissue's physical coordinates—losing information about *where* cells sit relative to blood vessels, invasive tumor margins, or tertiary lymphoid structures. **Spatial Omics** measures RNA, proteins, and metabolites directly *in situ* on intact tissue sections while preserving $X, Y, (Z)$ subcellular coordinates.",
+      "rawBody": "* **Core Concept:** Single-cell dissociation destroys a tissue's physical coordinates—losing information about *where* cells sit relative to blood vessels, invasive tumor margins, or tertiary lymphoid structures. **Spatial Omics** measures RNA, proteins, and metabolites directly *in situ* on intact tissue sections while preserving $X, Y, (Z)$ subcellular coordinates.\n* **Major Platform Categories:**\n  * **Sequencing-Based Spatial Barcoding (NGS Readout):**\n    * **10x Genomics Visium & Visium HD:** High-density spatially barcoded $2\\text{ }\\mu\\text{m} \\times 2\\text{ }\\mu\\text{m}$ squares capturing the whole transcriptome across FFPE or fresh-frozen tissue sections.\n    * **Slide-seq / Curio Seeker & Stereo-seq (BGI):** Microbead or DNB nanoball arrays achieving sub-cellular spatial capture.\n  * **Imaging-Based In Situ Hybridization & Cyclic Fluorescence (Subcellular Single-Molecule Readout):**\n    * **10x Genomics Xenium:** Padlock probes + rolling circle amplification + cyclic optical decoding for $400\\text{--}5,000$ RNA targets + multiplexed proteins on the same slide.\n    * **Vizgen MERSCOPE:** Multiplexed Error-Robust Fluorescence In Situ Hybridization (**MERFISH**).\n    * **Bruker / NanoString CosMx SMI & GeoMx DSP:** Spatial Molecular Imager (single-cell/subcellular up to $6,000$ RNAs + $64$ proteins) and Digital Spatial Profiler (UV-photocleavable ROI oligos).\n  * **Spatial Proteomics (High-Plex Tissue Imaging):** **Akoya Biosciences PhenoCycler-Fusion (CODEX)**, **Lunaphore COMET** (sequential immunofluorescence), **Standard BioTools Imaging Mass Cytometry (IMC)**, and **Ionpath MIBI** (Multiplexed Ion Beam Imaging using metal-tagged antibodies).\n  * **Bioinformatics:** Cell segmentation (`Cellpose`, `Mesmer`, `Baysor`), spatial analysis (`Squidpy`, `Giotto`, `SpatialData`, `Seurat v5`).\n* **How It Connects:**\n  * **Upstream from:** [N11: Transcriptomics](#n11-transcriptomics--bulkisoform-rna-seq), [N13: Single-Cell Omics](#n13-single-cell-multi-omics).\n  * **Downstream to:** [N26: Computational Pathology & Multi-Modal AI](#n26-multi-modal-clinical-ai-computational-pathology--virtual-cells), [N31: Precision Oncology Tumor Microenvironment (TME) Biomarkers](#n31-precision-oncology-liquid-biopsy-mrd--neoantigens).",
+      "upstream": [
+        "N13",
+        "N11"
+      ],
+      "downstream": [
+        "N31",
+        "N26"
+      ],
+      "tools": [
+        "Seurat",
+        "Squidpy",
+        "Cellpose",
+        "CAP"
+      ],
+      "companies": [
+        "10x Genomics",
+        "Bruker",
+        "NanoString",
+        "Vizgen",
+        "Akoya Biosciences"
+      ],
+      "keywords": [
+        "10x Genomics Visium & Visium HD",
+        "10x Genomics Xenium",
+        "Akoya Biosciences PhenoCycler-Fusion (CODEX)",
+        "Baysor",
+        "Bioinformatics",
+        "Bruker / NanoString CosMx SMI & GeoMx DSP",
+        "Cellpose",
+        "Giotto",
+        "Ionpath MIBI",
+        "Lunaphore COMET",
+        "MERFISH",
+        "Major Platform Categories",
+        "Mesmer",
+        "Seurat v5",
+        "Slide-seq / Curio Seeker & Stereo-seq (BGI)",
+        "Spatial Omics",
+        "Spatial Proteomics (High-Plex Tissue Imaging)",
+        "SpatialData",
+        "Squidpy",
+        "Vizgen MERSCOPE"
+      ],
+      "formulas": [
+        "2\\text{ }\\mu\\text{m} \\times 2\\text{ }\\mu\\text{m}",
+        "400\\text{--}5,000"
+      ]
+    },
+    {
+      "id": "N15",
+      "title": "Proteomics, Metabolomics & Microbiome/Metagenomics",
+      "layer": 3,
+      "layerName": "Multi-Omics, Single-Cell & Spatial Biology",
+      "layerColor": "#8B5CF6",
+      "layerBadge": "Layer 3",
+      "layerIcon": "🔬",
+      "coreConcept": "Completes the multi-omic cascade from genotype to phenotype by measuring functional proteins, small-molecule metabolic fluxes, and the trillions of symbiotic/pathogenic microbes inhabiting the human body.",
+      "rawBody": "* **Core Concept:** Completes the multi-omic cascade from genotype to phenotype by measuring functional proteins, small-molecule metabolic fluxes, and the trillions of symbiotic/pathogenic microbes inhabiting the human body.\n* **Key Domains & Platforms:**\n  * **High-Throughput Proteomics:**\n    * **Mass Spectrometry (LC-MS/MS):** Data-Independent Acquisition (**DIA-PASEF** on **Bruker timsTOF**; **Thermo Fisher Orbitrap Astral**) quantifying $8,000\\text{--}12,000+$ proteins and post-translational modifications (phosphoproteomics, immunopeptidomics for HLA neoantigens).\n    * **Affinity-Based Plasma Proteomics:** **Olink (Proximity Extension Assay [PEA]**—dual antibodies conjugated to DNA oligos read out via qPCR/NGS, profiling $5,400+$ proteins from microliters of plasma, acquired by Thermo Fisher) and **SomaLogic (SomaScan**—modified aptamers [**SOMAmers**] profiling $11,000$ proteins).\n    * **Single-Molecule Protein Sequencing:** **Quantum-Si (Platinum)**, **Nautilus Biotechnology**, **Portal Biotech** (nanopore protein sequencing).\n  * **Metabolomics & Lipidomics:** High-resolution NMR and GC-MS / LC-MS profiling of endogenous metabolites (amino acids, acylcarnitines, bile acids, lipids), essential for biochemical genetics / Inborn Errors of Metabolism (IEMs) and pharmacometabolomics.\n  * **Microbiome & Metagenomics:** **16S / 18S / ITS Amplicon Sequencing** (`QIIME 2`, `DADA2`) vs. **Shotgun Metagenomics** (`Kraken2`, `MetaPhlAn 4`, `HUMAnN 3`, Metagenome-Assembled Genomes [MAGs]). The gut and intratumoral microbiome directly modulate immune checkpoint inhibitor (PD-1/PD-L1) response and drug metabolism.\n* **How It Connects:**\n  * **Upstream from:** [N02: Central Dogma](#n02-the-central-dogma-of-molecular-biology), [N08: NGS](#n08-second-gen-short-read-high-throughput-sequencing-ngs).\n  * **Downstream to:** [N21: Biobanks (UK Biobank Pharma Proteomics Project — pQTL mapping)](#n21-population-reference-databases--global-biobanks), [N31: Oncology Immunopeptidomics](#n31-precision-oncology-liquid-biopsy-mrd--neoantigens), [N32: Newborn Biochemical + Genomic Screening](#n32-rare-disease-rwgs-reproductive-genetics--newborn-screening), [N34: Clinical Metagenomics (mNGS)](#n34-infectious-disease-genomics-clinical-mngs--amr-surveillance).\n\n---\n\n### Layer 4: Dry-Lab Bioinformatics & Pipeline Engineering",
+      "upstream": [
+        "N02",
+        "N08"
+      ],
+      "downstream": [
+        "N21",
+        "N31",
+        "N32",
+        "N34"
+      ],
+      "tools": [
+        "QIIME 2",
+        "Kraken2",
+        "MetaPhlAn",
+        "UK Biobank"
+      ],
+      "companies": [
+        "Bruker",
+        "Olink",
+        "SomaLogic",
+        "Quantum-Si",
+        "Nautilus Biotechnology"
+      ],
+      "keywords": [
+        "16S / 18S / ITS Amplicon Sequencing",
+        "Affinity-Based Plasma Proteomics",
+        "Bruker timsTOF",
+        "DADA2",
+        "DIA-PASEF",
+        "HUMAnN 3",
+        "High-Throughput Proteomics",
+        "Key Domains & Platforms",
+        "Kraken2",
+        "Mass Spectrometry (LC-MS/MS)",
+        "MetaPhlAn 4",
+        "Metabolomics & Lipidomics",
+        "Microbiome & Metagenomics",
+        "Nautilus Biotechnology",
+        "Olink (Proximity Extension Assay [PEA]",
+        "Portal Biotech",
+        "QIIME 2",
+        "Quantum-Si (Platinum)",
+        "SOMAmers",
+        "Shotgun Metagenomics",
+        "Single-Molecule Protein Sequencing",
+        "SomaLogic (SomaScan",
+        "Thermo Fisher Orbitrap Astral"
+      ],
+      "formulas": [
+        "8,000\\text{--}12,000+"
+      ]
+    },
+    {
+      "id": "N16",
+      "title": "Raw Data Formats, Compression & Pre-Processing QC",
+      "layer": 4,
+      "layerName": "Dry-Lab Bioinformatics & Pipeline Engineering",
+      "layerColor": "#F97316",
+      "layerBadge": "Layer 4",
+      "layerIcon": "💻",
+      "coreConcept": "The entry point of dry-lab bioinformatics—converting raw optical or electrical instrument signals into basecalled nucleotide sequences with calibrated per-base error probabilities and rigorous quality filtering.",
+      "rawBody": "* **Core Concept:** The entry point of dry-lab bioinformatics—converting raw optical or electrical instrument signals into basecalled nucleotide sequences with calibrated per-base error probabilities and rigorous quality filtering.\n* **File Formats, Mathematics & Tools:**\n  * **Raw Instrument Output:** `BCL` / `CBCL` (Illumina binary base call files) or `POD5` (Oxford Nanopore raw electrical squiggle current arrays).\n  * **Basecalling & Demultiplexing:** `bcl-convert` / `bcl2fastq` (Illumina), `Bases2Fastq` (Element), `Dorado` (ONT neural basecaller). Splits pooled run data by sample index barcodes into per-sample **`FASTQ`** (or unaligned `uBAM`) files.\n  * **The `FASTQ` 4-Line Structure & Phred Quality Score ($Q$):**\n    1. `@Read_ID` (instrument, run, flowcell, lane, tile, $X/Y$ coordinates, UMI/index)\n    2. Raw sequence string (`ATCGN...`)\n    3. `+` separator\n    4. ASCII-encoded **Phred Quality Score** string (`Phred+33`), where $Q$ is logarithmically related to the probability $P$ of an incorrect base call:\n       $$Q = -10 \\log_{10}(P) \\iff P = 10^{-Q/10}$$\n       * $Q20 \\implies P = 0.01$ ($99\\%$ accuracy)\n       * $Q30 \\implies P = 0.001$ ($99.9\\%$ accuracy)\n       * $Q40 \\implies P = 0.0001$ ($99.99\\%$ accuracy)\n  * **Pre-Processing & QC Suite:** `FastQC`, `MultiQC` (aggregates QC across entire pipeline), `fastp` / `Trimmomatic` / `Cutadapt` (adapter trimming, poly-G tail removal for 2-color SBS, sliding-window quality filtering), `NanoPlot` / `Chopper` (long-read QC), and `FastQ Screen` / `Kraken2` (cross-species contamination check).\n* **How It Connects:**\n  * **Upstream from:** [N08: Short-Read NGS](#n08-second-gen-short-read-high-throughput-sequencing-ngs), [N09: Long-Read Sequencing](#n09-third-gen-long-read--native-molecule-sequencing).\n  * **Downstream to:** [N17: Read Alignment](#n17-reference-genomes-pangenomes--read-alignment), [N19: Workflow Orchestration](#n19-workflow-orchestration-nextflowwdl-containers--cloud).",
+      "upstream": [
+        "N09",
+        "N08",
+        "N11",
+        "N10",
+        "N06"
+      ],
+      "downstream": [
+        "N19",
+        "N17"
+      ],
+      "tools": [
+        "FASTQ",
+        "BAM",
+        "Nextflow",
+        "WDL",
+        "FastQC",
+        "MultiQC",
+        "fastp",
+        "Trimmomatic",
+        "Kraken2"
+      ],
+      "companies": [
+        "Illumina",
+        "Oxford Nanopore",
+        "ONT"
+      ],
+      "keywords": [
+        "@Read_ID",
+        "ATCGN...",
+        "BCL",
+        "Basecalling & Demultiplexing",
+        "Bases2Fastq",
+        "CBCL",
+        "Chopper",
+        "Cutadapt",
+        "Dorado",
+        "FASTQ",
+        "FastQ Screen",
+        "FastQC",
+        "File Formats, Mathematics & Tools",
+        "Kraken2",
+        "MultiQC",
+        "NanoPlot",
+        "POD5",
+        "Phred Quality Score",
+        "Phred+33",
+        "Pre-Processing & QC Suite",
+        "Raw Instrument Output",
+        "Trimmomatic",
+        "`FASTQ`",
+        "bcl-convert",
+        "bcl2fastq",
+        "fastp",
+        "uBAM"
+      ],
+      "formulas": [
+        "Q = -10 \\log_{10}(P) \\iff P = 10^{-Q/10}"
+      ]
+    },
+    {
+      "id": "N17",
+      "title": "Reference Genomes, Pangenomes & Read Alignment",
+      "layer": 4,
+      "layerName": "Dry-Lab Bioinformatics & Pipeline Engineering",
+      "layerColor": "#F97316",
+      "layerBadge": "Layer 4",
+      "layerIcon": "💻",
+      "coreConcept": "Reconstructing where each millions of reads originated in the genome by mapping them against a coordinate reference system, sorting them, and removing technical artifacts.",
+      "rawBody": "* **Core Concept:** Reconstructing where each millions of reads originated in the genome by mapping them against a coordinate reference system, sorting them, and removing technical artifacts.\n* **Reference Assemblies & The Pangenome Revolution:**\n  * **`GRCh37` (`hg19`):** Legacy assembly (2009); still used in some older clinical panels, requiring coordinate conversion (`Liftover` / `CrossMap`).\n  * **`GRCh38` (`hg38`):** Standard clinical reference assembly including centromere models, alternate haplotype contigs (`ALT`), and decoy sequences (`hs38d1`).\n  * **`T2T-CHM13v2.0` (Telomere-to-Telomere Consortium):** The first truly complete, gapless $3.055\\text{ Gb}$ human genome assembly (resolved using PacBio HiFi + ONT Ultra-Long reads), adding $\\sim 200\\text{ Mb}$ of previously missing acrocentric short arms, centromeric satellites, and segmental duplications.\n  * **Human Pangenome Reference (`HPRC`):** Replaces a single linear reference (which creates *reference bias* against non-European or structurally divergent haplotypes) with a **Bidirected Sequence Graph** representing hundreds of phased, diverse global haplotypes (`Minigraph-Cactus`, `vg` [Variation Graph], `Giraffe` graph aligner, `DRAGEN Graph` multigenome reference).\n* **Alignment Algorithms & Post-Processing:**\n  * **Short-Read DNA Aligners:** `BWA-MEM2` (Burrows-Wheeler Transform + FM-Index seed-and-extend), `Bowtie2`, `Strobealign`, `Illumina DRAGEN` hardware-accelerated mapper.\n  * **Long-Read Aligners:** `Minimap2` (minimizer sketch chaining), `pbmm2`, `Winnowmap2` (for repetitive regions).\n  * **Splice-Aware RNA Aligners:** `STAR` (Suffix Arrays), `HISAT2`.\n  * **Alignment Formats & Tooling:** `SAM` (Sequence Alignment/Map text), `BAM` (Block-BGZF compressed binary), and **`CRAM`** (reference-based differential compression reducing storage footprint by $40\\text{--}60\\%$). Manipulated using `SAMtools`, `Picard`, `Sambamba`, and Python's **`Pysam`** library.\n  * **Post-Alignment Refinement:** Coordinate sorting, **MarkDuplicates** (`Picard` / `samblaster`) or **UMI Duplex Consensus Calling** (`fgbio CallDuplexConsensusReads`), **Base Quality Score Recalibration (BQSR)** (`GATK BaseRecalibrator`), and Post-Alignment QC (`Mosdepth`, `Picard CollectHsMetrics`/`CollectWgsMetrics`, `VerifyBamID2` for sample swap and contamination detection).\n* **How It Connects:**\n  * **Upstream from:** [N16: Raw FASTQ & QC](#n16-raw-data-formats-compression--pre-processing-qc).\n  * **Downstream to:** [N18: Variant Calling](#n18-variant-calling-ecosystem-germline-somatic-sv-cnv-str), [N19: Pipelines](#n19-workflow-orchestration-nextflowwdl-containers--cloud).",
+      "upstream": [
+        "N16",
+        "N09"
+      ],
+      "downstream": [
+        "N18",
+        "N19"
+      ],
+      "tools": [
+        "FASTQ",
+        "BAM",
+        "CRAM",
+        "GATK",
+        "BWA-MEM2",
+        "STAR",
+        "Minimap2",
+        "Nextflow",
+        "WDL",
+        "SAMtools",
+        "Picard",
+        "Pysam",
+        "fgbio",
+        "Mosdepth",
+        "Evo"
+      ],
+      "companies": [
+        "Illumina",
+        "PacBio",
+        "ONT"
+      ],
+      "keywords": [
+        "ALT",
+        "Alignment Algorithms & Post-Processing",
+        "Alignment Formats & Tooling",
+        "BAM",
+        "BWA-MEM2",
+        "Base Quality Score Recalibration (BQSR)",
+        "Bidirected Sequence Graph",
+        "Bowtie2",
+        "CRAM",
+        "CollectWgsMetrics",
+        "CrossMap",
+        "DRAGEN Graph",
+        "GATK BaseRecalibrator",
+        "GRCh37",
+        "GRCh38",
+        "Giraffe",
+        "HISAT2",
+        "HPRC",
+        "Human Pangenome Reference (`HPRC`)",
+        "Illumina DRAGEN",
+        "Liftover",
+        "Long-Read Aligners",
+        "MarkDuplicates",
+        "Minigraph-Cactus",
+        "Minimap2",
+        "Mosdepth",
+        "Picard",
+        "Picard CollectHsMetrics",
+        "Post-Alignment Refinement",
+        "Pysam"
+      ],
+      "formulas": [
+        "3.055\\text{ Gb}",
+        "\\sim 200\\text{ Mb}",
+        "40\\text{--}60\\%"
+      ]
+    },
+    {
+      "id": "N18",
+      "title": "Variant Calling Ecosystem (Germline, Somatic, SV, CNV, STR)",
+      "layer": 4,
+      "layerName": "Dry-Lab Bioinformatics & Pipeline Engineering",
+      "layerColor": "#F97316",
+      "layerBadge": "Layer 4",
+      "layerIcon": "💻",
+      "coreConcept": "Statistical and deep-learning algorithms that distinguish true biological differences (`VCF` / `gVCF` / `BCF` files) from sequencing chemistry errors and alignment artifacts.",
+      "rawBody": "* **Core Concept:** Statistical and deep-learning algorithms that distinguish true biological differences (`VCF` / `gVCF` / `BCF` files) from sequencing chemistry errors and alignment artifacts.\n* **Specialized Callers by Variant Class:**\n  * **Germline SNVs & Indels:**\n    * **`GATK HaplotypeCaller`:** Performs local *de novo* De Bruijn graph assembly in active regions + Pair-HMM likelihood calculation; outputs single-sample `gVCF` files for scalable cohort **Joint Genotyping** (`GenomicsDBImport` + `GenotypeGVCFs`, `GLnexus`).\n    * **`DeepVariant` (Google Health):** Converts pileup alignments into RGB tensor images and uses a Convolutional Neural Network (CNN) to achieve benchmark-leading accuracy across Illumina, Element, PacBio, and ONT reads.\n    * **`Clair3` (ONT/Long-Read)** and **`Illumina DRAGEN`** germline caller.\n  * **Somatic SNVs & Indels (Tumor-Normal Paired or Tumor-Only):**\n    * Must handle low Variant Allele Frequencies ($\\text{VAF} < 1\\%\\text{--}5\\%$), tumor purity, ploidy, subclonal evolution, and FFPE oxidative/deamination artifacts: `GATK Mutect2` (with Panel of Normals [PoN] + `FilterMutectCalls`), `Strelka2`, `DeepSomatic` (Google), `VarDict`, `LoFreq`, `Sage` (Hartwig Medical Foundation).\n  * **Structural Variants (SVs $\\ge 50\\text{ bp}$):**\n    * Short-read (using discordant paired-end insert sizes + split reads): `Manta`, `DELLY`, `LUMPY`/`Smoove`, `GRIDSS2` (purple/linx).\n    * Long-read (spanning entire SVs): `Sniffles2` (supports population/mosaic SVs), `Sawfish` (PacBio), `SVIM`, `cuteSV`, `Severus` (somatic long-read SVs).\n  * **Copy Number Variants (CNVs) & Ploidy:**\n    * Read-depth + B-Allele Frequency (BAF) segmentation: `CNVkit` (WES/Panels), `GATK DetermineGermlineContigPloidy` / `GermlineCNVCaller` (`gCNV`), `Control-FREEC`, `ASCAT`, `FACETS`, `ichorCNA` (tumor fraction from ulpWGS cfDNA), `XHMM`, `ExomeDepth`.\n  * **Short Tandem Repeats (STRs) & Paralog Callers:** `ExpansionHunter`, `GangSTR`, `TRGT` (PacBio Tandem Repeat Genotyping Tool), `Paraphase` / `Cyrius` ($CYP2D6$), `SMNCopyNumberCaller` ($SMN1/SMN2$).\n  * **Haplotype Phasing & VCF Manipulation:** `WhatsHap`, `HapCUT2`, `LongPhase` (assigning variants to maternal vs. paternal haplotypes `0|1` vs. `1|0`), and **`bcftools`** / `vcflib` / `cyvcf2` for normalization (`bcftools norm` left-aligning indels), filtering, and merging.\n* **How It Connects:**\n  * **Upstream from:** [N03: Spectrum of Variation](#n03-spectrum-of-genetic-variation), [N17: Alignment (`BAM`/`CRAM`)](#n17-reference-genomes-pangenomes--read-alignment).\n  * **Downstream to:** [N20: Variant Annotation](#n20-variant-annotation-engines-hgvs--mane-transcripts), [N29: GIAB Benchmarking (`hap.py` / `truvari`)](#n29-clinical-lab-regulations-cliacap-fda-cdx-giab--data-privacy).",
+      "upstream": [
+        "N03",
+        "N17",
+        "N09"
+      ],
+      "downstream": [
+        "N20",
+        "N29",
+        "N19",
+        "N31"
+      ],
+      "tools": [
+        "BAM",
+        "CRAM",
+        "VCF",
+        "gVCF",
+        "BCF",
+        "GATK",
+        "HaplotypeCaller",
+        "DeepVariant",
+        "bcftools",
+        "CNVkit",
+        "Manta",
+        "Sniffles2",
+        "ExpansionHunter",
+        "TRGT",
+        "DeepSomatic"
+      ],
+      "companies": [
+        "Illumina",
+        "PacBio",
+        "ONT"
+      ],
+      "keywords": [
+        "0|1",
+        "1|0",
+        "ASCAT",
+        "BAM",
+        "BCF",
+        "CNVkit",
+        "CRAM",
+        "Clair3",
+        "Control-FREEC",
+        "Copy Number Variants (CNVs) & Ploidy",
+        "Cyrius",
+        "DELLY",
+        "DeepSomatic",
+        "DeepVariant",
+        "ExomeDepth",
+        "ExpansionHunter",
+        "FACETS",
+        "FilterMutectCalls",
+        "GATK DetermineGermlineContigPloidy",
+        "GATK HaplotypeCaller",
+        "GATK Mutect2",
+        "GLnexus",
+        "GRIDSS2",
+        "GangSTR",
+        "GenomicsDBImport",
+        "GenotypeGVCFs",
+        "Germline SNVs & Indels",
+        "GermlineCNVCaller",
+        "HapCUT2",
+        "Haplotype Phasing & VCF Manipulation"
+      ],
+      "formulas": [
+        "\\text{VAF} < 1\\%\\text{--}5\\%",
+        "\\ge 50\\text{ bp}"
+      ]
+    },
+    {
+      "id": "N19",
+      "title": "Workflow Orchestration (Nextflow/WDL), Containers & Cloud",
+      "layer": 4,
+      "layerName": "Dry-Lab Bioinformatics & Pipeline Engineering",
+      "layerColor": "#F97316",
+      "layerBadge": "Layer 4",
+      "layerIcon": "💻",
+      "coreConcept": "Clinical genomics requires executing dozens of command-line tools across terabytes of data with $100\\%$ deterministic reproducibility, fault tolerance, auditability, and elastic scaling from a laptop to thousands of cloud CPUs/GPUs/FPGAs.",
+      "rawBody": "* **Core Concept:** Clinical genomics requires executing dozens of command-line tools across terabytes of data with $100\\%$ deterministic reproducibility, fault tolerance, auditability, and elastic scaling from a laptop to thousands of cloud CPUs/GPUs/FPGAs.\n* **The Modern Bioinformatic Engineering Stack:**\n  * **Workflow Languages & Engines:**\n    * **`Nextflow` (DSL2):** Dataflow programming model developed by Seqera Labs; powers the community-curated **`nf-core`** ecosystem (`nf-core/sarek` for germline/somatic WGS/WES, `nf-core/rnaseq`, `nf-core/raredisease`, `nf-core/oncoanalyser`).\n    * **`WDL` (Workflow Description Language):** Developed by the Broad Institute and OpenWDL; executed via **`Cromwell`** or **`Miniwdl`**, standard across Broad's **GATK Best Practices**, Terra, and the All of Us / AnVIL cloud platforms.\n    * **`Snakemake`** (Python-based rule orchestration) and **`CWL`** (Common Workflow Language).\n  * **Containerization & Environment Management:**\n    * **`Docker`** and **`Singularity` / `Apptainer`** (rootless containers for HPC clusters) guarantee identical OS libraries and binary versions across every machine.\n    * **`BioContainers`**, **`Bioconda` / `Mamba` / `Pixi`**, and **`Seqera Wave`** (on-demand container provisioning).\n  * **Hardware Acceleration:**\n    * **FPGA:** **Illumina DRAGEN** (Dynamic Read Analysis for GENomics) processes a $30\\times$ WGS from `FASTQ` to `VCF` in $\\sim 20\\text{--}30\\text{ minutes}$.\n    * **GPU:** **NVIDIA Clara Parabricks** accelerates `BWA-MEM2`, `GATK HaplotypeCaller`, `Mutect2`, and `DeepVariant` on GPUs.\n  * **Enterprise Cloud Genomics Platforms:** `Seqera Platform` (Nextflow Tower), `Terra.bio` (Broad/Verily/Microsoft), `DNAnexus`, `AWS HealthOmics`, `Seven Bridges` (Velsera), `Lifebit` (federated Trusted Research Environments [TREs]), `TileDB-Cloud`.\n* **How It Connects:**\n  * **Upstream from:** [N16: QC](#n16-raw-data-formats-compression--pre-processing-qc), [N17: Alignment](#n17-reference-genomes-pangenomes--read-alignment), [N18: Variant Calling](#n18-variant-calling-ecosystem-germline-somatic-sv-cnv-str).\n  * **Downstream to:** [N28: ETL & LIMS/EHR Automation](#n28-clinical-etl-pipelines-rest-apis-lims--ehr-integration), [N29: CLIA/CAP Pipeline Validation](#n29-clinical-lab-regulations-cliacap-fda-cdx-giab--data-privacy).\n\n---\n\n### Layer 5: Tertiary Analysis, Databases & Clinical Standards",
+      "upstream": [
+        "N17",
+        "N18",
+        "N16"
+      ],
+      "downstream": [
+        "N29",
+        "N28",
+        "N27"
+      ],
+      "tools": [
+        "FASTQ",
+        "VCF",
+        "GATK",
+        "HaplotypeCaller",
+        "DeepVariant",
+        "BWA-MEM2",
+        "Nextflow",
+        "WDL",
+        "Cromwell",
+        "Docker",
+        "Singularity",
+        "Mutect2",
+        "UNI",
+        "TileDB",
+        "All of Us"
+      ],
+      "companies": [
+        "Illumina",
+        "ONT",
+        "Seqera Labs",
+        "DNAnexus",
+        "Velsera",
+        "Terra.bio",
+        "Lifebit",
+        "NVIDIA",
+        "AWS"
+      ],
+      "keywords": [
+        "AWS HealthOmics",
+        "Apptainer",
+        "BWA-MEM2",
+        "BioContainers",
+        "Bioconda",
+        "CWL",
+        "Containerization & Environment Management",
+        "Cromwell",
+        "DNAnexus",
+        "DeepVariant",
+        "Docker",
+        "Enterprise Cloud Genomics Platforms",
+        "FASTQ",
+        "FPGA",
+        "GATK Best Practices",
+        "GATK HaplotypeCaller",
+        "GPU",
+        "Hardware Acceleration",
+        "Illumina DRAGEN",
+        "Lifebit",
+        "Mamba",
+        "Miniwdl",
+        "Mutect2",
+        "NVIDIA Clara Parabricks",
+        "Nextflow",
+        "Pixi",
+        "Seqera Platform",
+        "Seqera Wave",
+        "Seven Bridges",
+        "Singularity"
+      ],
+      "formulas": [
+        "100\\%",
+        "30\\times",
+        "\\sim 20\\text{--}30\\text{ minutes}"
+      ]
+    },
+    {
+      "id": "N20",
+      "title": "Variant Annotation Engines, HGVS & MANE Transcripts",
+      "layer": 5,
+      "layerName": "Tertiary Analysis, Databases & Clinical Standards",
+      "layerColor": "#EAB308",
+      "layerBadge": "Layer 5",
+      "layerIcon": "📊",
+      "coreConcept": "A raw `VCF` file only contains coordinates (`chr17:43094464 G>A`). **Variant Annotation** maps those genomic coordinates onto gene transcripts, predicts protein consequences, attaches population frequencies, and standardizes clinical nomenclature.",
+      "rawBody": "* **Core Concept:** A raw `VCF` file only contains coordinates (`chr17:43094464 G>A`). **Variant Annotation** maps those genomic coordinates onto gene transcripts, predicts protein consequences, attaches population frequencies, and standardizes clinical nomenclature.\n* **Key Tools & Standards:**\n  * **Annotation Engines:** **`Ensembl VEP` (Variant Effect Predictor)**, **`ANNOVAR`**, **`SnpEff` & `SnpSift`**, **`Illumina Nirvana`**, and **`vcfanno`**.\n  * **Transcript Standardization (`MANE`):** Historically, different labs annotated the same variant on different RefSeq (`NM_...`) or Ensembl (`ENST...`) transcripts, causing conflicting clinical reports. **MANE (Matched Annotation from NCBI and EMBL-EBI)** defines:\n    * **`MANE Select`:** One $100\\%$ identical canonical transcript per protein-coding gene agreed upon by both NCBI and Ensembl.\n    * **`MANE Plus Clinical`:** Additional transcripts needed to report known pathogenic variants not covered by MANE Select.\n  * **HGVS (Human Genome Variation Society) Nomenclature:**\n    * Genomic: `NC_000007.14:g.140753336A>T`\n    * Coding DNA: `NM_004333.6(BRAF):c.1799T>A`\n    * Protein: `NP_004324.2:p.Val600Glu` (or `p.V600E`)\n    * Validated programmatically via `hgvs` Python package or `VariantValidator`.\n* **How It Connects:**\n  * **Upstream from:** [N02: Central Dogma](#n02-the-central-dogma-of-molecular-biology), [N18: Variant Calling](#n18-variant-calling-ecosystem-germline-somatic-sv-cnv-str).\n  * **Downstream to:** [N21: Population Filtering](#n21-population-reference-databases--global-biobanks), [N22: Clinical Knowledgebases](#n22-clinical-variant-knowledgebases--phenotype-ontologies), [N23: ACMG Classification](#n23-clinical-variant-classification-acmgamp--ampascocap).",
+      "upstream": [
+        "N18",
+        "N02"
+      ],
+      "downstream": [
+        "N21",
+        "N23",
+        "N22",
+        "N24"
+      ],
+      "tools": [
+        "VCF",
+        "Ensembl VEP",
+        "ANNOVAR",
+        "SnpEff",
+        "VariantValidator",
+        "MANE",
+        "HGVS",
+        "CAP"
+      ],
+      "companies": [
+        "Illumina",
+        "ONT"
+      ],
+      "keywords": [
+        "ANNOVAR",
+        "Annotation Engines",
+        "ENST...",
+        "Ensembl VEP",
+        "Illumina Nirvana",
+        "Key Tools & Standards",
+        "MANE",
+        "MANE Plus Clinical",
+        "MANE Select",
+        "NC_000007.14:g.140753336A>T",
+        "NM_...",
+        "NM_004333.6(BRAF):c.1799T>A",
+        "NP_004324.2:p.Val600Glu",
+        "SnpEff",
+        "SnpSift",
+        "Transcript Standardization (`MANE`)",
+        "VCF",
+        "Variant Annotation",
+        "VariantValidator",
+        "`ANNOVAR`",
+        "`Ensembl VEP` (Variant Effect Predictor)",
+        "`Illumina Nirvana`",
+        "`MANE Plus Clinical`",
+        "`MANE Select`",
+        "`SnpEff` & `SnpSift`",
+        "`vcfanno`",
+        "chr17:43094464 G>A",
+        "hgvs",
+        "p.V600E",
+        "vcfanno"
+      ],
+      "formulas": [
+        "100\\%"
+      ]
+    },
+    {
+      "id": "N21",
+      "title": "Population Reference Databases & Global Biobanks",
+      "layer": 5,
+      "layerName": "Tertiary Analysis, Databases & Clinical Standards",
+      "layerColor": "#EAB308",
+      "layerBadge": "Layer 5",
+      "layerIcon": "📊",
+      "coreConcept": "A human genome contains $4\\text{--}5\\text{ million}$ variants. To find the $1\\text{--}2$ variants causing a rare Mendelian disease, $99.9\\%$ of benign common variants must be filtered out using large population allele frequency databases. Furthermore, biobanks linking WGS with longitudinal Electronic Health Records (EHRs) power drug target discovery.",
+      "rawBody": "* **Core Concept:** A human genome contains $4\\text{--}5\\text{ million}$ variants. To find the $1\\text{--}2$ variants causing a rare Mendelian disease, $99.9\\%$ of benign common variants must be filtered out using large population allele frequency databases. Furthermore, biobanks linking WGS with longitudinal Electronic Health Records (EHRs) power drug target discovery.\n* **Major Databases & Constraint Metrics:**\n  * **`gnomAD` (Genome Aggregation Database, v4.1+):** Aggregates $>800,000$ exomes and genomes across diverse ancestries. Provides population-specific Minor Allele Frequencies ($\\text{MAF}$ / $\\text{grpmax filtering AF}$) and **Gene Constraint Metrics**:\n    * **`pLI` (Probability of being Loss-of-Function Intolerant $\\ge 0.9$)** and **`LOEUF` (Loss-of-function Observed/Expected Upper bound Fraction $< 0.35$):** Identifies haploinsufficient genes where losing one copy causes severe disease.\n    * **`mis_z` & Regional Missense Constraint:** Identifies protein domains intolerant to amino acid changes.\n  * **Global Biobanks & Diversity Initiatives:**\n    * **`UK Biobank (UKB)`:** $500,000$ participants with WGS, WES, Olink/SomaScan proteomics, MRI imaging, and longitudinal health records.\n    * **`All of Us Research Program` (NIH):** $>500,000\\text{--}1\\text{M}$ diverse US participants with short/long-read WGS and EHR data.\n    * **`TOPMed` (NHLBI Trans-Omics for Precision Medicine)** & **`1000 Genomes Project`**.\n    * **`FinnGen`** (Finland founder isolate biobank), **`Estonian Biobank`**, **`BioBank Japan`**, **`deCODE Genetics`** (Iceland).\n    * **`GenomeIndia` ($10,000+$ Indian genomes) & `IndiGen` (CSIR India):** Critical for filtering South Asian-specific benign variants and founder alleles underrepresented in European-centric catalogs.\n    * **`H3Africa`** (Human Heredity and Health in Africa), **`Qatar Genome Programme`**, **`Mexico Biobank`**, **`Singapore SG100K`**.\n* **How It Connects:**\n  * **Upstream from:** [N04: Population Genetics](#n04-inheritance-patterns--population-genetics), [N20: Annotation](#n20-variant-annotation-engines-hgvs--mane-transcripts).\n  * **Downstream to:** [N23: ACMG Frequency Codes (`BA1`, `BS1`, `PM2`)](#n23-clinical-variant-classification-acmgamp--ampascocap), [N33: GWAS & PRS](#n33-complex-disease-gwas-polygenic-risk-scores-prs--preventive-genomics), [N35: Genetically Validated Drug Targets](#n35-targeted-small-molecules-monoclonal-antibodies--adcs).",
+      "upstream": [
+        "N04",
+        "N20",
+        "N15"
+      ],
+      "downstream": [
+        "N33",
+        "N23",
+        "N35"
+      ],
+      "tools": [
+        "gnomAD",
+        "MANE",
+        "HGVS",
+        "UK Biobank",
+        "All of Us",
+        "GenomeIndia",
+        "CAP"
+      ],
+      "companies": [
+        "ONT",
+        "Olink"
+      ],
+      "keywords": [
+        "1000 Genomes Project",
+        "All of Us Research Program",
+        "BA1",
+        "BS1",
+        "BioBank Japan",
+        "Estonian Biobank",
+        "FinnGen",
+        "Gene Constraint Metrics",
+        "GenomeIndia",
+        "Global Biobanks & Diversity Initiatives",
+        "H3Africa",
+        "IndiGen",
+        "LOEUF",
+        "Major Databases & Constraint Metrics",
+        "Mexico Biobank",
+        "PM2",
+        "Qatar Genome Programme",
+        "Singapore SG100K",
+        "TOPMed",
+        "UK Biobank (UKB)",
+        "`1000 Genomes Project`",
+        "`All of Us Research Program` (NIH)",
+        "`BioBank Japan`",
+        "`Estonian Biobank`",
+        "`FinnGen`",
+        "`H3Africa`",
+        "`Mexico Biobank`",
+        "`Qatar Genome Programme`",
+        "`Singapore SG100K`",
+        "`UK Biobank (UKB)`"
+      ],
+      "formulas": [
+        "4\\text{--}5\\text{ million}",
+        "1\\text{--}2",
+        "99.9\\%"
+      ]
+    },
+    {
+      "id": "N22",
+      "title": "Clinical Variant Knowledgebases & Phenotype Ontologies",
+      "layer": 5,
+      "layerName": "Tertiary Analysis, Databases & Clinical Standards",
+      "layerColor": "#EAB308",
+      "layerBadge": "Layer 5",
+      "layerIcon": "📊",
+      "coreConcept": "Curated repositories linking specific genetic variants and genes to human diseases, clinical assertions, functional assays, and therapeutic actionability.",
+      "rawBody": "* **Core Concept:** Curated repositories linking specific genetic variants and genes to human diseases, clinical assertions, functional assays, and therapeutic actionability.\n* **Germline & Rare Disease Databases:**\n  * **`ClinVar` (NCBI):** Public archive of variant-disease assertions submitted by clinical labs, rated by **Review Status ($0\\text{ to }4\\text{ Gold Stars}$)**: $3\\text{ stars}$ = reviewed by an expert panel (ClinGen VCEP); $4\\text{ stars}$ = practice guideline.\n  * **`ClinGen` (Clinical Genome Resource):** NIH-funded consortium curating **Gene-Disease Validity** (Definitive, Strong, Moderate, Limited), **Dosage Sensitivity** (Haploinsufficiency / Triplosensitivity scores $0\\text{--}3$), and Variant Clinical Actionability.\n  * **`OMIM` (Online Mendelian Inheritance in Man)**, **`Orphanet`**, **`GeneReviews`**, **`DECIPHER`** (rare CNV/developmental disorders), **`HGMD` (Human Gene Mutation Database — Qiagen)**, and **`PanelApp` (Genomics England / Australia)** (crowdsourced green/amber/red diagnostic gene panels).\n* **Somatic Oncology Knowledgebases:**\n  * **`COSMIC` (Catalogue Of Somatic Mutations In Cancer)** & **Cancer Gene Census**.\n  * **`OncoKB` (MSKCC — FDA-recognized database):** Classifies somatic mutations by therapeutic Level of Evidence (**Level 1:** FDA-recognized biomarker for an FDA-approved drug; **Level 2:** Standard care biomarker; **Level 3:** Clinical evidence; **Level 4:** Biological evidence; **Level R1/R2:** Resistance).\n  * **`CIViC` (Clinical Interpretation of Variants in Cancer):** Open-source crowd-curated cancer variant knowledgebase.\n  * **`cBioPortal`**, **`TCGA` (The Cancer Genome Atlas)**, **`ICGC`**, **`DepMap` (Broad Cancer Dependency Map)**.\n* **Phenotype & Medical Ontologies:**\n  * **`HPO` (Human Phenotype Ontology):** Standardized vocabulary of $>16,000$ phenotypic abnormalities (e.g., `HP:0001250` = Seizure). Enables **Phenotype-Driven Variant Prioritization** (`Exomiser`, `LIRICAL`, `Phrank`, `AMELIE`) to match a patient's symptoms against known zebrafish/mouse/human gene phenotypes.\n  * **`MONDO` Disease Ontology**, **`SNOMED CT`**, **`ICD-10` / `ICD-11`**, **`LOINC`** (lab test codes), **`RxNorm`**.\n* **How It Connects:**\n  * **Upstream from:** [N20: Variant Annotation](#n20-variant-annotation-engines-hgvs--mane-transcripts).\n  * **Downstream to:** [N23: ACMG/AMP & AMP/ASCO/CAP Classification](#n23-clinical-variant-classification-acmgamp--ampascocap), [N27: GA4GH Phenopackets & FHIR](#n27-healthcare-data-interoperability-hl7-fhir-genomics-ga4gh-omop).",
+      "upstream": [
+        "N20"
+      ],
+      "downstream": [
+        "N27",
+        "N23",
+        "N31"
+      ],
+      "tools": [
+        "STAR",
+        "Exomiser",
+        "LIRICAL",
+        "ClinVar",
+        "COSMIC",
+        "OncoKB",
+        "OMIM",
+        "HPO",
+        "ClinGen",
+        "MANE",
+        "HGVS",
+        "TCGA",
+        "cBioPortal",
+        "DECIPHER",
+        "Orphanet"
+      ],
+      "companies": [
+        "ONT",
+        "Qiagen"
+      ],
+      "keywords": [
+        "AMELIE",
+        "CIViC",
+        "COSMIC",
+        "Cancer Gene Census",
+        "ClinGen",
+        "ClinVar",
+        "DECIPHER",
+        "DepMap",
+        "Dosage Sensitivity",
+        "Exomiser",
+        "Gene-Disease Validity",
+        "GeneReviews",
+        "Germline & Rare Disease Databases",
+        "HGMD",
+        "HP:0001250",
+        "HPO",
+        "ICD-10",
+        "ICD-11",
+        "ICGC",
+        "LIRICAL",
+        "LOINC",
+        "Level 1",
+        "Level 2",
+        "Level 3",
+        "Level 4",
+        "Level R1/R2",
+        "MONDO",
+        "OMIM",
+        "OncoKB",
+        "Orphanet"
+      ],
+      "formulas": [
+        "0\\text{ to }4\\text{ Gold Stars}",
+        "3\\text{ stars}",
+        "4\\text{ stars}"
+      ]
+    },
+    {
+      "id": "N23",
+      "title": "Clinical Variant Classification (ACMG/AMP & AMP/ASCO/CAP)",
+      "layer": 5,
+      "layerName": "Tertiary Analysis, Databases & Clinical Standards",
+      "layerColor": "#EAB308",
+      "layerBadge": "Layer 5",
+      "layerIcon": "📊",
+      "coreConcept": "The global rulebook used by molecular pathologists and clinical geneticists to weigh evidence and classify a variant's clinical meaning.",
+      "rawBody": "* **Core Concept:** The global rulebook used by molecular pathologists and clinical geneticists to weigh evidence and classify a variant's clinical meaning.\n* **Germline Framework: ACMG/AMP Guidelines (Richards et al. 2015 & ClinGen Bayesian Point Updates):**\n  * **5-Tier Classification System:**\n    1. **Pathogenic ($\\text{P}$, $\\ge 99\\%$ probability of pathogenicity)**\n    2. **Likely Pathogenic ($\\text{LP}$, $\\ge 90\\%$ probability)**\n    3. **Variant of Uncertain Significance ($\\text{VUS}$, $10\\%\\text{--}89\\%$ probability)** — *cannot* be used alone for clinical decision-making; requires family cosegregation, RNA splicing assays, or functional reclassification.\n    4. **Likely Benign ($\\text{LB}$, $\\le 10\\%$ probability)**\n    5. **Benign ($\\text{B}$, $\\le 1\\%$ probability)**\n  * **The 28 Evidence Criteria Matrix:**\n    * **Pathogenic Criteria:** **Very Strong (`PVS1`:** null variant [nonsense, frameshift, canonical $\\pm 1,2$ splice site, initiation codon, single/multi-exon deletion] in a gene where Loss-of-Function [LoF] is a known mechanism of disease); **Strong (`PS1`–`PS4`:** same amino acid change as known pathogenic variant; confirmed *de novo* [`PS2`]; well-established functional assay [`PS3`]; enriched in cases vs. controls [`PS4`]); **Moderate (`PM1`–`PM6`:** mutational hotspot/functional domain [`PM1`]; absent/extremely rare in gnomAD [`PM2_Supporting`]; *in trans* with a pathogenic variant for a recessive disorder [`PM3`]; in-frame indel/stop-loss [`PM4`]; novel missense at same codon as known pathogenic missense [`PM5`]; assumed *de novo* [`PM6`]); **Supporting (`PP1`–`PP4`:** cosegregation in family [`PP1`]; missense in gene with low benign missense rate [`PP2`]; computational/AI prediction [`PP3`—calibrated up to Strong/Moderate via ClinGen Pejaver et al.]; highly specific phenotype [`PP4`]).\n    * **Benign Criteria:** **Stand-Alone (`BA1`:** allele frequency $>5\\%$ in gnomAD); **Strong (`BS1`–`BS4`:** frequency greater than expected for disorder [`BS1`]; observed in healthy adults [`BS2`]; functional study shows no damaging effect [`BS3`]; lack of segregation [`BS4`]); **Supporting (`BP1`–`BP7`:** computational benign prediction [`BP4`], silent variant with no splice impact [`BP7`]).\n  * **ACMG Secondary Findings (`ACMG SF v3.2+`):** Mandatory/opt-out reporting of medically actionable pathogenic variants in $81+$ genes (e.g., $BRCA1/2$, $LDLR$, $MLH1$, $MYBPC3$, $RYR1$) discovered incidentally during clinical WES/WGS.\n* **Somatic Oncology Framework: AMP/ASCO/CAP Guidelines (Li et al. 2017) & ESCAT:**\n  * **Tier I:** Variants of Strong Clinical Significance (Level A: FDA-approved therapy / professional guidelines; Level B: well-powered clinical studies).\n  * **Tier II:** Variants of Potential Clinical Significance (Level C: FDA-approved for different tumor type [off-label] or investigational clinical trial inclusion criteria; Level D: preclinical evidence).\n  * **Tier III:** Variants of Unknown Clinical Significance (Somatic VUS).\n  * **Tier IV:** Benign or Likely Benign variants.\n* **Commercial & Open-Source Decision Support Platforms:** `Genoox Franklin`, `Varsome Clinical`, `Qiagen Clinical Insight (QCI)`, `Illumina Emedgene`, `Fabric Genomics`, `Moon` (Diploid/Invitae), `InterVar`, `AutoPVS1`, `ClassifyCNV` (ACMG/ClinGen CNV rubric).\n* **How It Connects:**\n  * **Upstream from:** [N21: Population Databases](#n21-population-reference-databases--global-biobanks), [N22: Clinical Knowledgebases](#n22-clinical-variant-knowledgebases--phenotype-ontologies), [N24: Variant Effect AI (`PP3`/`BP4`)](#n24-variant-effect-predictors--non-coding-regulatory-ai).\n  * **Downstream to:** [N27: FHIR Clinical Reports](#n27-healthcare-data-interoperability-hl7-fhir-genomics-ga4gh-omop), [N31: Precision Oncology](#n31-precision-oncology-liquid-biopsy-mrd--neoantigens), [N32: Rare Disease Diagnosis](#n32-rare-disease-rwgs-reproductive-genetics--newborn-screening).\n\n---\n\n### Layer 6: AI, Deep Learning & Foundation Models",
+      "upstream": [
+        "N21",
+        "N24",
+        "N22",
+        "N03",
+        "N11",
+        "N20"
+      ],
+      "downstream": [
+        "N31",
+        "N27",
+        "N32",
+        "N24",
+        "N30",
+        "N29"
+      ],
+      "tools": [
+        "gnomAD",
+        "ClinGen",
+        "HL7",
+        "GA4GH",
+        "CAP"
+      ],
+      "companies": [
+        "Illumina",
+        "ONT",
+        "Qiagen",
+        "Invitae",
+        "Genoox",
+        "Fabric Genomics"
+      ],
+      "keywords": [
+        "5-Tier Classification System",
+        "ACMG SF v3.2+",
+        "ACMG Secondary Findings (`ACMG SF v3.2+`)",
+        "AutoPVS1",
+        "BA1",
+        "BP1",
+        "BP4",
+        "BP7",
+        "BS1",
+        "BS2",
+        "BS3",
+        "BS4",
+        "Benign ($\\text{B}$, $\\le 1\\%$ probability)",
+        "Benign Criteria",
+        "ClassifyCNV",
+        "Fabric Genomics",
+        "Genoox Franklin",
+        "Illumina Emedgene",
+        "InterVar",
+        "Moderate (`PM1`–`PM6`",
+        "Moon",
+        "PM1",
+        "PM2_Supporting",
+        "PM3",
+        "PM4",
+        "PM5",
+        "PM6",
+        "PP1",
+        "PP2",
+        "PP3"
+      ],
+      "formulas": [
+        "\\text{P}",
+        "\\ge 99\\%",
+        "\\text{LP}"
+      ]
+    },
+    {
+      "id": "N24",
+      "title": "Variant Effect Predictors & Non-Coding Regulatory AI",
+      "layer": 6,
+      "layerName": "AI, Deep Learning & Foundation Models",
+      "layerColor": "#EF4444",
+      "layerBadge": "Layer 6",
+      "layerIcon": "🤖",
+      "coreConcept": "Over $40\\%$ of missense variants in ClinVar are VUS, and $98.5\\%$ of the genome is non-coding. Deep learning models trained on evolutionary conservation across thousands of species, 3D protein structure, and functional genomics assays predict the pathogenic impact of every possible single-nucleotide change in the human genome.",
+      "rawBody": "* **Core Concept:** Over $40\\%$ of missense variants in ClinVar are VUS, and $98.5\\%$ of the genome is non-coding. Deep learning models trained on evolutionary conservation across thousands of species, 3D protein structure, and functional genomics assays predict the pathogenic impact of every possible single-nucleotide change in the human genome.\n* **Key Models & Architectures:**\n  * **Missense Pathogenicity Predictors:**\n    * **`AlphaMissense` (Google DeepMind):** Adapts AlphaFold structural representations + evolutionary multiple sequence alignments (MSAs) + weak population frequency labels to score all $71\\text{ million}$ possible human single-amino-acid substitutions, classifying $89\\%$ as either likely benign or likely pathogenic.\n    * **`PrimateAI-3D` (Illumina):** Trained on common variants observed in $>230$ non-human primate species (variants tolerated in healthy primates are nearly always benign in humans) combined with 3D protein voxel convolutions.\n    * **`EVE` (Evolutionary Model of Variant Effect):** Unsupervised Variational Autoencoder (VAE) trained on evolutionary sequences.\n    * **Ensemble & Meta-Predictors:** `REVEL` (Rare Exome Variant Ensemble Learner), `CADD` (Combined Annotation Dependent Depletion), `BayesDel`, `MutPred2`, `ESM-1b` zero-shot log-likelihood ratios.\n  * **RNA Splicing AI:**\n    * **`SpliceAI` (Illumina)** & **`Pangolin`:** Deep dilated Convolutional Neural Networks that scan $10,000\\text{ bp}$ of flanking genomic context around a variant to predict cryptic donor/acceptor gain or canonical splice loss ($\\Delta\\text{ score } 0.0\\text{--}1.0$).\n  * **Non-Coding Sequence-to-Function & Chromatin AI:**\n    * **`Enformer` (DeepMind)** & **`Borzoi` (Calico):** Transformer + CNN models taking $196\\text{ kb}\\text{--}524\\text{ kb}$ of raw DNA sequence to predict thousands of epigenetic tracks (CAGE gene expression, histone marks, DNase/ATAC accessibility, ChIP-Seq transcription factor binding) and non-coding eQTL effects *in silico*.\n    * **`Sei` / `DeepSEA`** & **`AlphaGenome`:** High-resolution regulatory sequence grammar models.\n* **How It Connects:**\n  * **Upstream from:** [N02: Central Dogma](#n02-the-central-dogma-of-molecular-biology), [N20: Annotation](#n20-variant-annotation-engines-hgvs--mane-transcripts).\n  * **Downstream to:** [N23: ACMG `PP3`/`BP4` Evidence](#n23-clinical-variant-classification-acmgamp--ampascocap), [N25: Foundation Models](#n25-genomic--protein-foundation-models-glms-plms--structural-ai).",
+      "upstream": [
+        "N20",
+        "N02",
+        "N23"
+      ],
+      "downstream": [
+        "N25",
+        "N23"
+      ],
+      "tools": [
+        "AlphaFold",
+        "AlphaMissense",
+        "Evo",
+        "SpliceAI",
+        "Enformer",
+        "Borzoi",
+        "ClinVar",
+        "MANE",
+        "HGVS",
+        "CAP"
+      ],
+      "companies": [
+        "Illumina",
+        "ONT",
+        "Google DeepMind"
+      ],
+      "keywords": [
+        "AlphaGenome",
+        "AlphaMissense",
+        "BP4",
+        "BayesDel",
+        "Borzoi",
+        "CADD",
+        "DeepSEA",
+        "ESM-1b",
+        "EVE",
+        "Enformer",
+        "Ensemble & Meta-Predictors",
+        "Key Models & Architectures",
+        "Missense Pathogenicity Predictors",
+        "MutPred2",
+        "PP3",
+        "Pangolin",
+        "PrimateAI-3D",
+        "REVEL",
+        "RNA Splicing AI",
+        "Sei",
+        "SpliceAI",
+        "`AlphaGenome`",
+        "`AlphaMissense` (Google DeepMind)",
+        "`Borzoi` (Calico)",
+        "`EVE` (Evolutionary Model of Variant Effect)",
+        "`Enformer` (DeepMind)",
+        "`Pangolin`",
+        "`PrimateAI-3D` (Illumina)",
+        "`Sei` / `DeepSEA`",
+        "`SpliceAI` (Illumina)"
+      ],
+      "formulas": [
+        "40\\%",
+        "98.5\\%",
+        "71\\text{ million}"
+      ]
+    },
+    {
+      "id": "N25",
+      "title": "Genomic & Protein Foundation Models (gLMs, pLMs & Structural AI)",
+      "layer": 6,
+      "layerName": "AI, Deep Learning & Foundation Models",
+      "layerColor": "#EF4444",
+      "layerBadge": "Layer 6",
+      "layerIcon": "🤖",
+      "coreConcept": "Just as Large Language Models (LLMs) learn the grammar of human text, **Biological Foundation Models** learn the evolutionary and biophysical grammar of DNA, RNA, proteins, and single-cell states—enabling both zero-shot variant interpretation and *de novo* generative design of new medicines.",
+      "rawBody": "* **Core Concept:** Just as Large Language Models (LLMs) learn the grammar of human text, **Biological Foundation Models** learn the evolutionary and biophysical grammar of DNA, RNA, proteins, and single-cell states—enabling both zero-shot variant interpretation and *de novo* generative design of new medicines.\n* **The Foundation Model Landscape:**\n  * **Genomic Language Models (gLMs — DNA/RNA):**\n    * **`Evo` & `Evo 2` (Arc Institute / Stanford / Together AI / NVIDIA):** $7\\text{B}\\text{--}40\\text{B}$ parameter **StripedHyena** architecture trained at single-nucleotide resolution across $>9\\text{ trillion}$ bases spanning prokaryotic, phage, and eukaryotic genomes ($1\\text{ Mb}$ context window). Capable of zero-shot fitness prediction across coding/non-coding DNA and *generative design* of complete synthetic CRISPR-Cas complexes, regulatory circuits, and genome-scale sequences.\n    * **`Nucleotide Transformer` (InstaDeep / Eli Lilly)**, **`DNABERT-2`**, **`HyenaDNA`**, **`Caduceus`** (reverse-complement equivariant Mamba model), **`RNA-FM`** / **`RiNALMo`**.\n  * **Protein Language Models (pLMs) & All-Atom Biomolecular Structure Prediction:**\n    * **`AlphaFold 2` & `AlphaFold 3` (Google DeepMind / Isomorphic Labs):** Diffusion-based architecture (`Pairformer` + Diffusion Module) predicting joint 3D atomic coordinates of proteins, DNA, RNA, post-translational modifications, ions, and small-molecule drug ligands simultaneously.\n    * **`ESM-2` & `ESM3` (EvolutionaryScale):** Multimodal generative protein model trained jointly on sequence, 3D structure, and function tokens across billions of proteins; demonstrated generative evolution of a novel fluorescent protein (`esmGFP`).\n    * **`RoseTTAFold All-Atom` (Baker Lab)**, **`Chai-1`**, **`Boltz-1`** (open-source biomolecular interaction models).\n  * **De Novo Generative Protein & Binder Design (Nobel Prize in Chemistry 2024):**\n    * **`RFdiffusion`**, **`ProteinMPNN`**, **`AlphaProteo` (DeepMind)**, **`BindCraft`:** Designing custom miniprotein binders, therapeutic antibodies, and enzymes from scratch on a computer.\n  * **Single-Cell Foundation Models:**\n    * **`scGPT`**, **`Geneformer`**, **`Universal Cell Embeddings (UCE)`**, **`scFoundation`:** Pre-trained on $30\\text{M}\\text{--}100\\text{M}+$ single-cell transcriptomes (CELLxGENE) to predict *in silico* genetic perturbation responses and drug target effects.\n* **How It Connects:**\n  * **Upstream from:** [N02: Central Dogma](#n02-the-central-dogma-of-molecular-biology), [N13: Single-Cell Atlases](#n13-single-cell-multi-omics).\n  * **Downstream to:** [N26: Virtual Cells](#n26-multi-modal-clinical-ai-computational-pathology--virtual-cells), [N35: AI-Designed Small Molecules & Biologics](#n35-targeted-small-molecules-monoclonal-antibodies--adcs), [N36: AI-Engineered CRISPR/Base Editors](#n36-programmable-gene-editing-crispr-base-prime--epigenome-editing).",
+      "upstream": [
+        "N02",
+        "N13",
+        "N24"
+      ],
+      "downstream": [
+        "N36",
+        "N26",
+        "N35"
+      ],
+      "tools": [
+        "AlphaFold",
+        "AlphaFold 3",
+        "ESM3",
+        "ESM-2",
+        "Evo 2",
+        "Evo",
+        "UNI",
+        "CAP"
+      ],
+      "companies": [
+        "ONT",
+        "NVIDIA",
+        "Google DeepMind",
+        "Isomorphic Labs",
+        "EvolutionaryScale",
+        "InstaDeep"
+      ],
+      "keywords": [
+        "AlphaFold 2",
+        "AlphaFold 3",
+        "AlphaProteo",
+        "BindCraft",
+        "Biological Foundation Models",
+        "Boltz-1",
+        "Caduceus",
+        "Chai-1",
+        "DNABERT-2",
+        "ESM-2",
+        "ESM3",
+        "Evo",
+        "Evo 2",
+        "Geneformer",
+        "Genomic Language Models (gLMs — DNA/RNA)",
+        "HyenaDNA",
+        "Nucleotide Transformer",
+        "Pairformer",
+        "ProteinMPNN",
+        "RFdiffusion",
+        "RNA-FM",
+        "RiNALMo",
+        "RoseTTAFold All-Atom",
+        "Single-Cell Foundation Models",
+        "StripedHyena",
+        "The Foundation Model Landscape",
+        "Universal Cell Embeddings (UCE)",
+        "`AlphaProteo` (DeepMind)",
+        "`BindCraft`",
+        "`Boltz-1`"
+      ],
+      "formulas": [
+        "7\\text{B}\\text{--}40\\text{B}",
+        ">9\\text{ trillion}",
+        "1\\text{ Mb}"
+      ]
+    },
+    {
+      "id": "N26",
+      "title": "Multi-Modal Clinical AI, Computational Pathology & Virtual Cells",
+      "layer": 6,
+      "layerName": "AI, Deep Learning & Foundation Models",
+      "layerColor": "#EF4444",
+      "layerBadge": "Layer 6",
+      "layerIcon": "🤖",
+      "coreConcept": "Integrating genomic data with whole-slide pathology images, radiology, longitudinal EHR notes, and multi-omic cellular dynamics to build clinical decision co-pilots and predictive **Virtual Cells / Patient Digital Twins**.",
+      "rawBody": "* **Core Concept:** Integrating genomic data with whole-slide pathology images, radiology, longitudinal EHR notes, and multi-omic cellular dynamics to build clinical decision co-pilots and predictive **Virtual Cells / Patient Digital Twins**.\n* **Key Applications:**\n  * **Computational Pathology Foundation Models:** Vision transformers (`UNI`, `CONCH`, `Virchow` [Paige/Microsoft], `Prov-GigaPath`, `CHIEF`) trained on millions of digitized H&E histopathology slides. These models directly predict **Microsatellite Instability (`MSI`)**, **Tumor Mutational Burden (`TMB`)**, **Homologous Recombination Deficiency (`HRD`)**, and specific actionable driver mutations ($EGFR, BRAF, FGFR3$) straight from routine biopsy images in minutes—triaging patients for confirmatory NGS.\n  * **Agentic Clinical Co-Pilots & Literature Synthesis:** Biomedical LLMs and Retrieval-Augmented Generation (**RAG**) agents (`Med-PaLM 2` / `Med-Gemini`, `BioGPT`, `Mastermind` [Genomenon] automated genomic literature indexing) extracting phenotype terms (`HPO`) from unstructured clinical notes and drafting ACMG/oncology narrative reports.\n  * **AI Virtual Cells (CZI Initiative & Biotech):** Multi-scale neural simulations integrating genomic sequence, chromatin state, transcriptomics, proteomics, and spatial imaging to simulate how a human cell transitions from healthy to diseased—and how it responds to any combinatorial drug or gene edit.\n* **How It Connects:**\n  * **Upstream from:** [N14: Spatial & Digital Pathology](#n14-spatial-omics--digital-histopathology), [N25: Foundation Models](#n25-genomic--protein-foundation-models-glms-plms--structural-ai).\n  * **Downstream to:** [N31: Precision Oncology Triage](#n31-precision-oncology-liquid-biopsy-mrd--neoantigens), [N35: In Silico Clinical Trials & Drug Discovery](#n35-targeted-small-molecules-monoclonal-antibodies--adcs).\n\n---\n\n### Layer 7: Healthcare Interoperability, ETL & Governance",
+      "upstream": [
+        "N25",
+        "N14"
+      ],
+      "downstream": [
+        "N31",
+        "N35"
+      ],
+      "tools": [
+        "UNI",
+        "Virchow",
+        "CONCH",
+        "HPO"
+      ],
+      "companies": [
+        "Genomenon"
+      ],
+      "keywords": [
+        "AI Virtual Cells (CZI Initiative & Biotech)",
+        "BioGPT",
+        "CHIEF",
+        "CONCH",
+        "Computational Pathology Foundation Models",
+        "HPO",
+        "HRD",
+        "Homologous Recombination Deficiency (`HRD`)",
+        "Key Applications",
+        "MSI",
+        "Mastermind",
+        "Med-Gemini",
+        "Med-PaLM 2",
+        "Microsatellite Instability (`MSI`)",
+        "Prov-GigaPath",
+        "RAG",
+        "TMB",
+        "Tumor Mutational Burden (`TMB`)",
+        "UNI",
+        "Virchow",
+        "Virtual Cells / Patient Digital Twins"
+      ],
+      "formulas": []
+    },
+    {
+      "id": "N27",
+      "title": "Healthcare Data Interoperability (HL7, FHIR Genomics, GA4GH, OMOP)",
+      "layer": 7,
+      "layerName": "Healthcare Interoperability, ETL & Governance",
+      "layerColor": "#06B6D4",
+      "layerBadge": "Layer 7",
+      "layerIcon": "🏥",
+      "coreConcept": "Even the most accurate genomic finding is clinically useless if it sits trapped inside a static PDF faxed to a hospital. **Interoperability Standards** structure genomic and clinical data into machine-readable schemas so Electronic Health Records (EHRs) can trigger automated real-time Clinical Decision Support (CDS) alerts at the point of care.",
+      "rawBody": "* **Core Concept:** Even the most accurate genomic finding is clinically useless if it sits trapped inside a static PDF faxed to a hospital. **Interoperability Standards** structure genomic and clinical data into machine-readable schemas so Electronic Health Records (EHRs) can trigger automated real-time Clinical Decision Support (CDS) alerts at the point of care.\n* **Core Standards & Specifications:**\n  * **`HL7 v2`:** Legacy pipe-delimited (`|`) hospital messaging standard (`ORM` orders, `ORU` lab results) still widely used between LIMS and hospital interfaces.\n  * **`HL7 FHIR` (Fast Healthcare Interoperability Resources — R4 / R5) & the `FHIR Genomics Reporting Implementation Guide`:**\n    * Modern RESTful API standard (`JSON` / `XML`).\n    * **`DiagnosticReport`:** Top-level summary of the genomic test, interpretation narrative, and recommended actions.\n    * **`Observation` (Genomic Variant / Genotype / Haplotype / TMB / MSI / Therapeutic Implication):** Structured key-value representations using `LOINC` codes (e.g., `69548-6` Genetic variant assessment), `HGVS`, `ClinVar` IDs, zygosity, and allele frequency.\n    * **`MolecularSequence`:** Represents raw or reference-coordinate sequence intervals.\n    * **`ServiceRequest` & `Specimen`:** Order and biospecimen provenance.\n    * **`SMART on FHIR` & `CDS Hooks`:** Enables third-party genomic visualization apps and real-time prescribing alerts (e.g., firing an alert when a physician orders Clopidogrel for a patient whose FHIR record carries `CYP2C19 *2/*2` Poor Metabolizer status).\n  * **`GA4GH` (Global Alliance for Genomics and Health) Standards:**\n    * **`VRS` (Variant Representation Specification):** Computed digest identifiers (`ga4gh:VA....`) guaranteeing unambiguous mathematical representation of any allele worldwide.\n    * **`Phenopackets` (ISO 4454):** Standardized JSON/Protobuf schema linking patient phenotypes (`HPO`), disease diagnosis (`MONDO`), treatments, and genomic variants.\n    * **`Beacon v2`:** Federated genomic discovery protocol (\"Does your biobank have a patient with variant $X$ and phenotype $Y$?\") without exposing raw patient data.\n    * **`DRS` (Data Repository Service), `WES` (Workflow Execution Service), `TES` (Task Execution Service), `Crypt4GH`** (encrypted genomic file container).\n  * **`OMOP CDM` (Observational Medical Outcomes Partnership Common Data Model — OHDSI Genomic Extension):** Harmonizes EHR clinical data + somatic/germline variants across multi-hospital federated real-world evidence (RWE) networks.\n* **How It Connects:**\n  * **Upstream from:** [N22: Ontologies (`HPO`, `LOINC`, `SNOMED`)](#n22-clinical-variant-knowledgebases--phenotype-ontologies), [N23: ACMG/AMP Reports](#n23-clinical-variant-classification-acmgamp--ampascocap).\n  * **Downstream to:** [N28: ETL, REST APIs & EHR Integration](#n28-clinical-etl-pipelines-rest-apis-lims--ehr-integration), [N30: EHR Pharmacogenomic Alerts](#n30-pharmacogenomics-pgx--precision-drug-dosing).",
+      "upstream": [
+        "N23",
+        "N22",
+        "N19"
+      ],
+      "downstream": [
+        "N30",
+        "N28",
+        "N29"
+      ],
+      "tools": [
+        "ClinVar",
+        "HPO",
+        "HGVS",
+        "HL7",
+        "FHIR Genomics",
+        "GA4GH",
+        "VRS",
+        "Phenopackets",
+        "Beacon v2",
+        "OMOP CDM",
+        "LOINC",
+        "MONDO",
+        "CAP"
+      ],
+      "companies": [
+        "ONT"
+      ],
+      "keywords": [
+        "69548-6",
+        "Beacon v2",
+        "CDS Hooks",
+        "CYP2C19 *2/*2",
+        "ClinVar",
+        "Core Standards & Specifications",
+        "Crypt4GH",
+        "DRS",
+        "DiagnosticReport",
+        "GA4GH",
+        "HGVS",
+        "HL7 FHIR",
+        "HL7 v2",
+        "HPO",
+        "Interoperability Standards",
+        "JSON",
+        "LOINC",
+        "MONDO",
+        "MolecularSequence",
+        "OMOP CDM",
+        "ORM",
+        "ORU",
+        "Observation",
+        "Phenopackets",
+        "SMART on FHIR",
+        "SNOMED",
+        "ServiceRequest",
+        "Specimen",
+        "TES",
+        "VRS"
+      ],
+      "formulas": []
+    },
+    {
+      "id": "N28",
+      "title": "Clinical ETL Pipelines, REST APIs, LIMS & EHR Integration",
+      "layer": 7,
+      "layerName": "Healthcare Interoperability, ETL & Governance",
+      "layerColor": "#06B6D4",
+      "layerBadge": "Layer 7",
+      "layerIcon": "🏥",
+      "coreConcept": "The software engineering backbone (\"plumbing\") that extracts, transforms, and loads (**ETL**) structured and semi-structured data between wet-lab instruments, cloud bioinformatics pipelines, external annotation REST APIs, Laboratory Information Management Systems (**LIMS**), and hospital **EHRs**.",
+      "rawBody": "* **Core Concept:** The software engineering backbone (\"plumbing\") that extracts, transforms, and loads (**ETL**) structured and semi-structured data between wet-lab instruments, cloud bioinformatics pipelines, external annotation REST APIs, Laboratory Information Management Systems (**LIMS**), and hospital **EHRs**.\n* **Key Engineering Components:**\n  * **Structured File Handling & Columnar Lakehouses:** Parsing and validating `JSON`, `JSON-LD` (`Pydantic`, `JSON Schema`), `YAML` (pipeline configuration), `TSV`/`CSV`, and converting massive cohorts of `VCF` files into cloud-native analytical formats like **`Apache Parquet`**, **`Delta Lake` / `Apache Iceberg`**, **`Hail` MatrixTables**, or **`TileDB-VCF`** for sub-second SQL/Spark querying across millions of variants.\n  * **Genomic REST & GraphQL APIs:**\n    * **NCBI E-utilities / Entrez API & ClinVar API**\n    * **Ensembl REST API** (variant consequences, liftover, linkage disequilibrium)\n    * **gnomAD GraphQL API** & **BioThings (`MyVariant.info`, `MyGene.info`)**\n    * **OncoKB API**, **CIViC GraphQL API**, **CPIC / PharmGKB API**, **ClinicalTrials.gov REST API v2** (automated clinical trial matching).\n  * **LIMS & Hospital EHR Genomics Modules:**\n    * **LIMS:** `Illumina Clarity LIMS`, `Benchling`, `Sapio Sciences`, `LabVantage`, `STARLIMS` (sample accessioning, chain-of-custody barcoding, reagent lot tracking, automated NovaSeq run-sheet generation).\n    * **EHR Genomic Modules:** **`Epic Aura`** (specialty diagnostics & genomics integration suite), **Epic Genomics Module** (discrete genomic indicators on the patient Storyboard), **`Oracle Health (Cerner)`**, **`Meditech Expanse`**.\n* **How It Connects:**\n  * **Upstream from:** [N19: Pipelines](#n19-workflow-orchestration-nextflowwdl-containers--cloud), [N27: FHIR & HL7 Standards](#n27-healthcare-data-interoperability-hl7-fhir-genomics-ga4gh-omop).\n  * **Downstream to:** [N30: Clinical PGx](#n30-pharmacogenomics-pgx--precision-drug-dosing), [N31: Precision Oncology Molecular Tumor Boards](#n31-precision-oncology-liquid-biopsy-mrd--neoantigens).",
+      "upstream": [
+        "N27",
+        "N19",
+        "N30"
+      ],
+      "downstream": [
+        "N31",
+        "N30"
+      ],
+      "tools": [
+        "VCF",
+        "STAR",
+        "Nextflow",
+        "WDL",
+        "TileDB",
+        "Hail",
+        "gnomAD",
+        "ClinVar",
+        "OncoKB",
+        "CPIC",
+        "PharmGKB",
+        "HL7",
+        "GA4GH"
+      ],
+      "companies": [
+        "Illumina",
+        "ONT",
+        "Epic Aura",
+        "Cerner",
+        "Oracle Health"
+      ],
+      "keywords": [
+        "Apache Iceberg",
+        "Apache Parquet",
+        "Benchling",
+        "BioThings (`MyVariant.info`, `MyGene.info`)",
+        "CIViC GraphQL API",
+        "CPIC / PharmGKB API",
+        "CSV",
+        "ClinicalTrials.gov REST API v2",
+        "Delta Lake",
+        "EHR Genomic Modules",
+        "EHRs",
+        "ETL",
+        "Ensembl REST API",
+        "Epic Aura",
+        "Epic Genomics Module",
+        "Genomic REST & GraphQL APIs",
+        "Hail",
+        "Illumina Clarity LIMS",
+        "JSON",
+        "JSON Schema",
+        "JSON-LD",
+        "Key Engineering Components",
+        "LIMS",
+        "LIMS & Hospital EHR Genomics Modules",
+        "LabVantage",
+        "Meditech Expanse",
+        "MyGene.info",
+        "MyVariant.info",
+        "NCBI E-utilities / Entrez API & ClinVar API",
+        "OncoKB API"
+      ],
+      "formulas": []
+    },
+    {
+      "id": "N29",
+      "title": "Clinical Lab Regulations (CLIA/CAP, FDA CDx), GIAB & Data Privacy",
+      "layer": 7,
+      "layerName": "Healthcare Interoperability, ETL & Governance",
+      "layerColor": "#06B6D4",
+      "layerBadge": "Layer 7",
+      "layerIcon": "🏥",
+      "coreConcept": "Because clinical genomic results dictate irreversible medical actions (such as prophylactic mastectomy, embryo selection, or chemotherapy choice), every wet-lab assay and dry-lab bioinformatics pipeline must meet strict analytical validation, quality management, and legal privacy standards.",
+      "rawBody": "* **Core Concept:** Because clinical genomic results dictate irreversible medical actions (such as prophylactic mastectomy, embryo selection, or chemotherapy choice), every wet-lab assay and dry-lab bioinformatics pipeline must meet strict analytical validation, quality management, and legal privacy standards.\n* **Regulatory & Validation Pillar:**\n  * **`CLIA` (Clinical Laboratory Improvement Amendments) & `CAP` (College of American Pathologists) / `ISO 15189` / `NABL` (India):** Regulates clinical laboratory personnel, standard operating procedures (SOPs), proficiency testing (CAP PT challenges), and bioinformatics pipeline version locking (any change to aligner, caller, or reference database triggers re-validation).\n  * **`FDA` Oversight — `CDx` (Companion Diagnostics) vs. `LDTs` (Laboratory Developed Tests) & `EU IVDR`:**\n    * **Companion Diagnostic (`CDx`):** An IVD medical device approved via FDA **PMA** or **510(k)** whose result is essential for the safe and effective use of a corresponding therapeutic drug (e.g., *FoundationOne CDx*, *Guardant360 CDx*, *Illumina TruSight Oncology Comprehensive*).\n  * **Analytical Validation & `GIAB` (Genome in a Bottle — NIST) Benchmarks:**\n    * Laboratories validate pipeline **Sensitivity (Recall)**, **Precision (Positive Predictive Value)**, **Repeatability (Intra-run)**, **Reproducibility (Inter-run)**, and **Limit of Detection ($\\text{LoD}$)** using **NIST GIAB Reference Genomes**:\n      * `HG001` (`NA12878` — Utah European female)\n      * `HG002` / `HG003` / `HG004` (Ashkenazi Jewish Trio — heavily characterized for SNVs, Indels, SVs, and difficult medically relevant genes [`CMRG`])\n      * `HG005` / `HG006` / `HG007` (Han Chinese Trio)\n      * Somatic reference standards (`SEQC2`, Horizon Discovery reference blends, SeraCare ctDNA standards).\n    * Evaluated with standardized benchmarking tools: **`hap.py`** + **`rtg-tools vcfeval`** (for SNVs/Indels) and **`Truvari`** (for Structural Variants).\n* **Genomic Privacy, Ethics & Security:**\n  * **`HIPAA`** (USA), **`GDPR`** (European Union), **`DPDP Act`** (Digital Personal Data Protection Act, India), **`GINA`** (Genetic Information Nondiscrimination Act — bars health insurers and employers from discriminating based on genetic predisposition).\n  * **Privacy-Preserving Computation:** Trusted Research Environments (**TREs**), **Federated Learning** (training models across hospitals without moving genomic files), Differential Privacy, and Homomorphic Encryption.\n* **How It Connects:**\n  * **Upstream from:** [N18: Variant Calling](#n18-variant-calling-ecosystem-germline-somatic-sv-cnv-str), [N19: Pipelines](#n19-workflow-orchestration-nextflowwdl-containers--cloud).\n  * **Downstream to:** [N38: Commercial Diagnostics](#n38-global-commercial-landscape--companies-matrix).\n\n---\n\n### Layer 8: Translation to Precision Medicine (Clinical Specialties)",
+      "upstream": [
+        "N18",
+        "N19",
+        "N27",
+        "N23"
+      ],
+      "downstream": [
+        "N38"
+      ],
+      "tools": [
+        "VCF",
+        "Nextflow",
+        "WDL",
+        "UNI",
+        "hap.py",
+        "Truvari",
+        "GIAB",
+        "CLIA",
+        "CAP",
+        "HIPAA",
+        "GDPR"
+      ],
+      "companies": [
+        "Illumina",
+        "ONT"
+      ],
+      "keywords": [
+        "510(k)",
+        "CAP",
+        "CDx",
+        "CLIA",
+        "CMRG",
+        "Companion Diagnostic (`CDx`)",
+        "DPDP Act",
+        "EU IVDR",
+        "FDA",
+        "Federated Learning",
+        "GDPR",
+        "GIAB",
+        "GINA",
+        "Genomic Privacy, Ethics & Security",
+        "HG001",
+        "HG002",
+        "HG003",
+        "HG004",
+        "HG005",
+        "HG006",
+        "HG007",
+        "HIPAA",
+        "ISO 15189",
+        "LDTs",
+        "Limit of Detection ($\\text{LoD}$)",
+        "NA12878",
+        "NABL",
+        "NIST GIAB Reference Genomes",
+        "PMA",
+        "Precision (Positive Predictive Value)"
+      ],
+      "formulas": [
+        "\\text{LoD}"
+      ]
+    },
+    {
+      "id": "N30",
+      "title": "Pharmacogenomics (PGx) & Precision Drug Dosing",
+      "layer": 8,
+      "layerName": "Translation to Precision Medicine (Clinical Specialties)",
+      "layerColor": "#EC4899",
+      "layerBadge": "Layer 8",
+      "layerIcon": "🩺",
+      "coreConcept": "Studies how inherited genetic variations affect an individual's pharmacokinetic (**PK**: Absorption, Distribution, Metabolism, Excretion — **ADME**—\"what the body does to the drug\") and pharmacodynamic (**PD**: drug target receptors/ion channels—\"what the drug does to the body\") response to medications. Adverse drug reactions (ADRs) remain a leading cause of hospitalization worldwide, and $>95\\%$ of individuals carry at least one actionable PGx variant.",
+      "rawBody": "* **Core Concept:** Studies how inherited genetic variations affect an individual's pharmacokinetic (**PK**: Absorption, Distribution, Metabolism, Excretion — **ADME**—\"what the body does to the drug\") and pharmacodynamic (**PD**: drug target receptors/ion channels—\"what the drug does to the body\") response to medications. Adverse drug reactions (ADRs) remain a leading cause of hospitalization worldwide, and $>95\\%$ of individuals carry at least one actionable PGx variant.\n* **Star Allele ($\\text{*}$) Nomenclature & Metabolizer Phenotypes:**\n  * Unlike rare disease genetics (which looks at single SNVs), PGx defines haplotypes across an entire gene as **Star Alleles** (e.g., `*1` = wild-type reference; `*2`, `*3` = loss-of-function alleles; `*17` = increased-function promoter allele; `*1xN` = gene duplication).\n  * Combining maternal and paternal star alleles yields a **Diplotype** (e.g., `CYP2C19 *1/*2`) and an **Activity Score**, which translates into $5$ standard clinical metabolizer phenotypes:\n    1. **Ultrarapid Metabolizer ($\\text{UM}$):** Inactivates prodrugs too fast into active toxins (e.g., Codeine $\\rightarrow$ Morphine overdose via $CYP2D6$ duplication) OR clears active drugs too rapidly (sub-therapeutic levels).\n    2. **Rapid Metabolizer ($\\text{RM}$)**\n    3. **Normal Metabolizer ($\\text{NM}$)**\n    4. **Intermediate Metabolizer ($\\text{IM}$)**\n    5. **Poor Metabolizer ($\\text{PM}$):** Cannot activate prodrugs (e.g., Clopidogrel fails to prevent stent thrombosis in $CYP2C19$ PMs) OR accumulates toxic levels of active drugs (e.g., fatal 5-Fluorouracil toxicity in $DPYD$ PMs).\n* **High-Impact Clinical Gene-Drug Pairs:**\n  * **`CYP2C19`:** Clopidogrel (antiplatelet), Voriconazole (antifungal), SSRIs (Escitalopram, Sertraline), Proton Pump Inhibitors (Omeprazole).\n  * **`CYP2D6`:** Codeine, Tramadol, Tamoxifen (breast cancer), Ondansetron, Tricyclic Antidepressants (Amitriptyline), Antipsychotics (Risperidone), Atomoxetine. *(Notoriously complex due to $CYP2D7$ pseudogene hybrid rearrangements and CNVs).*\n  * **`CYP2C9` + `VKORC1` + `CYP4F2`:** Warfarin (anticoagulant), Phenytoin, NSAIDs (Celecoxib, Meloxicam).\n  * **`DPYD`:** Fluoropyrimidines (5-Fluorouracil [5-FU], Capecitabine) — deficiency causes severe/fatal mucositis and neutropenia.\n  * **`TPMT` & `NUDT15`:** Thiopurines (Azathioprine, 6-Mercaptopurine, Thioguanine) — $NUDT15$ risk alleles are especially prevalent in East and South Asian populations, causing severe myelosuppression.\n  * **`SLCO1B1` & `ABCG2`:** Statins (Simvastatin, Atorvastatin, Rosuvastatin) — hepatic transporter variants cause statin-induced myopathy and rhabdomyolysis.\n  * **`UGT1A1` (`*28`, `*6`):** Irinotecan (chemotherapy) and Atazanavir.\n  * **`CYP3A5`:** Tacrolimus (organ transplant immunosuppressant dosing).\n  * **`HLA-B*57:01`:** Abacavir (HIV hypersensitivity syndrome).\n  * **`HLA-B*15:02` & `HLA-A*31:01`:** Carbamazepine, Oxcarbazepine, Phenytoin (life-threatening Stevens-Johnson Syndrome [SJS] / Toxic Epidermal Necrolysis [TEN]).\n  * **`MT-RNR1` (`m.1555A>G`):** Aminoglycoside antibiotics (Gentamicin) — single dose causes irreversible profound deafness in newborns carrying this mitochondrial variant (now tested in NICUs via rapid point-of-care swabs).\n  * **`G6PD`:** Rasburicase, Primaquine, Tafenoquine (hemolytic anemia).\n  * **`RYR1` & `CACNA1S`:** Volatile inhaled anesthetics & Succinylcholine (Malignant Hyperthermia).\n* **PGx Bioinformatics Callers & Knowledgebases:**\n  * **Callers:** `PharmCAT` (Pharmacogenomics Clinical Annotation Tool), `Aldy`, `PyPGx`, `Stargazer`, `Cyrius` (Illumina $CYP2D6$), `OptiType` / `HLA-HD` / `SpecHLA` (HLA typing).\n  * **Consortia & Guidelines:** **`CPIC` (Clinical Pharmacogenetics Implementation Consortium)**, **`PharmGKB` / `ClinPGx`**, **`PharmVar`** (star allele registry), **`DPWG`** (Dutch Pharmacogenetics Working Group), and the **`FDA Table of Pharmacogenomic Biomarkers in Drug Labeling`**.\n* **How It Connects:**\n  * **Upstream from:** [N07: PGx Arrays](#n07-first-gen-sequencing-pcr-microarrays--optical-mapping), [N08: NGS](#n08-second-gen-short-read-high-throughput-sequencing-ngs), [N09: Long-Read PGx Phasing](#n09-third-gen-long-read--native-molecule-sequencing), [N27: FHIR & CDS Hooks](#n27-healthcare-data-interoperability-hl7-fhir-genomics-ga4gh-omop).\n  * **Downstream to:** [N28: EHR Prescribing Alerts](#n28-clinical-etl-pipelines-rest-apis-lims--ehr-integration), [N31: Oncology DPYD/UGT1A1 Safety](#n31-precision-oncology-liquid-biopsy-mrd--neoantigens), [N38: Commercial PGx Providers](#n38-global-commercial-landscape--companies-matrix).",
+      "upstream": [
+        "N07",
+        "N27",
+        "N09",
+        "N08",
+        "N23",
+        "N28"
+      ],
+      "downstream": [
+        "N38",
+        "N31",
+        "N28"
+      ],
+      "tools": [
+        "BAM",
+        "STAR",
+        "PharmCAT",
+        "OptiType",
+        "CPIC",
+        "PharmGKB",
+        "PharmVar",
+        "HL7",
+        "GA4GH",
+        "CAP"
+      ],
+      "companies": [
+        "Illumina",
+        "BD"
+      ],
+      "keywords": [
+        "*1",
+        "*17",
+        "*1xN",
+        "*2",
+        "*28",
+        "*3",
+        "*6",
+        "ABCG2",
+        "ADME",
+        "Activity Score",
+        "Aldy",
+        "CACNA1S",
+        "CPIC",
+        "CYP2C19",
+        "CYP2C19 *1/*2",
+        "CYP2C9",
+        "CYP2D6",
+        "CYP3A5",
+        "CYP4F2",
+        "Callers",
+        "ClinPGx",
+        "Consortia & Guidelines",
+        "Cyrius",
+        "DPWG",
+        "DPYD",
+        "Diplotype",
+        "G6PD",
+        "HLA-A*31:01",
+        "HLA-B*15:02",
+        "HLA-B*57:01"
+      ],
+      "formulas": [
+        ">95\\%",
+        "\\text{*}",
+        "\\text{UM}"
+      ]
+    },
+    {
+      "id": "N31",
+      "title": "Precision Oncology, Liquid Biopsy, MRD & Neoantigens",
+      "layer": 8,
+      "layerName": "Translation to Precision Medicine (Clinical Specialties)",
+      "layerColor": "#EC4899",
+      "layerBadge": "Layer 8",
+      "layerIcon": "🩺",
+      "coreConcept": "Cancer is fundamentally a disease of the genome driven by somatic mutations, copy number amplifications, chromosomal rearrangements, and epigenetic dysregulation. Precision oncology profiles a patient's tumor (via tissue biopsy or blood-based liquid biopsy) to match them with targeted therapies, immunotherapies, and personalized clinical trials.",
+      "rawBody": "* **Core Concept:** Cancer is fundamentally a disease of the genome driven by somatic mutations, copy number amplifications, chromosomal rearrangements, and epigenetic dysregulation. Precision oncology profiles a patient's tumor (via tissue biopsy or blood-based liquid biopsy) to match them with targeted therapies, immunotherapies, and personalized clinical trials.\n* **Actionable Somatic Biomarkers & Targeted Paradigms:**\n  * **Single-Gene Drivers:**\n    * **Non-Small Cell Lung Cancer (NSCLC):** $EGFR$ (exon 19 deletions, L858R $\\rightarrow$ Osimertinib; exon 20 insertions $\\rightarrow$ Amivantamab), $ALK$ fusions ($\\rightarrow$ Lorlatinib, Alectinib), $ROS1$, $KRAS\\text{ G12C}$ ($\\rightarrow$ Sotorasib, Adagrasib), $BRAF\\text{ V600E}$, $MET$ exon 14 skipping, $RET$ fusions, $ERBB2$ ($HER2$) mutations, $NTRK1/2/3$ fusions.\n    * **Breast, Ovarian, Prostate & Pancreatic Cancer:** Germline & Somatic $BRCA1$, $BRCA2$, $PALB2$, $ATM$ ($\\rightarrow$ PARP Inhibitors: Olaparib, Niraparib, Talazoparib via **Synthetic Lethality**); $PIK3CA$ ($\\rightarrow$ Alpelisib, Inavolisib); $ESR1$ (liquid biopsy resistance mutations $\\rightarrow$ Elacestrant); $ERBB2/HER2$-low ($\\rightarrow$ Trastuzumab deruxtecan [Enhertu]).\n    * **Colorectal & Melanoma:** $KRAS/NRAS$ wild-type vs. mutant, $BRAF\\text{ V600E}$ ($\\rightarrow$ Encorafenib + Cetuximab / Dabrafenib + Trametinib).\n    * **Hematologic Malignancies:** $BCR\\text{-}ABL1$ ($\\rightarrow$ Imatinib, Ponatinib, Asciminib), $FLT3$, $IDH1/IDH2$, $NPM1$, $TP53$, $JAK2\\text{ V617F}$.\n  * **Pan-Cancer / Tumor-Agnostic Genomic Signatures:**\n    * **Microsatellite Instability-High (`MSI-H`) / Mismatch Repair Deficient (`dMMR`):** Loss of $MLH1, MSH2, MSH6,$ or $PMS2$ causes hypermutation at microsatellites (`MSIsensor-pro`, `MANTIS`), approved for tumor-agnostic **PD-1 Immune Checkpoint Blockade** (Pembrolizumab).\n    * **Tumor Mutational Burden (`TMB-High` $\\ge 10\\text{ mut/Mb}$):** Nonsynonymous somatic mutations per megabase of coding sequence.\n    * **Homologous Recombination Deficiency (`HRD` / Genomic Instability Score [`GIS`]):** Combines Loss of Heterozygosity ($\\text{LOH}$), Telomeric Allelic Imbalance ($\\text{TAI}$), and Large-Scale State Transitions ($\\text{LST}$) (`ScarHRD`, `HRDetect`) to identify tumors sensitive to PARP inhibitors even without a $BRCA1/2$ mutation.\n    * **Mutational Signatures (`COSMIC` SBS1–SBS96, `SigProfiler`):** Fingerprints of mutagenic processes (e.g., SBS4 tobacco smoking, SBS7 UV light, SBS3 HRD, SBS2/13 APOBEC, SBS10 $POLE$ ultramutated).\n* **The Liquid Biopsy Continuum ($\\text{ctDNA}$ & Fragmentomics):**\n  1. **Multi-Cancer Early Detection (`MCED`):** Screening asymptomatic individuals for $>50$ cancer types using plasma $\\text{cfDNA}$ targeted methylation patterns (**GRAIL Galleri**, **Exact Sciences Cancerguard**) or **cfDNA Fragmentomics** (analyzing fragment length ratios, end-motifs, and nucleosome footprinting—**DELFI Diagnostics**) + blood biomarkers.\n  2. **Comprehensive Genomic Profiling (`CGP`) from Blood:** Non-invasive genotyping when tissue biopsy is unsafe or insufficient (**Guardant360, FoundationOne Liquid CDx, Tempus xF**), while filtering out **Clonal Hematopoiesis of Indeterminate Potential (`CHIP`)** (age-related somatic mutations in white blood cells in $DNMT3A, TET2, ASXL1, TP53, JAK2, ATM$ that mimic tumor mutations unless paired buffy-coat WBC sequencing is performed).\n  3. **Minimal / Molecular Residual Disease (`MRD`):** Ultra-sensitive detection ($\\text{LoD} \\approx 10^{-4}\\text{ to }10^{-6}$ VAF) of microscopic residual cancer after curative-intent surgery to guide adjuvant chemotherapy escalation/de-escalation and detect relapse months before CT scans:\n     * **Tumor-Informed MRD:** Sequences the patient's surgical tumor WES/WGS first to design a bespoke $16\\text{--}1,800$ variant multiplex PCR or hybrid-capture panel (**Natera Signatera, Personalis NeXT Personal, Invitae/Labcorp Personalized Cancer Monitoring, Foresight Diagnostics PhasED-Seq**).\n     * **Tumor-Naive (Tissue-Free) MRD:** Combines fixed somatic mutation + epigenomic methylation panels directly from plasma without needing tumor tissue (**Guardant Reveal**).\n  4. **Clonal Evolution & Resistance Monitoring:** Serial blood draws catching secondary gatekeeper mutations (e.g., $EGFR\\text{ C797S}$, $ESR1$, $BRCA$ reversion mutations) in real time.\n* **Personalized Cancer Vaccine Neoantigen Pipeline:**\n  * Tumor/Normal WES + Tumor RNA-Seq $\\rightarrow$ Somatic Variant Calling $\\rightarrow$ Patient HLA Class I/II Typing (`OptiType`) $\\rightarrow$ Peptide-MHC Binding & Immunogenicity AI (`NetMHCpan 4.1`, `MHCflurry`) $\\rightarrow$ Ranking top $20\\text{--}34$ tumor-specific **Neoantigens** $\\rightarrow$ Manufacturing bespoke **Individualized Neoantigen Therapy (mRNA-4157 / V940 [Moderna/Merck] or Autogene Cevumeran [BioNTech/Genentech])** within weeks.\n* **How It Connects:**\n  * **Upstream from:** [N05: cfDNA/FFPE](#n05-biospecimen-collection-cfdnactdna--extraction), [N10: CGP Panels/WGS](#n10-sequencing-assay-modalities-panels-wes-wgs-low-pass), [N18: Somatic Callers](#n18-variant-calling-ecosystem-germline-somatic-sv-cnv-str), [N22: OncoKB/COSMIC](#n22-clinical-variant-knowledgebases--phenotype-ontologies).\n  * **Downstream to:** [N35: Targeted Therapies & ADCs](#n35-targeted-small-molecules-monoclonal-antibodies--adcs), [N37: mRNA Neoantigen Vaccines & CAR-T](#n37-gene-replacement-aavlnp-rna-medicines-asosirnamrna--car-t).",
+      "upstream": [
+        "N18",
+        "N05",
+        "N10",
+        "N22",
+        "N28",
+        "N30",
+        "N15",
+        "N23",
+        "N12",
+        "N26",
+        "N11",
+        "N14",
+        "N03"
+      ],
+      "downstream": [
+        "N37",
+        "N35",
+        "N38"
+      ],
+      "tools": [
+        "Evo",
+        "OptiType",
+        "SigProfiler",
+        "ScarHRD",
+        "COSMIC",
+        "OncoKB",
+        "CAP"
+      ],
+      "companies": [
+        "ONT",
+        "Natera",
+        "Exact Sciences",
+        "GRAIL",
+        "Personalis",
+        "DELFI Diagnostics",
+        "Foresight Diagnostics",
+        "Labcorp",
+        "Invitae",
+        "AWS",
+        "Moderna",
+        "BioNTech"
+      ],
+      "keywords": [
+        "Breast, Ovarian, Prostate & Pancreatic Cancer",
+        "CGP",
+        "CHIP",
+        "COSMIC",
+        "Clonal Evolution & Resistance Monitoring",
+        "Colorectal & Melanoma",
+        "DELFI Diagnostics",
+        "Exact Sciences Cancerguard",
+        "GIS",
+        "GRAIL Galleri",
+        "Guardant Reveal",
+        "HRD",
+        "HRDetect",
+        "Hematologic Malignancies",
+        "MANTIS",
+        "MCED",
+        "MHCflurry",
+        "MRD",
+        "MSI-H",
+        "MSIsensor-pro",
+        "Minimal / Molecular Residual Disease (`MRD`)",
+        "Multi-Cancer Early Detection (`MCED`)",
+        "Neoantigens",
+        "NetMHCpan 4.1",
+        "Non-Small Cell Lung Cancer (NSCLC)",
+        "OptiType",
+        "PD-1 Immune Checkpoint Blockade",
+        "ScarHRD",
+        "SigProfiler",
+        "Single-Gene Drivers"
+      ],
+      "formulas": [
+        "\\rightarrow",
+        "\\rightarrow",
+        "\\rightarrow"
+      ]
+    },
+    {
+      "id": "N32",
+      "title": "Rare Disease (rWGS), Reproductive Genetics & Newborn Screening",
+      "layer": 8,
+      "layerName": "Translation to Precision Medicine (Clinical Specialties)",
+      "layerColor": "#EC4899",
+      "layerBadge": "Layer 8",
+      "layerIcon": "🩺",
+      "coreConcept": "Over $7,000\\text{--}10,000$ rare diseases affect $>300\\text{ million}$ people globally ($\\sim 75\\%$ are children, and $80\\%$ have a genetic etiology). Historically, families endured a $5\\text{--}8\\text{ year}$ **\"Diagnostic Odyssey\"**. Genomics compresses that odyssey into days or hours.",
+      "rawBody": "* **Core Concept:** Over $7,000\\text{--}10,000$ rare diseases affect $>300\\text{ million}$ people globally ($\\sim 75\\%$ are children, and $80\\%$ have a genetic etiology). Historically, families endured a $5\\text{--}8\\text{ year}$ **\"Diagnostic Odyssey\"**. Genomics compresses that odyssey into days or hours.\n* **Clinical Paradigms Across the Early Lifespan:**\n  * **Preconception Expanded Carrier Screening (ECS):** Sequencing $100\\text{--}500+$ autosomal recessive and X-linked genes ($CFTR$ Cystic Fibrosis, $SMN1$ Spinal Muscular Atrophy, $HBB$ Beta-Thalassemia/Sickle Cell, $HEXA$ Tay-Sachs, $FMR1$ Fragile X) in prospective parents to assess reproductive risk ($25\\%$ if both carry the same AR condition).\n  * **Preimplantation Genetic Testing (`PGT` during IVF):** Trophectoderm biopsy of day-5 blastocyst embryos:\n    * **`PGT-A`:** Screening for chromosomal **Aneuploidy** (Trisomy 21, 18, 13, monosomies).\n    * **`PGT-M`:** Testing for a known parental **Monogenic** disease mutation (using karyomapping / haplarithmisis).\n    * **`PGT-SR`:** Testing for parental chromosomal **Structural Rearrangements** (balanced translocations).\n  * **Non-Invasive Prenatal Testing (`NIPT` / `NIPS`):** Sequencing maternal plasma containing $4\\%\\text{--}15\\%$ placental **cell-free fetal DNA ($\\text{cffDNA}$)** at $\\ge 9\\text{--}10$ weeks gestation to screen for common trisomies ($T21, T18, T13$), sex chromosome aneuploidies, microdeletions ($22q11.2$ DiGeorge), and single-gene disorders with $>99\\%$ sensitivity for Trisomy 21, dramatically reducing invasive amniocentesis procedures.\n  * **Genomic Newborn Screening (`gNBS`):** Expanding traditional heel-prick dried blood spot tandem mass spectrometry (which catches $\\sim 30\\text{--}60$ metabolic disorders) with targeted NGS or WGS for $200\\text{--}500+$ treatable childhood-onset genetic conditions (e.g., global flagship programs: **BabySeq Project, Guardian Study, UK NHS Generation Study [$100,000$ newborns], Screen4Care, BabyBeyond**).\n  * **Ultra-Rapid NICU/PICU Whole Genome Sequencing (`rWGS` / `urWGS`):** Pioneered by Rady Children's Institute for Genomic Medicine (Stephen Kingsmore) and Project Baby Bear/Bambi, plus Stanford's Guinness World Record ($5\\text{--}7\\text{ hour}$ nanopore/DRAGEN rWGS). Uses **Trio WGS** (critically ill infant + both biological parents sequenced simultaneously) to immediately filter for **De Novo** (`PS2`), **Compound Heterozygous** (`PM3`), and **Homozygous Recessive** mutations paired with NLP-extracted `HPO` phenotypes (`Exomiser`), achieving $35\\%\\text{--}50\\%$ diagnostic yield and changing acute ICU management (initiating targeted enzyme/cofactor/gene therapies, avoiding futile surgeries).\n* **How It Connects:**\n  * **Upstream from:** [N04: Mendelian Inheritance](#n04-inheritance-patterns--population-genetics), [N09: Long-Read Sequencing](#n09-third-gen-long-read--native-molecule-sequencing), [N10: Trio WES/WGS](#n10-sequencing-assay-modalities-panels-wes-wgs-low-pass), [N23: ACMG Guidelines](#n23-clinical-variant-classification-acmgamp--ampascocap).\n  * **Downstream to:** [N36: CRISPR Gene Editing](#n36-programmable-gene-editing-crispr-base-prime--epigenome-editing), [N37: AAV Gene Therapy & N-of-1 ASOs](#n37-gene-replacement-aavlnp-rna-medicines-asosirnamrna--car-t).",
+      "upstream": [
+        "N04",
+        "N10",
+        "N23",
+        "N09",
+        "N03",
+        "N07",
+        "N15",
+        "N05"
+      ],
+      "downstream": [
+        "N36",
+        "N37",
+        "N38"
+      ],
+      "tools": [
+        "BAM",
+        "Exomiser",
+        "HPO",
+        "CAP"
+      ],
+      "companies": [
+        "ONT"
+      ],
+      "keywords": [
+        "\"Diagnostic Odyssey\"",
+        "Aneuploidy",
+        "Clinical Paradigms Across the Early Lifespan",
+        "Compound Heterozygous",
+        "De Novo",
+        "Exomiser",
+        "Genomic Newborn Screening (`gNBS`)",
+        "HPO",
+        "Homozygous Recessive",
+        "Monogenic",
+        "NIPS",
+        "NIPT",
+        "PGT",
+        "PGT-A",
+        "PGT-M",
+        "PGT-SR",
+        "PM3",
+        "PS2",
+        "Structural Rearrangements",
+        "Trio WGS",
+        "`PGT-A`",
+        "`PGT-M`",
+        "`PGT-SR`",
+        "cell-free fetal DNA ($\\text{cffDNA}$)",
+        "gNBS",
+        "rWGS",
+        "urWGS"
+      ],
+      "formulas": [
+        "7,000\\text{--}10,000",
+        ">300\\text{ million}",
+        "\\sim 75\\%"
+      ]
+    },
+    {
+      "id": "N33",
+      "title": "Complex Disease GWAS, Polygenic Risk Scores (PRS) & Preventive Genomics",
+      "layer": 8,
+      "layerName": "Translation to Precision Medicine (Clinical Specialties)",
+      "layerColor": "#EC4899",
+      "layerBadge": "Layer 8",
+      "layerIcon": "🩺",
+      "coreConcept": "Common chronic diseases—coronary artery disease (CAD), type 2 diabetes, atrial fibrillation, hypertension, breast/prostate cancer, Alzheimer's disease, schizophrenia, and autoimmune disorders—are usually not caused by a single mutation, but by the cumulative additive effect of thousands of common genetic variants (**Polygenic architecture**) interacting with lifestyle and clinical factors.",
+      "rawBody": "* **Core Concept:** Common chronic diseases—coronary artery disease (CAD), type 2 diabetes, atrial fibrillation, hypertension, breast/prostate cancer, Alzheimer's disease, schizophrenia, and autoimmune disorders—are usually not caused by a single mutation, but by the cumulative additive effect of thousands of common genetic variants (**Polygenic architecture**) interacting with lifestyle and clinical factors.\n* **Methodology & Mathematical Formulation:**\n  * **Genome-Wide Association Studies (`GWAS`):** Testing millions of common variants across cases and controls (or quantitative traits) using linear or logistic mixed models (`PLINK 2.0`, `REGENIE`, `SAIGE`, `BOLT-LMM`) while controlling for population stratification (principal components $\\text{PC1--PC20}$) and cryptic relatedness. Significance threshold corrected for $1,000,000$ independent LD blocks:\n    $$P < 5 \\times 10^{-8}$$\n    Visualized via **Manhattan Plots** ($-\\log_{10} P$ vs. genomic position) and **Q-Q Plots** ($\\lambda_{\\text{GC}}$ genomic inflation factor), followed by statistical **Fine-Mapping** (`SuSiE`, `FINEMAP`), **Colocalization** (`coloc` with GTEx eQTLs / UKB pQTLs), and **Mendelian Randomization (`MR`)** (using genetic variants as instrumental variables to prove causal relationships between biomarkers and disease).\n  * **Polygenic Risk Scores (`PRS` / `PGS`):** For an individual $i$, the polygenic score sums the number of risk alleles $G_{ij} \\in \\{0, 1, 2\\}$ across $M$ variants weighted by their GWAS effect size $\\hat{\\beta}_j$ (log odds ratio):\n    $$\\text{PRS}_i = \\sum_{j=1}^{M} \\hat{\\beta}_j \\cdot G_{ij}$$\n  * **Modern Bayesian PRS Algorithms & Catalogs:** Because variants are correlated via Linkage Disequilibrium ($LD$), modern methods adjust $\\hat{\\beta}_j$ using continuous shrinkage priors (`PRS-CS`, `PRS-CSx` for multi-ancestry meta-analysis, `LDpred2`, `SBayesRC`) and archive validated models in the **`PGS Catalog`**.\n  * **Integrated Clinical Risk Models:** Combining **Monogenic risk** (e.g., $LDLR/APOB/PCSK9$ Familial Hypercholesterolemia or $BRCA1/2$) + **Polygenic Risk Score** (patients in the top $1\\text{--}5\\%$ PRS tail often carry disease risk equivalent to monogenic mutation carriers!) + **Clinical Scores** (Framingham / PREVENT cardiovascular score, Tyrer-Cuzick / BOADICEA CanRisk breast cancer model) to initiate early statin/PCSK9 therapy or early breast MRI screening.\n* **How It Connects:**\n  * **Upstream from:** [N04: LD & Population Genetics](#n04-inheritance-patterns--population-genetics), [N07: SNP Arrays](#n07-first-gen-sequencing-pcr-microarrays--optical-mapping), [N10: Low-Pass WGS](#n10-sequencing-assay-modalities-panels-wes-wgs-low-pass), [N21: Global Biobanks](#n21-population-reference-databases--global-biobanks).\n  * **Downstream to:** [N38: Preventive Genomics & Health Systems](#n38-global-commercial-landscape--companies-matrix).",
+      "upstream": [
+        "N04",
+        "N21",
+        "N10",
+        "N07"
+      ],
+      "downstream": [
+        "N38"
+      ],
+      "tools": [
+        "PLINK",
+        "REGENIE",
+        "PRS-CS",
+        "LDpred2",
+        "CAP",
+        "PGS Catalog",
+        "CARD"
+      ],
+      "companies": [
+        "ONT",
+        "BD"
+      ],
+      "keywords": [
+        "BOLT-LMM",
+        "Clinical Scores",
+        "Colocalization",
+        "FINEMAP",
+        "Fine-Mapping",
+        "GWAS",
+        "Genome-Wide Association Studies (`GWAS`)",
+        "Integrated Clinical Risk Models",
+        "LDpred2",
+        "MR",
+        "Manhattan Plots",
+        "Mendelian Randomization (`MR`)",
+        "Methodology & Mathematical Formulation",
+        "Modern Bayesian PRS Algorithms & Catalogs",
+        "Monogenic risk",
+        "PGS",
+        "PGS Catalog",
+        "PLINK 2.0",
+        "PRS",
+        "PRS-CS",
+        "PRS-CSx",
+        "Polygenic Risk Score",
+        "Polygenic Risk Scores (`PRS` / `PGS`)",
+        "Polygenic architecture",
+        "Q-Q Plots",
+        "REGENIE",
+        "SAIGE",
+        "SBayesRC",
+        "SuSiE",
+        "`PGS Catalog`"
+      ],
+      "formulas": [
+        "P < 5 \\times 10^{-8}",
+        "\\text{PRS}_i = \\sum_{j=1}^{M} \\hat{\\beta}_j \\cdot G_{ij}"
+      ]
+    },
+    {
+      "id": "N34",
+      "title": "Infectious Disease Genomics, Clinical mNGS & AMR Surveillance",
+      "layer": 8,
+      "layerName": "Translation to Precision Medicine (Clinical Specialties)",
+      "layerColor": "#EC4899",
+      "layerBadge": "Layer 8",
+      "layerIcon": "🩺",
+      "coreConcept": "Applying rapid sequencing to identify unknown bacterial, viral, fungal, or parasitic pathogens directly from patient samples, track outbreak transmission chains in real time, and predict Antimicrobial Resistance (**AMR**).",
+      "rawBody": "* **Core Concept:** Applying rapid sequencing to identify unknown bacterial, viral, fungal, or parasitic pathogens directly from patient samples, track outbreak transmission chains in real time, and predict Antimicrobial Resistance (**AMR**).\n* **Key Applications & Tools:**\n  * **Clinical Metagenomic Next-Generation Sequencing (`mNGS`):** Agnostic shotgun DNA/RNA sequencing of cerebrospinal fluid (CSF for meningitis/encephalitis), bronchoalveolar lavage (BAL for pneumonia), synovial fluid, or plasma microbial cell-free DNA (**Karius Test, Delve Bio, ChromaCode**). Depletes host human reads (`Bowtie2`/`Minimap2` against `T2T-CHM13`) and taxonomically classifies remaining pathogen reads (`Kraken2`, `Centrifuge`, `CZ ID` [Chan Zuckerberg ID]) within $24\\text{--}48\\text{ hours}$ when traditional cultures fail.\n  * **Genomic Epidemiology & Outbreak Phylodynamics:** Whole-genome tiling amplicon or hybrid capture sequencing of viruses (SARS-CoV-2, Influenza, Mpox, Dengue, Ebola) and hospital-acquired superbugs (MRSA, CRE, *Candida auris*). Analyzed via **`Nextstrain` (`Augur`/`Auspice`)**, **`Pangolin`**, **`GISAID`**, and wastewater genomic surveillance.\n  * **Genotypic Antimicrobial Resistance (`AMR`) Prediction:** Whole-genome sequencing of *Mycobacterium tuberculosis* (predicting Rifampicin [$rpoB$], Isoniazid [$katG/inhA$], Fluoroquinolone [$gyrA$], and Bedaquiline resistance weeks faster than slow liquid culture via `TB-Profiler` / `Mykrobe`) and Gram-negative bacteria using resistance databases (**`CARD` [Comprehensive Antibiotic Resistance Database]**, **`ResFinder`**, **`NCBI AMRFinderPlus`**).\n* **How It Connects:**\n  * **Upstream from:** [N09: Nanopore Real-Time Sequencing](#n09-third-gen-long-read--native-molecule-sequencing), [N15: Metagenomics](#n15-proteomics-metabolomics--microbiomemetagenomics).\n  * **Downstream to:** [N38: Infectious Disease Diagnostics](#n38-global-commercial-landscape--companies-matrix).\n\n---\n\n### Layer 9: Precision Therapeutics (Acting on the Genome)",
+      "upstream": [
+        "N15",
+        "N09"
+      ],
+      "downstream": [
+        "N38"
+      ],
+      "tools": [
+        "Minimap2",
+        "Kraken2",
+        "T2T-CHM13",
+        "CAP",
+        "CARD",
+        "GISAID",
+        "Nextstrain"
+      ],
+      "companies": [],
+      "keywords": [
+        "AMR",
+        "Augur",
+        "Auspice",
+        "Bowtie2",
+        "CARD",
+        "CZ ID",
+        "Centrifuge",
+        "GISAID",
+        "Genomic Epidemiology & Outbreak Phylodynamics",
+        "Karius Test, Delve Bio, ChromaCode",
+        "Key Applications & Tools",
+        "Kraken2",
+        "Minimap2",
+        "Mykrobe",
+        "NCBI AMRFinderPlus",
+        "Nextstrain",
+        "Pangolin",
+        "ResFinder",
+        "T2T-CHM13",
+        "TB-Profiler",
+        "`GISAID`",
+        "`NCBI AMRFinderPlus`",
+        "`Nextstrain` (`Augur`/`Auspice`)",
+        "`Pangolin`",
+        "`ResFinder`",
+        "mNGS"
+      ],
+      "formulas": [
+        "24\\text{--}48\\text{ hours}"
+      ]
+    },
+    {
+      "id": "N35",
+      "title": "Targeted Small Molecules, Monoclonal Antibodies & ADCs",
+      "layer": 9,
+      "layerName": "Precision Therapeutics (Acting on the Genome)",
+      "layerColor": "#14B8A6",
+      "layerBadge": "Layer 9",
+      "layerIcon": "💊",
+      "coreConcept": "Translating genomic target discovery into precision medicines that selectively inhibit mutated proteins or deliver payloads exclusively to diseased cells. (Human genetic evidence from GWAS/Biobanks increases the probability of FDA drug approval from Phase I to launch by $2.6\\times\\text{ to }4\\times$).",
+      "rawBody": "* **Core Concept:** Translating genomic target discovery into precision medicines that selectively inhibit mutated proteins or deliver payloads exclusively to diseased cells. (Human genetic evidence from GWAS/Biobanks increases the probability of FDA drug approval from Phase I to launch by $2.6\\times\\text{ to }4\\times$).\n* **Therapeutic Modalities:**\n  * **Genetically Validated Targets:** The gold-standard example is **$PCSK9$**: discovery of rare loss-of-function mutations in $PCSK9$ in individuals with lifelong ultra-low LDL cholesterol and $88\\%$ reduced coronary heart disease risk directly led to PCSK9 monoclonal antibodies (Evolocumab, Alirocumab), siRNA (Inclisiran), and base editing therapies.\n  * **Allosteric & Covalent Small-Molecule Inhibitors:** Tyrosine Kinase Inhibitors (TKIs: Osimertinib, Lorlatinib), covalent $KRAS\\text{ G12C}$ and $KRAS\\text{ G12D}$ inhibitors, PARP inhibitors (synthetic lethality), **PROTACs & Molecular Glues** (Targeted Protein Degraders that hijack E3 ubiquitin ligase to destroy \"undruggable\" transcription factors via the proteasome).\n  * **Antibody-Drug Conjugates (`ADCs`) & Bispecifics:** Monoclonal antibodies targeting surface antigens ($HER2, TROP2, Nectin\\text{-}4, Folate\\text{ Receptor }\\alpha$) linked via cleavable linkers to potent cytotoxic payloads (Trastuzumab deruxtecan, Sacituzumab govitecan), plus T-cell engager bispecific antibodies.\n* **How It Connects:**\n  * **Upstream from:** [N21: Biobank Target Validation](#n21-population-reference-databases--global-biobanks), [N25: AlphaFold 3 / Structure-Based Drug Design](#n25-genomic--protein-foundation-models-glms-plms--structural-ai), [N31: Oncology Biomarkers](#n31-precision-oncology-liquid-biopsy-mrd--neoantigens).\n  * **Downstream to:** [N38: Biopharma Ecosystem](#n38-global-commercial-landscape--companies-matrix).",
+      "upstream": [
+        "N21",
+        "N25",
+        "N31",
+        "N26"
+      ],
+      "downstream": [
+        "N38"
+      ],
+      "tools": [
+        "AlphaFold",
+        "AlphaFold 3",
+        "Evo",
+        "CAP"
+      ],
+      "companies": [],
+      "keywords": [
+        "$PCSK9$",
+        "ADCs",
+        "Genetically Validated Targets",
+        "PROTACs & Molecular Glues",
+        "Therapeutic Modalities"
+      ],
+      "formulas": [
+        "2.6\\times\\text{ to }4\\times",
+        "88\\%",
+        "KRAS\\text{ G12C}"
+      ]
+    },
+    {
+      "id": "N36",
+      "title": "Programmable Gene Editing (CRISPR, Base, Prime & Epigenome Editing)",
+      "layer": 9,
+      "layerName": "Precision Therapeutics (Acting on the Genome)",
+      "layerColor": "#14B8A6",
+      "layerBadge": "Layer 9",
+      "layerIcon": "💊",
+      "coreConcept": "Instead of managing symptoms for life, programmable gene editors permanently correct or silence the root pathogenic sequence directly inside a patient's DNA (*in vivo* via LNP/AAV or *ex vivo* in hematopoietic stem cells).",
+      "rawBody": "* **Core Concept:** Instead of managing symptoms for life, programmable gene editors permanently correct or silence the root pathogenic sequence directly inside a patient's DNA (*in vivo* via LNP/AAV or *ex vivo* in hematopoietic stem cells).\n* **Generations of Gene Editing Technologies:**\n  * **1st Generation — CRISPR-Cas Nucleases (`Cas9`, `Cas12a`):** Guided by a $20\\text{ nt}$ spacer single-guide RNA ($\\text{sgRNA}$) adjacent to a **PAM (Protospacer Adjacent Motif, e.g., $5'\\text{-NGG-}3'$ for SpCas9)**, the nuclease creates a **Double-Strand Break (DSB)**. Repaired via error-prone **Non-Homologous End Joining (`NHEJ`)** (creating indels to knock out a toxic gene or erythroid enhancer) or **Homology-Directed Repair (`HDR`)**.\n    * *Clinical Milestone:* **`Casgevy` (exagamglogene autotemcel — Vertex / CRISPR Therapeutics)**, the first FDA/EMA-approved CRISPR therapy, edits the $BCL11A$ erythroid enhancer in CD34+ stem cells to reactivate fetal hemoglobin ($\\text{HbF}$), functionally curing Sickle Cell Disease and Transfusion-Dependent $\\beta$-Thalassemia. *In vivo* LNP CRISPR-Cas9 (**Intellia Therapeutics `NTLA-2001` / `NTLA-2002`**) knocks out hepatic $TTR$ (transthyretin amyloidosis) and $KLKB1$ (hereditary angioedema) with a single IV infusion.\n  * **2nd Generation — Base Editing (`CBE` & `ABE` — David Liu Lab / Beam Therapeutics / Verve Therapeutics):** Fuses a catalytically impaired **Cas9 nickase (`nCas9`)** (which cuts only one strand—avoiding DSBs, p53 activation, and chromosomal translocations!) to a cytidine or deoxyadenosine deaminase enzyme:\n    * **Cytosine Base Editors (`CBE`):** Convert $C \\cdot G \\rightarrow T \\cdot A$.\n    * **Adenine Base Editors (`ABE`):** Convert $A \\cdot T \\rightarrow G \\cdot C$ (capable of reversing $\\sim 48\\%$ of all known pathogenic human point mutations, e.g., Beam's `BEAM-101` / `BEAM-302` for Alpha-1 Antitrypsin Deficiency and Verve's `VERVE-102` *in vivo* $PCSK9$ base editor).\n  * **3rd Generation — Prime Editing (`PE` — Prime Medicine):** Fuses `nCas9` to an engineered **Reverse Transcriptase** guided by a **prime editing guide RNA (`pegRNA`)** that contains both the target site and the desired new RNA template. Acts as a molecular **\"word processor search-and-replace\"**, capable of making all $12$ possible base-to-base conversions plus targeted small insertions and deletions without double-strand breaks or donor DNA templates.\n  * **Large Gene Insertion (`PASTE`, Passige, & Programmable RNA Bridge Recombinases):** Combines Prime Editing or bridge RNAs with serine integrases/recombinases to insert whole multi-kilobase genes ($>5\\text{--}36\\text{ kb}$) into a single safe-harbor locus, addressing genes like $CFTR$ (Cystic Fibrosis) that have $>1,000$ different patient mutations.\n  * **Epigenome Editing (`CRISPRoff` / `CRISPRon` — Chroma Medicine, Tune Therapeutics, Epic Bio):** Fuses catalytically dead **dCas9** (zero DNA cutting!) to DNA methyltransferases ($DNMT3A/3L$) or demethylases ($TET1$) to durably silence or activate target genes via epigenetic marks.\n  * **Off-Target Safety Profiling:** Validated using wet-lab and dry-lab genome-wide off-target assays (`GUIDE-seq`, `CIRCLE-seq`, `DISCOVER-Seq`, `CHANGE-seq`, `CRISPResso2`, `Cas-OFFinder`).\n* **How It Connects:**\n  * **Upstream from:** [N01: DNA](#n01-dna-chromosomes--genome-architecture), [N12: Epigenomics](#n12-epigenomics-methylation--3d-chromatin-architecture), [N25: AI Enzyme Engineering (`Evo 2`)](#n25-genomic--protein-foundation-models-glms-plms--structural-ai), [N32: Rare Monogenic Diseases](#n32-rare-disease-rwgs-reproductive-genetics--newborn-screening).\n  * **Downstream to:** [N37: Delivery Vectors (AAV/LNP) & CAR-T](#n37-gene-replacement-aavlnp-rna-medicines-asosirnamrna--car-t), [N38: Commercial Gene Editing Biotechs](#n38-global-commercial-landscape--companies-matrix).",
+      "upstream": [
+        "N12",
+        "N25",
+        "N01",
+        "N32"
+      ],
+      "downstream": [
+        "N38",
+        "N37"
+      ],
+      "tools": [
+        "Evo 2",
+        "Evo",
+        "MANE",
+        "CAP"
+      ],
+      "companies": [
+        "ONT",
+        "CRISPR Therapeutics",
+        "Vertex",
+        "Intellia Therapeutics",
+        "Beam Therapeutics",
+        "Prime Medicine",
+        "Verve Therapeutics",
+        "Chroma Medicine",
+        "Tune Therapeutics"
+      ],
+      "keywords": [
+        "\"word processor search-and-replace\"",
+        "ABE",
+        "Adenine Base Editors (`ABE`)",
+        "BEAM-101",
+        "BEAM-302",
+        "CBE",
+        "CHANGE-seq",
+        "CIRCLE-seq",
+        "CRISPResso2",
+        "CRISPRoff",
+        "CRISPRon",
+        "Cas-OFFinder",
+        "Cas12a",
+        "Cas9",
+        "Cas9 nickase (`nCas9`)",
+        "Casgevy",
+        "Cytosine Base Editors (`CBE`)",
+        "DISCOVER-Seq",
+        "Double-Strand Break (DSB)",
+        "Evo 2",
+        "GUIDE-seq",
+        "Generations of Gene Editing Technologies",
+        "HDR",
+        "Homology-Directed Repair (`HDR`)",
+        "NHEJ",
+        "NTLA-2001",
+        "NTLA-2002",
+        "Non-Homologous End Joining (`NHEJ`)",
+        "Off-Target Safety Profiling",
+        "PASTE"
+      ],
+      "formulas": [
+        "20\\text{ nt}",
+        "\\text{sgRNA}",
+        "5'\\text{-NGG-}3'"
+      ]
+    },
+    {
+      "id": "N37",
+      "title": "Gene Replacement (AAV/LNP), RNA Medicines (ASO/siRNA/mRNA) & CAR-T",
+      "layer": 9,
+      "layerName": "Precision Therapeutics (Acting on the Genome)",
+      "layerColor": "#14B8A6",
+      "layerBadge": "Layer 9",
+      "layerIcon": "💊",
+      "coreConcept": "Delivering functional copies of missing genes, transiently modulating mRNA transcripts, or engineering living immune cells to eradicate cancer and autoimmune diseases.",
+      "rawBody": "* **Core Concept:** Delivering functional copies of missing genes, transiently modulating mRNA transcripts, or engineering living immune cells to eradicate cancer and autoimmune diseases.\n* **Key Modalities:**\n  * **Viral & Non-Viral Gene Replacement Therapy:**\n    * **Adeno-Associated Virus (`AAV` — serotypes `AAV9`, `AAVrh74`, AI-engineered capsids for CNS/muscle tropism, payload limit $\\sim 4.7\\text{ kb}$):** Delivers episomal functional gene copies in a single dose. Approved landmarks: **`Zolgensma`** ($SMN1$ for Spinal Muscular Atrophy), **`Luxturna`** ($RPE65$ inherited retinal dystrophy), **`Elevidys`** (micro-dystrophin for Duchenne Muscular Dystrophy), **`Hemgenix` / `Roctavian`** (Hemophilia B & A), and **`Otoferlin` (`DB-OTO` / `AK-OTOF`)** gene therapy restoring hearing in congenital deafness.\n    * **Lentiviral *Ex Vivo* Gene Therapy:** **`Lyfgenia`** (Sickle Cell), **`Zynteglo`** ($\\beta$-Thalassemia), **`Lenmeldy`** (Metachromatic Leukodystrophy).\n    * **Lipid Nanoparticles (`LNPs`):** Non-viral ionizable lipid delivery systems capable of redosing and carrying large mRNA/CRISPR payloads.\n  * **Programmable RNA Medicines (Oligonucleotide Therapeutics):**\n    * **Antisense Oligonucleotides (`ASOs` — Ionis, Biogen, Sarepta):** Single-stranded chemically modified oligos ($15\\text{--}25\\text{ nt}$) that either recruit **RNase H1** to degrade toxic mRNA (e.g., *Tofersen* for $SOD1$-ALS) or sterically modulate **pre-mRNA splicing** (e.g., *Nusinersen [Spinraza]* rescuing $SMN2$ exon 7 inclusion in SMA; exon-skipping phosphorodiamidate morpholino oligomers [PMOs] in DMD). Also powers **N-of-1 Bespoke Therapies** (*Milasen*, **n-Lorem Foundation**) designed within months for ultra-rare patients with unique deep-intronic splice mutations!\n    * **Small Interfering RNA (`siRNA` — Alnylam, Arrowhead, Dicerna):** Double-stranded RNA loaded into the **RISC (RNA-Induced Silencing Complex)** conjugated to **GalNAc** (trivalent N-acetylgalactosamine for targeted hepatocyte uptake) or CNS/adipose ligands (e.g., *Patisiran/Vutrisiran* for $TTR$, *Inclisiran* for $PCSK9$, *Givosiran* for acute hepatic porphyria).\n    * **ADAR-Mediated Programmable RNA Editing (Wave Life Sciences, Korro Bio, ProQR):** Endogenous Adenosine Deaminase Acting on RNA converts $A \\rightarrow I$ (read as $G$ by ribosomes) directly on mRNA transcripts without permanent DNA changes.\n  * **Adoptive Cell Therapies (`CAR-T`, `TCR-T`, `CAR-NK`, `TILs`):**\n    * **Chimeric Antigen Receptor T-Cells (`CAR-T`):** Autologous or allogeneic (CRISPR-edited off-the-shelf) T-cells engineered to recognize surface antigens ($CD19$ in B-cell leukemias/lymphomas and severe refractory Lupus; $BCMA$ in Multiple Myeloma).\n    * **TCR-T & Tumor-Infiltrating Lymphocytes (`TILs` — Lifileucel):** Recognizing intracellular neoantigens presented on specific patient **HLA** alleles (e.g., *Afamitresgene autoleucel* targeting $MAGE\\text{-}A4$ in `HLA-A*02` synovial sarcoma patients).\n* **How It Connects:**\n  * **Upstream from:** [N02: Central Dogma](#n02-the-central-dogma-of-molecular-biology), [N11: RNA Splicing](#n11-transcriptomics--bulkisoform-rna-seq), [N31: Oncology Neoantigens](#n31-precision-oncology-liquid-biopsy-mrd--neoantigens), [N32: Rare Disease rWGS](#n32-rare-disease-rwgs-reproductive-genetics--newborn-screening), [N36: Gene Editing](#n36-programmable-gene-editing-crispr-base-prime--epigenome-editing).\n  * **Downstream to:** [N38: Commercial Therapeutics Ecosystem](#n38-global-commercial-landscape--companies-matrix).\n\n---\n\n### Layer 10: Commercial Ecosystem, Patents & Conferences",
+      "upstream": [
+        "N31",
+        "N32",
+        "N36",
+        "N11",
+        "N02",
+        "N13"
+      ],
+      "downstream": [
+        "N38"
+      ],
+      "tools": [
+        "UNI",
+        "MANE",
+        "CAP"
+      ],
+      "companies": [
+        "ONT",
+        "Alnylam",
+        "Ionis",
+        "Sarepta",
+        "Wave Life Sciences"
+      ],
+      "keywords": [
+        "($\\beta$-Thalassemia),",
+        "(Sickle Cell),",
+        "AAV",
+        "AAV9",
+        "AAVrh74",
+        "AK-OTOF",
+        "ASOs",
+        "CAR-NK",
+        "CAR-T",
+        "Chimeric Antigen Receptor T-Cells (`CAR-T`)",
+        "DB-OTO",
+        "Elevidys",
+        "GalNAc",
+        "HLA",
+        "HLA-A*02",
+        "Hemgenix",
+        "Key Modalities",
+        "LNPs",
+        "Lenmeldy",
+        "Lipid Nanoparticles (`LNPs`)",
+        "Luxturna",
+        "Lyfgenia",
+        "N-of-1 Bespoke Therapies",
+        "Otoferlin",
+        "RISC (RNA-Induced Silencing Complex)",
+        "RNase H1",
+        "Roctavian",
+        "TCR-T",
+        "TILs",
+        "Viral & Non-Viral Gene Replacement Therapy"
+      ],
+      "formulas": [
+        "\\sim 4.7\\text{ kb}",
+        "\\beta",
+        "15\\text{--}25\\text{ nt}"
+      ]
+    },
+    {
+      "id": "N38",
+      "title": "Global Commercial Landscape & Companies Matrix",
+      "layer": 10,
+      "layerName": "Commercial Ecosystem, Patents & Conferences",
+      "layerColor": "#94A3B8",
+      "layerBadge": "Layer 10",
+      "layerIcon": "🌐",
+      "coreConcept": "How every scientific layer in this Atlas translates into real-world commercial companies, diagnostic tests, cloud platforms, and therapeutic pipelines.\n\n| Commercial Sector | Leading Global & Regional Companies / Platforms | Core Nodes Connected |\n| :--- | :--- | :--- |\n| **1. Sequencing Hardware & Chemistry** | **Illumina** (NovaSeq X, MiSeq i100), **Pacific Biosciences (PacBio)** (Revio, Vega, Onso), **Oxford Nanopore Technologies (ONT)** (PromethION, MinION), **Element Biosciences** (AVITI24), **Ultima Genomics** (UG 100), **MGI / Complete Genomics** (DNBSEQ-T7), **Thermo Fisher Scientific** (Ion Torrent Genexus, SeqStudio), **Roche Sequencing** (SBX nanopore), **Bionano Genomics** (OGM Stratys). | [N07](#n07-first-gen-sequencing-pcr-microarrays--optical-mapping), [N08](#n08-second-gen-short-read-high-throughput-sequencing-ngs), [N09](#n09-third-gen-long-read--native-molecule-sequencing) |\n| **2. Sample Prep, Library & Target Capture** | **Twist Bioscience**, **Integrated DNA Technologies (IDT - Danaher)**, **Agilent Technologies**, **Qiagen**, **New England Biolabs (NEB)**, **Roche KAPA**, **Watchmaker Genomics**, **Covaris**, **Streck**. | [N05](#n05-biospecimen-collection-cfdnactdna--extraction), [N06](#n06-library-preparation-umis--target-enrichment) |\n| **3. Single-Cell, Spatial & Multi-Omics** | **10x Genomics** (Chromium, Visium HD, Xenium), **Bruker Spatial Biology** (NanoString CosMx/GeoMx, Canopy), **Vizgen** (MERSCOPE), **Akoya Biosciences** (PhenoCycler), **Parse Biosciences**, **Scale Biosciences**, **BD**, **Olink (Thermo Fisher)**, **SomaLogic (Standard BioTools)**, **Quantum-Si**, **Nautilus**. | [N13](#n13-single-cell-multi-omics), [N14](#n14-spatial-omics--digital-histopathology), [N15](#n15-proteomics-metabolomics--microbiomemetagenomics) |\n| **4. Precision Oncology, Liquid Biopsy & MRD** | **Guardant Health** (Guardant360, Reveal, Shield), **Foundation Medicine (Roche)** (FoundationOne CDx/Liquid), **Tempus AI** (xT, xF, xR, multimodal EHR+genomics), **Natera** (Signatera MRD, Panorama NIPT), **Exact Sciences** (Oncotype DX, Cologuard Plus, Cancerguard, OncoExTra), **GRAIL** (Galleri MCED), **Caris Life Sciences** (WES+WTS), **Personalis** (NeXT Personal), **DELFI Diagnostics**, **Freenome**, **Foresight Diagnostics**, **SOPHiA GENETICS**. | [N10](#n10-sequencing-assay-modalities-panels-wes-wgs-low-pass), [N26](#n26-multi-modal-clinical-ai-computational-pathology--virtual-cells), [N31](#n31-precision-oncology-liquid-biopsy-mrd--neoantigens) |\n| **5. Rare Disease, Reproductive & PGx Diagnostics** | **GeneDx** (Rapid WES/WGS), **Labcorp / Invitae**, **Quest Diagnostics**, **Ambry Genetics (REALM)**, **Myriad Genetics** (MyRisk, GeneSight PGx, Prequel), **Baylor Genetics**, **Centogene**, **Blueprint Genetics**, **Fulgent Genetics**, **OneOme**, **Color Health**, **MedGenome**, **Strand Life Sciences**, **Mapmygenome**, **4baseCare**, **Redcliffe Labs**, **HaystackAnalytics**. | [N30](#n30-pharmacogenomics-pgx--precision-drug-dosing), [N32](#n32-rare-disease-rwgs-reproductive-genetics--newborn-screening), [N33](#n33-complex-disease-gwas-polygenic-risk-scores-prs--preventive-genomics) |\n| **6. Cloud Bioinformatics, Pipelines & Clinical Interpretation** | **Seqera Labs** (Nextflow, Wave, MultiQC), **Illumina Connected Analytics & DRAGEN / Emedgene**, **DNAnexus**, **Velsera (Seven Bridges / Pierian)**, **Terra.bio**, **Lifebit**, **Genoox (Franklin)**, **Saphetor (Varsome)**, **Qiagen Digital Insights (QCI, HGMD, CLC)**, **Fabric Genomics**, **Golden Helix**, **Genomenon (Mastermind)**, **NVIDIA Clara Parabricks**, **AWS HealthOmics**, **TileDB**. | [N18](#n18-variant-calling-ecosystem-germline-somatic-sv-cnv-str), [N19](#n19-workflow-orchestration-nextflowwdl-containers--cloud), [N20](#n20-variant-annotation-engines-hgvs--mane-transcripts), [N23](#n23-clinical-variant-classification-acmgamp--ampascocap), [N28](#n28-clinical-etl-pipelines-rest-apis-lims--ehr-integration) |\n| **7. AI Foundation Models & TechBio Drug Discovery** | **Isomorphic Labs / Google DeepMind**, **EvolutionaryScale**, **Recursion Pharmaceuticals (Exscientia)**, **Insitro**, **Schrödinger**, **Generate:Biomedicines**, **Chai Discovery**, **Cradle Bio**, **InstaDeep**, **Xaira Therapeutics**, **Owkin**, **Paige AI**, **PathAI**. | [N24](#n24-variant-effect-predictors--non-coding-regulatory-ai), [N25](#n25-genomic--protein-foundation-models-glms-plms--structural-ai), [N26](#n26-multi-modal-clinical-ai-computational-pathology--virtual-cells), [N35](#n35-targeted-small-molecules-monoclonal-antibodies--adcs) |\n| **8. Gene Editing, Gene Therapy & RNA Medicines** | **CRISPR Therapeutics**, **Vertex Pharmaceuticals**, **Intellia Therapeutics**, **Beam Therapeutics**, **Prime Medicine**, **Verve Therapeutics**, **Editas Medicine**, **Mammoth Biosciences**, **Tessera Therapeutics**, **Chroma Medicine**, **Tune Therapeutics**, **Alnylam Pharmaceuticals**, **Ionis Pharmaceuticals**, **Sarepta Therapeutics**, **Moderna**, **BioNTech**, **Wave Life Sciences**. | [N36](#n36-programmable-gene-editing-crispr-base-prime--epigenome-editing), [N37](#n37-gene-replacement-aavlnp-rna-medicines-asosirnamrna--car-t) |",
+      "rawBody": "* **Core Concept:** How every scientific layer in this Atlas translates into real-world commercial companies, diagnostic tests, cloud platforms, and therapeutic pipelines.\n\n| Commercial Sector | Leading Global & Regional Companies / Platforms | Core Nodes Connected |\n| :--- | :--- | :--- |\n| **1. Sequencing Hardware & Chemistry** | **Illumina** (NovaSeq X, MiSeq i100), **Pacific Biosciences (PacBio)** (Revio, Vega, Onso), **Oxford Nanopore Technologies (ONT)** (PromethION, MinION), **Element Biosciences** (AVITI24), **Ultima Genomics** (UG 100), **MGI / Complete Genomics** (DNBSEQ-T7), **Thermo Fisher Scientific** (Ion Torrent Genexus, SeqStudio), **Roche Sequencing** (SBX nanopore), **Bionano Genomics** (OGM Stratys). | [N07](#n07-first-gen-sequencing-pcr-microarrays--optical-mapping), [N08](#n08-second-gen-short-read-high-throughput-sequencing-ngs), [N09](#n09-third-gen-long-read--native-molecule-sequencing) |\n| **2. Sample Prep, Library & Target Capture** | **Twist Bioscience**, **Integrated DNA Technologies (IDT - Danaher)**, **Agilent Technologies**, **Qiagen**, **New England Biolabs (NEB)**, **Roche KAPA**, **Watchmaker Genomics**, **Covaris**, **Streck**. | [N05](#n05-biospecimen-collection-cfdnactdna--extraction), [N06](#n06-library-preparation-umis--target-enrichment) |\n| **3. Single-Cell, Spatial & Multi-Omics** | **10x Genomics** (Chromium, Visium HD, Xenium), **Bruker Spatial Biology** (NanoString CosMx/GeoMx, Canopy), **Vizgen** (MERSCOPE), **Akoya Biosciences** (PhenoCycler), **Parse Biosciences**, **Scale Biosciences**, **BD**, **Olink (Thermo Fisher)**, **SomaLogic (Standard BioTools)**, **Quantum-Si**, **Nautilus**. | [N13](#n13-single-cell-multi-omics), [N14](#n14-spatial-omics--digital-histopathology), [N15](#n15-proteomics-metabolomics--microbiomemetagenomics) |\n| **4. Precision Oncology, Liquid Biopsy & MRD** | **Guardant Health** (Guardant360, Reveal, Shield), **Foundation Medicine (Roche)** (FoundationOne CDx/Liquid), **Tempus AI** (xT, xF, xR, multimodal EHR+genomics), **Natera** (Signatera MRD, Panorama NIPT), **Exact Sciences** (Oncotype DX, Cologuard Plus, Cancerguard, OncoExTra), **GRAIL** (Galleri MCED), **Caris Life Sciences** (WES+WTS), **Personalis** (NeXT Personal), **DELFI Diagnostics**, **Freenome**, **Foresight Diagnostics**, **SOPHiA GENETICS**. | [N10](#n10-sequencing-assay-modalities-panels-wes-wgs-low-pass), [N26](#n26-multi-modal-clinical-ai-computational-pathology--virtual-cells), [N31](#n31-precision-oncology-liquid-biopsy-mrd--neoantigens) |\n| **5. Rare Disease, Reproductive & PGx Diagnostics** | **GeneDx** (Rapid WES/WGS), **Labcorp / Invitae**, **Quest Diagnostics**, **Ambry Genetics (REALM)**, **Myriad Genetics** (MyRisk, GeneSight PGx, Prequel), **Baylor Genetics**, **Centogene**, **Blueprint Genetics**, **Fulgent Genetics**, **OneOme**, **Color Health**, **MedGenome**, **Strand Life Sciences**, **Mapmygenome**, **4baseCare**, **Redcliffe Labs**, **HaystackAnalytics**. | [N30](#n30-pharmacogenomics-pgx--precision-drug-dosing), [N32](#n32-rare-disease-rwgs-reproductive-genetics--newborn-screening), [N33](#n33-complex-disease-gwas-polygenic-risk-scores-prs--preventive-genomics) |\n| **6. Cloud Bioinformatics, Pipelines & Clinical Interpretation** | **Seqera Labs** (Nextflow, Wave, MultiQC), **Illumina Connected Analytics & DRAGEN / Emedgene**, **DNAnexus**, **Velsera (Seven Bridges / Pierian)**, **Terra.bio**, **Lifebit**, **Genoox (Franklin)**, **Saphetor (Varsome)**, **Qiagen Digital Insights (QCI, HGMD, CLC)**, **Fabric Genomics**, **Golden Helix**, **Genomenon (Mastermind)**, **NVIDIA Clara Parabricks**, **AWS HealthOmics**, **TileDB**. | [N18](#n18-variant-calling-ecosystem-germline-somatic-sv-cnv-str), [N19](#n19-workflow-orchestration-nextflowwdl-containers--cloud), [N20](#n20-variant-annotation-engines-hgvs--mane-transcripts), [N23](#n23-clinical-variant-classification-acmgamp--ampascocap), [N28](#n28-clinical-etl-pipelines-rest-apis-lims--ehr-integration) |\n| **7. AI Foundation Models & TechBio Drug Discovery** | **Isomorphic Labs / Google DeepMind**, **EvolutionaryScale**, **Recursion Pharmaceuticals (Exscientia)**, **Insitro**, **Schrödinger**, **Generate:Biomedicines**, **Chai Discovery**, **Cradle Bio**, **InstaDeep**, **Xaira Therapeutics**, **Owkin**, **Paige AI**, **PathAI**. | [N24](#n24-variant-effect-predictors--non-coding-regulatory-ai), [N25](#n25-genomic--protein-foundation-models-glms-plms--structural-ai), [N26](#n26-multi-modal-clinical-ai-computational-pathology--virtual-cells), [N35](#n35-targeted-small-molecules-monoclonal-antibodies--adcs) |\n| **8. Gene Editing, Gene Therapy & RNA Medicines** | **CRISPR Therapeutics**, **Vertex Pharmaceuticals**, **Intellia Therapeutics**, **Beam Therapeutics**, **Prime Medicine**, **Verve Therapeutics**, **Editas Medicine**, **Mammoth Biosciences**, **Tessera Therapeutics**, **Chroma Medicine**, **Tune Therapeutics**, **Alnylam Pharmaceuticals**, **Ionis Pharmaceuticals**, **Sarepta Therapeutics**, **Moderna**, **BioNTech**, **Wave Life Sciences**. | [N36](#n36-programmable-gene-editing-crispr-base-prime--epigenome-editing), [N37](#n37-gene-replacement-aavlnp-rna-medicines-asosirnamrna--car-t) |",
+      "upstream": [
+        "N29",
+        "N37",
+        "N31",
+        "N36",
+        "N33",
+        "N30",
+        "N35",
+        "N08",
+        "N32",
+        "N34"
+      ],
+      "downstream": [
+        "N39"
+      ],
+      "tools": [
+        "Nextflow",
+        "WDL",
+        "MultiQC",
+        "Evo",
+        "TileDB",
+        "MANE",
+        "HGVS",
+        "CAP"
+      ],
+      "companies": [
+        "Illumina",
+        "Pacific Biosciences",
+        "PacBio",
+        "Oxford Nanopore",
+        "ONT",
+        "Element Biosciences",
+        "Ultima Genomics",
+        "MGI",
+        "Complete Genomics",
+        "Thermo Fisher Scientific",
+        "Bionano Genomics",
+        "Twist Bioscience"
+      ],
+      "keywords": [
+        "1. Sequencing Hardware & Chemistry",
+        "10x Genomics",
+        "2. Sample Prep, Library & Target Capture",
+        "3. Single-Cell, Spatial & Multi-Omics",
+        "4. Precision Oncology, Liquid Biopsy & MRD",
+        "4baseCare",
+        "8. Gene Editing, Gene Therapy & RNA Medicines",
+        "AWS HealthOmics",
+        "Agilent Technologies",
+        "Akoya Biosciences",
+        "Alnylam Pharmaceuticals",
+        "Ambry Genetics (REALM)",
+        "BD",
+        "Baylor Genetics",
+        "Beam Therapeutics",
+        "BioNTech",
+        "Bionano Genomics",
+        "Blueprint Genetics",
+        "Bruker Spatial Biology",
+        "CRISPR Therapeutics",
+        "Caris Life Sciences",
+        "Centogene",
+        "Chai Discovery",
+        "Chroma Medicine",
+        "Color Health",
+        "Covaris",
+        "Cradle Bio",
+        "DELFI Diagnostics",
+        "DNAnexus",
+        "Editas Medicine"
+      ],
+      "formulas": []
+    },
+    {
+      "id": "N39",
+      "title": "Landmark Patents, Consortia & Global Conferences",
+      "layer": 10,
+      "layerName": "Commercial Ecosystem, Patents & Conferences",
+      "layerColor": "#94A3B8",
+      "layerBadge": "Layer 10",
+      "layerIcon": "🌐",
+      "coreConcept": "The intellectual property, open-science standards bodies, and premier annual conferences where breakthroughs in genomics and precision medicine are published, debated, and commercialized.",
+      "rawBody": "* **Core Concept:** The intellectual property, open-science standards bodies, and premier annual conferences where breakthroughs in genomics and precision medicine are published, debated, and commercialized.\n* **Key Patent Landscapes & IP Domains:**\n  1. **Next-Generation Sequencing Chemistry Patents:** Reversible terminator nucleotides ($3'\\text{-O-azidomethyl}$ cleavable blockers — Solexa/Illumina foundational patents expired/expiring, unlocking fierce competition from Element, MGI, and Ultima), nanopore CsgG/MspA pore mutants & motor helicases (ONT), and zero-mode waveguide (ZMW) polymerase immobilization (PacBio).\n  2. **Liquid Biopsy & cffDNA/ctDNA Patents:** Non-invasive prenatal testing via maternal plasma cffDNA (Dennis Lo / Chinese University of Hong Kong / Sequenom foundational patents), duplex UMI molecular barcoding error-suppression patents (University of Washington / TwinStrand / Guardant / Foundation), tumor-informed multiplex PCR MRD patents (Natera vs. Invitae/Guardant litigation), and cfDNA methylation/fragmentomics classification patents.\n  3. **Genome Editing IP Matrix:** Foundational eukaryotic CRISPR-Cas9 cleavage patents (Broad Institute [Feng Zhang] vs. CVC [Jennifer Doudna & Emmanuelle Charpentier]), Cas12/Cas13/miniature Cas14/Cas$\\Phi$ nucleases, Cytosine/Adenine Base Editing patents (Harvard/Broad licensed to Beam Therapeutics), and Prime Editing patents (Harvard/Broad licensed to Prime Medicine).\n* **Global Scientific Consortia:**\n  * **GA4GH** (Global Alliance for Genomics and Health), **HPRC** (Human Pangenome Reference Consortium), **T2T** (Telomere-to-Telomere), **ClinGen**, **CPIC**, **GIAB** (Genome in a Bottle), **HCA** (Human Cell Atlas), **IGVF** (Impact of Genomic Variation on Function), **ICDA** (International Common Disease Alliance).\n* **Major Annual Conferences & Proceedings:**\n  * **Human & Clinical Genetics:** **`ASHG`** (American Society of Human Genetics), **`ACMG`** (Annual Clinical Genetics Meeting), **`ESHG`** (European Society of Human Genetics), **`ICHG`**.\n  * **Sequencing Technology & Spatial Biology:** **`AGBT`** (Advances in Genome Biology and Technology — General Meeting & Agricultural/Precision Health Meetings, where major sequencing platforms launch), **`Festival of Genomics & Biodata`** (London / Boston).\n  * **Computational Biology & AI in Genomics:** **`ISMB` / `ECCB`** (Intelligent Systems for Molecular Biology), **`RECOMB`** (Research in Computational Molecular Biology), **`PSB`** (Pacific Symposium on Biocomputing), **`GIW`**, **`NeurIPS` / `ICLR` / `ICML` Machine Learning in Structural Biology & Genomics Workshops**.\n  * **Precision Oncology & Clinical Informatics:** **`ASCO`** (American Society of Clinical Oncology), **`AACR`** (American Association for Cancer Research), **`ESMO`**, **`AMP`** (Association for Molecular Pathology), **`ASH`** (Hematology), **`AMIA`** (American Medical Informatics Association), **`HL7 FHIR DevDays`**.\n\n---\n\n## 🚀 Part 5: Google Antigravity Agent Specification (`tasks.md` Blueprint)\n\n> **Instructions for Google Antigravity Agent:**  \n> When this `README.md` file is opened in **Google Antigravity**, use the specification below to generate, build, and launch an interactive **Genomics to Precision Medicine Knowledge Graph Atlas** web application served on `http://localhost:8000`.\n\n### 🎯 Application Objective\nBuild a responsive, zero-backend or Python-served Single Page Application (`index.html` + `server.py` on `http://localhost:8000`) that visualizes all **10 Layers** and **39 Core Nodes (`N01`–`N39`)** from this document as an **Interactive Force-Directed / Layered Knowledge Graph Atlas**.\n\n### ✅ Antigravity Persistent Task Checklist\n- [ ] **Task 1: Parse Knowledge Graph Data (`N01`–`N39`)**\n  - Extract all 39 Nodes (`N01` through `N39`), their assigned Layer (`Layer 1` to `Layer 10`), color coding, core conceptual summary, exhaustive technical keywords, tools/standards, commercial companies, and all directed Upstream/Downstream edges defined in Part 2 and Part 4 of this `README.md`.\n- [ ] **Task 2: Build Interactive Graph Canvas (`index.html`)**\n  - Implement an interactive node-link canvas (using Cytoscape.js, D3.js, or HTML5 Canvas/SVG) where each concept is a glowing, color-coded node (\"dot\") grouped by its biological-to-clinical layer.\n  - Support smooth zoom, pan, node dragging, and layer-by-layer topological layout switching (Force-Directed Graph Mode vs. 10-Layer Pipeline Flow Mode).\n- [ ] **Task 3: Interactive Node Inspector & Connection Highlighter**\n  - When a user clicks any dot/node (`N01`–`N39`):\n    1. Highlight the selected node and animate all **Upstream Input Edges** (in cyan) and **Downstream Application Edges** (in emerald green), dimming unrelated nodes.\n    2. Slide open a rich **Concept Deep-Dive Drawer** displaying:\n       - Full Concept Explanation & Mathematical/Scientific Formulas (rendered with KaTeX/MathJax).\n       - All Key Tools, File Formats, Databases & Standards badges.\n       - Commercial Companies & Real-World Applications linked to that node.\n       - Clickable **Upstream** and **Downstream** node pills so clicking a connected pill smoothly pans the camera to that dot and opens its concept.\n- [ ] **Task 4: Global Keyword Search, Layer Filters & \"Pathfinder Mode\"**\n  - Add a real-time search bar indexing all $500+$ genomics/bioinformatics keywords (`FASTQ`, `BAM`, `VCF`, `Nextflow`, `WDL`, `Pysam`, `bcftools`, `ACMG`, `FHIR`, `CRISPR`, `ctDNA`, `MRD`, `AlphaMissense`, `Evo 2`, `CPIC`, etc.) that highlights matching nodes on the map.\n  - Add a **\"Trace Translation Path\"** feature allowing users to pick any starting node (e.g., `N01: DNA`) and any clinical/commercial target node (e.g., `N30: Pharmacogenomics` or `N36: CRISPR Gene Editing`) and visually illuminate the shortest step-by-step translational pathway connecting them.\n- [ ] **Task 5: Localhost Server & Verification (`http://localhost:8000`)**\n  - Ensure `server.py` serves the application on `http://localhost:8000` with CORS enabled and verify the UI renders cleanly in the browser.",
+      "upstream": [
+        "N38"
+      ],
+      "downstream": [],
+      "tools": [
+        "FASTQ",
+        "BAM",
+        "VCF",
+        "BCF",
+        "STAR",
+        "Nextflow",
+        "WDL",
+        "bcftools",
+        "Pysam",
+        "AlphaMissense",
+        "Evo 2",
+        "Evo",
+        "UNI",
+        "ClinGen",
+        "CPIC"
+      ],
+      "companies": [
+        "Illumina",
+        "PacBio",
+        "ONT",
+        "MGI",
+        "Natera",
+        "Invitae",
+        "Beam Therapeutics",
+        "Prime Medicine"
+      ],
+      "keywords": [
+        "\"Trace Translation Path\"",
+        "10 Layers",
+        "39 Core Nodes (`N01`–`N39`)",
+        "AACR",
+        "ACMG",
+        "AGBT",
+        "AMIA",
+        "AMP",
+        "ASCO",
+        "ASH",
+        "ASHG",
+        "AlphaMissense",
+        "BAM",
+        "CPIC",
+        "CRISPR",
+        "ClinGen",
+        "Computational Biology & AI in Genomics",
+        "Concept Deep-Dive Drawer",
+        "Downstream",
+        "Downstream Application Edges",
+        "ECCB",
+        "ESHG",
+        "ESMO",
+        "Evo 2",
+        "FASTQ",
+        "FHIR",
+        "Festival of Genomics & Biodata",
+        "GA4GH",
+        "GIAB",
+        "GIW"
+      ],
+      "formulas": [
+        "3'\\text{-O-azidomethyl}",
+        "\\Phi"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "e_N09_N10",
+      "source": "N09",
+      "target": "N10"
+    },
+    {
+      "id": "e_N04_N21",
+      "source": "N04",
+      "target": "N21"
+    },
+    {
+      "id": "e_N27_N28",
+      "source": "N27",
+      "target": "N28"
+    },
+    {
+      "id": "e_N29_N38",
+      "source": "N29",
+      "target": "N38"
+    },
+    {
+      "id": "e_N08_N16",
+      "source": "N08",
+      "target": "N16"
+    },
+    {
+      "id": "e_N02_N25",
+      "source": "N02",
+      "target": "N25"
+    },
+    {
+      "id": "e_N23_N24",
+      "source": "N23",
+      "target": "N24"
+    },
+    {
+      "id": "e_N03_N32",
+      "source": "N03",
+      "target": "N32"
+    },
+    {
+      "id": "e_N28_N31",
+      "source": "N28",
+      "target": "N31"
+    },
+    {
+      "id": "e_N01_N02",
+      "source": "N01",
+      "target": "N02"
+    },
+    {
+      "id": "e_N12_N36",
+      "source": "N12",
+      "target": "N36"
+    },
+    {
+      "id": "e_N10_N32",
+      "source": "N10",
+      "target": "N32"
+    },
+    {
+      "id": "e_N32_N36",
+      "source": "N32",
+      "target": "N36"
+    },
+    {
+      "id": "e_N30_N31",
+      "source": "N30",
+      "target": "N31"
+    },
+    {
+      "id": "e_N25_N36",
+      "source": "N25",
+      "target": "N36"
+    },
+    {
+      "id": "e_N25_N35",
+      "source": "N25",
+      "target": "N35"
+    },
+    {
+      "id": "e_N20_N21",
+      "source": "N20",
+      "target": "N21"
+    },
+    {
+      "id": "e_N15_N31",
+      "source": "N15",
+      "target": "N31"
+    },
+    {
+      "id": "e_N23_N31",
+      "source": "N23",
+      "target": "N31"
+    },
+    {
+      "id": "e_N18_N29",
+      "source": "N18",
+      "target": "N29"
+    },
+    {
+      "id": "e_N37_N38",
+      "source": "N37",
+      "target": "N38"
+    },
+    {
+      "id": "e_N23_N30",
+      "source": "N23",
+      "target": "N30"
+    },
+    {
+      "id": "e_N15_N34",
+      "source": "N15",
+      "target": "N34"
+    },
+    {
+      "id": "e_N09_N18",
+      "source": "N09",
+      "target": "N18"
+    },
+    {
+      "id": "e_N30_N28",
+      "source": "N30",
+      "target": "N28"
+    },
+    {
+      "id": "e_N31_N35",
+      "source": "N31",
+      "target": "N35"
+    },
+    {
+      "id": "e_N12_N31",
+      "source": "N12",
+      "target": "N31"
+    },
+    {
+      "id": "e_N36_N37",
+      "source": "N36",
+      "target": "N37"
+    },
+    {
+      "id": "e_N20_N24",
+      "source": "N20",
+      "target": "N24"
+    },
+    {
+      "id": "e_N31_N37",
+      "source": "N31",
+      "target": "N37"
+    },
+    {
+      "id": "e_N09_N30",
+      "source": "N09",
+      "target": "N30"
+    },
+    {
+      "id": "e_N11_N37",
+      "source": "N11",
+      "target": "N37"
+    },
+    {
+      "id": "e_N13_N37",
+      "source": "N13",
+      "target": "N37"
+    },
+    {
+      "id": "e_N31_N38",
+      "source": "N31",
+      "target": "N38"
+    },
+    {
+      "id": "e_N07_N32",
+      "source": "N07",
+      "target": "N32"
+    },
+    {
+      "id": "e_N09_N34",
+      "source": "N09",
+      "target": "N34"
+    },
+    {
+      "id": "e_N03_N23",
+      "source": "N03",
+      "target": "N23"
+    },
+    {
+      "id": "e_N02_N15",
+      "source": "N02",
+      "target": "N15"
+    },
+    {
+      "id": "e_N05_N07",
+      "source": "N05",
+      "target": "N07"
+    },
+    {
+      "id": "e_N26_N31",
+      "source": "N26",
+      "target": "N31"
+    },
+    {
+      "id": "e_N08_N15",
+      "source": "N08",
+      "target": "N15"
+    },
+    {
+      "id": "e_N05_N31",
+      "source": "N05",
+      "target": "N31"
+    },
+    {
+      "id": "e_N15_N32",
+      "source": "N15",
+      "target": "N32"
+    },
+    {
+      "id": "e_N09_N16",
+      "source": "N09",
+      "target": "N16"
+    },
+    {
+      "id": "e_N22_N31",
+      "source": "N22",
+      "target": "N31"
+    },
+    {
+      "id": "e_N23_N32",
+      "source": "N23",
+      "target": "N32"
+    },
+    {
+      "id": "e_N27_N29",
+      "source": "N27",
+      "target": "N29"
+    },
+    {
+      "id": "e_N05_N09",
+      "source": "N05",
+      "target": "N09"
+    },
+    {
+      "id": "e_N23_N29",
+      "source": "N23",
+      "target": "N29"
+    },
+    {
+      "id": "e_N17_N19",
+      "source": "N17",
+      "target": "N19"
+    },
+    {
+      "id": "e_N23_N27",
+      "source": "N23",
+      "target": "N27"
+    },
+    {
+      "id": "e_N18_N19",
+      "source": "N18",
+      "target": "N19"
+    },
+    {
+      "id": "e_N11_N31",
+      "source": "N11",
+      "target": "N31"
+    },
+    {
+      "id": "e_N09_N32",
+      "source": "N09",
+      "target": "N32"
+    },
+    {
+      "id": "e_N01_N36",
+      "source": "N01",
+      "target": "N36"
+    },
+    {
+      "id": "e_N12_N13",
+      "source": "N12",
+      "target": "N13"
+    },
+    {
+      "id": "e_N25_N26",
+      "source": "N25",
+      "target": "N26"
+    },
+    {
+      "id": "e_N02_N11",
+      "source": "N02",
+      "target": "N11"
+    },
+    {
+      "id": "e_N08_N11",
+      "source": "N08",
+      "target": "N11"
+    },
+    {
+      "id": "e_N01_N05",
+      "source": "N01",
+      "target": "N05"
+    },
+    {
+      "id": "e_N11_N16",
+      "source": "N11",
+      "target": "N16"
+    },
+    {
+      "id": "e_N05_N32",
+      "source": "N05",
+      "target": "N32"
+    },
+    {
+      "id": "e_N13_N25",
+      "source": "N13",
+      "target": "N25"
+    },
+    {
+      "id": "e_N01_N12",
+      "source": "N01",
+      "target": "N12"
+    },
+    {
+      "id": "e_N20_N22",
+      "source": "N20",
+      "target": "N22"
+    },
+    {
+      "id": "e_N38_N39",
+      "source": "N38",
+      "target": "N39"
+    },
+    {
+      "id": "e_N24_N23",
+      "source": "N24",
+      "target": "N23"
+    },
+    {
+      "id": "e_N22_N27",
+      "source": "N22",
+      "target": "N27"
+    },
+    {
+      "id": "e_N05_N06",
+      "source": "N05",
+      "target": "N06"
+    },
+    {
+      "id": "e_N18_N20",
+      "source": "N18",
+      "target": "N20"
+    },
+    {
+      "id": "e_N36_N38",
+      "source": "N36",
+      "target": "N38"
+    },
+    {
+      "id": "e_N16_N19",
+      "source": "N16",
+      "target": "N19"
+    },
+    {
+      "id": "e_N33_N38",
+      "source": "N33",
+      "target": "N38"
+    },
+    {
+      "id": "e_N01_N10",
+      "source": "N01",
+      "target": "N10"
+    },
+    {
+      "id": "e_N11_N14",
+      "source": "N11",
+      "target": "N14"
+    },
+    {
+      "id": "e_N10_N33",
+      "source": "N10",
+      "target": "N33"
+    },
+    {
+      "id": "e_N13_N14",
+      "source": "N13",
+      "target": "N14"
+    },
+    {
+      "id": "e_N11_N13",
+      "source": "N11",
+      "target": "N13"
+    },
+    {
+      "id": "e_N16_N17",
+      "source": "N16",
+      "target": "N17"
+    },
+    {
+      "id": "e_N04_N32",
+      "source": "N04",
+      "target": "N32"
+    },
+    {
+      "id": "e_N14_N26",
+      "source": "N14",
+      "target": "N26"
+    },
+    {
+      "id": "e_N17_N18",
+      "source": "N17",
+      "target": "N18"
+    },
+    {
+      "id": "e_N21_N23",
+      "source": "N21",
+      "target": "N23"
+    },
+    {
+      "id": "e_N22_N23",
+      "source": "N22",
+      "target": "N23"
+    },
+    {
+      "id": "e_N18_N31",
+      "source": "N18",
+      "target": "N31"
+    },
+    {
+      "id": "e_N10_N16",
+      "source": "N10",
+      "target": "N16"
+    },
+    {
+      "id": "e_N02_N20",
+      "source": "N02",
+      "target": "N20"
+    },
+    {
+      "id": "e_N09_N11",
+      "source": "N09",
+      "target": "N11"
+    },
+    {
+      "id": "e_N03_N04",
+      "source": "N03",
+      "target": "N04"
+    },
+    {
+      "id": "e_N07_N33",
+      "source": "N07",
+      "target": "N33"
+    },
+    {
+      "id": "e_N06_N08",
+      "source": "N06",
+      "target": "N08"
+    },
+    {
+      "id": "e_N30_N38",
+      "source": "N30",
+      "target": "N38"
+    },
+    {
+      "id": "e_N03_N05",
+      "source": "N03",
+      "target": "N05"
+    },
+    {
+      "id": "e_N14_N31",
+      "source": "N14",
+      "target": "N31"
+    },
+    {
+      "id": "e_N06_N07",
+      "source": "N06",
+      "target": "N07"
+    },
+    {
+      "id": "e_N06_N10",
+      "source": "N06",
+      "target": "N10"
+    },
+    {
+      "id": "e_N02_N24",
+      "source": "N02",
+      "target": "N24"
+    },
+    {
+      "id": "e_N28_N30",
+      "source": "N28",
+      "target": "N30"
+    },
+    {
+      "id": "e_N11_N23",
+      "source": "N11",
+      "target": "N23"
+    },
+    {
+      "id": "e_N20_N23",
+      "source": "N20",
+      "target": "N23"
+    },
+    {
+      "id": "e_N19_N28",
+      "source": "N19",
+      "target": "N28"
+    },
+    {
+      "id": "e_N02_N37",
+      "source": "N02",
+      "target": "N37"
+    },
+    {
+      "id": "e_N35_N38",
+      "source": "N35",
+      "target": "N38"
+    },
+    {
+      "id": "e_N02_N05",
+      "source": "N02",
+      "target": "N05"
+    },
+    {
+      "id": "e_N06_N09",
+      "source": "N06",
+      "target": "N09"
+    },
+    {
+      "id": "e_N03_N18",
+      "source": "N03",
+      "target": "N18"
+    },
+    {
+      "id": "e_N08_N38",
+      "source": "N08",
+      "target": "N38"
+    },
+    {
+      "id": "e_N01_N03",
+      "source": "N01",
+      "target": "N03"
+    },
+    {
+      "id": "e_N04_N33",
+      "source": "N04",
+      "target": "N33"
+    },
+    {
+      "id": "e_N32_N37",
+      "source": "N32",
+      "target": "N37"
+    },
+    {
+      "id": "e_N08_N12",
+      "source": "N08",
+      "target": "N12"
+    },
+    {
+      "id": "e_N06_N16",
+      "source": "N06",
+      "target": "N16"
+    },
+    {
+      "id": "e_N32_N38",
+      "source": "N32",
+      "target": "N38"
+    },
+    {
+      "id": "e_N03_N31",
+      "source": "N03",
+      "target": "N31"
+    },
+    {
+      "id": "e_N07_N30",
+      "source": "N07",
+      "target": "N30"
+    },
+    {
+      "id": "e_N19_N29",
+      "source": "N19",
+      "target": "N29"
+    },
+    {
+      "id": "e_N21_N35",
+      "source": "N21",
+      "target": "N35"
+    },
+    {
+      "id": "e_N26_N35",
+      "source": "N26",
+      "target": "N35"
+    },
+    {
+      "id": "e_N09_N12",
+      "source": "N09",
+      "target": "N12"
+    },
+    {
+      "id": "e_N03_N09",
+      "source": "N03",
+      "target": "N09"
+    },
+    {
+      "id": "e_N19_N27",
+      "source": "N19",
+      "target": "N27"
+    },
+    {
+      "id": "e_N24_N25",
+      "source": "N24",
+      "target": "N25"
+    },
+    {
+      "id": "e_N15_N21",
+      "source": "N15",
+      "target": "N21"
+    },
+    {
+      "id": "e_N27_N30",
+      "source": "N27",
+      "target": "N30"
+    },
+    {
+      "id": "e_N10_N31",
+      "source": "N10",
+      "target": "N31"
+    },
+    {
+      "id": "e_N21_N33",
+      "source": "N21",
+      "target": "N33"
+    },
+    {
+      "id": "e_N08_N10",
+      "source": "N08",
+      "target": "N10"
+    },
+    {
+      "id": "e_N34_N38",
+      "source": "N34",
+      "target": "N38"
+    },
+    {
+      "id": "e_N09_N17",
+      "source": "N09",
+      "target": "N17"
+    },
+    {
+      "id": "e_N08_N30",
+      "source": "N08",
+      "target": "N30"
+    }
+  ]
+}
