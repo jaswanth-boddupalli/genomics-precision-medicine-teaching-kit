@@ -22,54 +22,80 @@
     <!-- Fullscreen Graph Canvas Workspace -->
     <div id="graph-canvas-container"></div>
 
-    <!-- Floating HUD Elements on Fullscreen Canvas -->
-    <div class="floating-hud hud-top-left">
-      <!-- Toggle / Expand Sidebar Button -->
-      <button id="btn-floating-sidebar" class="btn-floating-pill" title="Toggle Options & Layers Sidebar (Press Esc to minimize)">
-        <span>☰</span>
-        <span>Controls &amp; Layers</span>
-        <kbd>Esc</kbd>
-      </button>
+    <!-- Unified Top App Header Bar (Non-overlapping & Collapsible) -->
+    <header id="top-app-header" class="top-app-header">
+      <div class="top-nav-main-row">
+        <!-- Left Section: Sidebar Toggle & View Switcher -->
+        <div class="nav-left-group">
+          <button id="btn-floating-sidebar" class="btn-floating-pill" title="Toggle Options & Layers Sidebar (Press Esc to minimize)">
+            <span class="icon-burger">☰</span>
+            <span class="btn-sidebar-label">Controls &amp; Layers</span>
+            <kbd class="key-hint">Esc</kbd>
+          </button>
 
-      <!-- View Switcher Segmented Control -->
-      <div class="view-switcher-bar">
-        <button class="btn-view-mode active" data-view="atlas" title="Full 10-Layer Visual Knowledge Graph">
-          <span>🗺️ Atlas Map</span>
-        </button>
-        <button class="btn-view-mode coach-active" data-view="coach" title="Split Screen: Interview Card on Left + Live Graph on Right">
-          <span>⚡ Coach View</span>
-        </button>
-        <button class="btn-view-mode arena-active" data-view="arena" title="Fullscreen Gamified Flashcard Deck & Question Bank">
-          <span>🎮 Interview Arena</span>
-        </button>
-      </div>
-    </div>
-
-    <div class="floating-hud hud-top-right">
-      <!-- Gamified Progress Strip -->
-      <div class="gamified-hud-strip" title="Your Simulated Laboratory Readiness & Series A Valuation">
-        <div class="hud-rank-pill">
-          <span id="hud-rank-icon">🧬</span>
-          <span id="hud-rank-title">Genomics Explorer</span>
+          <!-- View Switcher Segmented Control -->
+          <div class="view-switcher-bar">
+            <button class="btn-view-mode active" data-view="atlas" title="Full 10-Layer Visual Knowledge Graph">
+              <span class="mode-icon">🗺️</span><span class="mode-text">Atlas Map</span>
+            </button>
+            <button class="btn-view-mode coach-active" data-view="coach" title="Split Screen: Interview Card on Left + Live Graph on Right">
+              <span class="mode-icon">⚡</span><span class="mode-text">Coach View</span>
+            </button>
+            <button class="btn-view-mode arena-active" data-view="arena" title="Fullscreen Gamified Flashcard Deck & Question Bank">
+              <span class="mode-icon">🎮</span><span class="mode-text">Arena</span>
+            </button>
+          </div>
         </div>
-        <div class="hud-stat-pill" title="Diagnostic Yield Rate">Yield: <b id="hud-yield-pct">15%</b></div>
-        <div class="hud-stat-pill" title="Series A Simulated Valuation">Valuation: <b id="hud-valuation-amt">$1.5M</b></div>
-        <div class="hud-stat-pill" title="Questions Mastered" style="color:#a78bfa;">Mastered: <b id="hud-mastered-count" style="color:#c084fc;">0/27</b></div>
+
+        <!-- Right Section: Desktop Quick Tools & Collapsible Stats Toggle Button -->
+        <div class="nav-right-group">
+          <!-- Desktop Quick Actions -->
+          <div class="nav-desktop-actions">
+            <button id="btn-hud-pathfinder" class="btn-floating-icon btn-pathfinder-pill" title="Trace Translational Pathway between any 2 nodes">
+              <span>🧭</span><span class="btn-label-text">Pathfinder</span>
+            </button>
+            <button id="btn-hud-fit" class="btn-floating-icon" title="Fit Entire Graph on Screen">
+              <span>⛶</span><span class="btn-label-text">Fit</span>
+            </button>
+            <button id="btn-hud-fullscreen" class="btn-floating-icon" title="Toggle Browser Fullscreen">
+              <span>🖥️</span>
+            </button>
+          </div>
+
+          <!-- Expand / Collapse Stats & Mobile Tools Toggle Button -->
+          <button id="btn-toggle-hud-shelf" class="btn-floating-pill btn-hud-toggle" title="Expand or Collapse Metrics & Tools">
+            <span class="hud-toggle-icon">📊</span>
+            <span class="btn-hud-toggle-text">Stats &amp; Tools</span>
+            <span id="hud-shelf-arrow" class="toggle-arrow">▾</span>
+          </button>
+        </div>
       </div>
 
-      <!-- Quick Pathfinder Button -->
-      <button id="btn-hud-pathfinder" class="btn-floating-icon btn-pathfinder-pill" title="Trace Translational Pathway between any 2 nodes">
-        <span>🧭 Pathfinder</span>
-      </button>
-      <!-- Fit View Button -->
-      <button id="btn-hud-fit" class="btn-floating-icon" title="Fit Entire Graph on Screen">
-        <span>⛶ Fit</span>
-      </button>
-      <!-- Fullscreen Toggle -->
-      <button id="btn-hud-fullscreen" class="btn-floating-icon" title="Toggle Browser Fullscreen">
-        <span>🖥️</span>
-      </button>
-    </div>
+      <!-- Collapsible Secondary Shelf (Metrics, Valuation, Progress & Mobile Actions) -->
+      <div id="hud-collapsible-shelf" class="hud-collapsible-shelf collapsed">
+        <div class="hud-shelf-inner">
+          <!-- Gamified Progress Strip -->
+          <div class="gamified-hud-strip" title="Your Simulated Laboratory Readiness & Series A Valuation">
+            <div class="hud-rank-pill">
+              <span id="hud-rank-icon">🧬</span>
+              <span id="hud-rank-title">Genomics Explorer</span>
+            </div>
+            <div class="hud-stat-pill" title="Diagnostic Yield Rate">Yield: <b id="hud-yield-pct">15%</b></div>
+            <div class="hud-stat-pill" title="Series A Simulated Valuation">Valuation: <b id="hud-valuation-amt">$1.5M</b></div>
+            <div class="hud-stat-pill" title="Questions Mastered" style="color:#a78bfa;">Mastered: <b id="hud-mastered-count" style="color:#c084fc;">0/27</b></div>
+          </div>
+
+          <!-- Mobile Tools Row (Shown inside shelf for easy one-tap access on phones) -->
+          <div class="hud-shelf-mobile-tools">
+            <button id="btn-shelf-pathfinder" class="btn-shelf-action" title="Open Pathfinder">🧭 Pathfinder</button>
+            <button id="btn-shelf-fit" class="btn-shelf-action" title="Fit Entire Graph to Screen">⛶ Fit Graph</button>
+            <button id="btn-shelf-labels" class="btn-shelf-action" title="Toggle Concept Labels">🏷️ Labels</button>
+            <button id="btn-shelf-flow" class="btn-shelf-action" title="Toggle Animated Pathway Particles">⚡ Flow</button>
+            <button id="btn-shelf-matrix" class="btn-shelf-action" title="Open 27 Question Matrix">🗺️ Matrix (27)</button>
+          </div>
+        </div>
+      </div>
+    </header>
 
     <!-- Floating Canvas Zoom & View Controls (Bottom Left) -->
     <div class="floating-hud hud-bottom-left">
@@ -256,68 +282,76 @@
               <span>🌐 Hubs</span>
             </button>
             <button id="btn-arena-exit" class="btn-arena-header" title="Return to full Atlas map">
-              <span>🗺️ Back to Map</span>
+              <span>🗺️ Map</span>
+            </button>
+            <!-- Toggle Filters & Stats Button -->
+            <button id="btn-toggle-arena-shelf" class="btn-arena-header btn-arena-toggle active" title="Expand or Collapse Filters and Progress Tracker">
+              <span>🔍 Filters &amp; Stats</span>
+              <span id="arena-shelf-arrow">▴</span>
             </button>
           </div>
         </div>
 
-        <!-- Gamified Progress Bar Strip -->
-        <div class="arena-gamified-strip">
-          <div id="arena-rank-badge" class="rank-badge-large">
-            <span id="arena-rank-icon">🧬</span>
-            <span id="arena-rank-title">Genomics Explorer</span>
-          </div>
-
-          <div class="progress-metric-box">
-            <div class="progress-metric-labels">
-              <span>Diagnostic Yield Readiness: <b id="arena-yield-pct">15%</b></span>
-              <span id="arena-mastered-text">0 / 27 Mastered</span>
+        <!-- Collapsible Arena Shelf: Progress Bar & Filters Strip -->
+        <div id="arena-collapsible-shelf" class="arena-collapsible-shelf">
+          <!-- Gamified Progress Bar Strip -->
+          <div class="arena-gamified-strip">
+            <div id="arena-rank-badge" class="rank-badge-large">
+              <span id="arena-rank-icon">🧬</span>
+              <span id="arena-rank-title">Genomics Explorer</span>
             </div>
-            <div class="progress-bar-track">
-              <div id="arena-progress-bar-fill" class="progress-bar-fill" style="width: 0%;"></div>
+
+            <div class="progress-metric-box">
+              <div class="progress-metric-labels">
+                <span>Diagnostic Yield Readiness: <b id="arena-yield-pct">15%</b></span>
+                <span id="arena-mastered-text">0 / 27 Mastered</span>
+              </div>
+              <div class="progress-bar-track">
+                <div id="arena-progress-bar-fill" class="progress-bar-fill" style="width: 0%;"></div>
+              </div>
+            </div>
+
+            <div class="valuation-tag">
+              <span>Series A:</span>
+              <b id="arena-valuation-amt">$1.5M</b>
             </div>
           </div>
 
-          <div class="valuation-tag">
-            <span>Series A:</span>
-            <b id="arena-valuation-amt">$1.5M</b>
+          <!-- Filter Strip: Difficulty, Persona, Node, Search -->
+          <div class="arena-filter-strip">
+            <div class="arena-filter-group" id="arena-diff-filters">
+              <span style="font-size:10px; color:var(--text-muted); font-weight:700;">LEVEL:</span>
+              <button class="arena-filter-pill active" data-level="all">All</button>
+              <button class="arena-filter-pill" data-level="beginner">🟢 Beginner</button>
+              <button class="arena-filter-pill" data-level="medium">🟡 Medium</button>
+              <button class="arena-filter-pill" data-level="expert">🔴 Expert</button>
+            </div>
+
+            <div class="filter-divider"></div>
+
+            <div class="arena-filter-group" id="arena-persona-filters">
+              <span style="font-size:10px; color:var(--text-muted); font-weight:700;">PERSONA:</span>
+              <button class="arena-filter-pill active" data-persona="all">All</button>
+              <button class="arena-filter-pill" data-persona="scientist">🧬 Scientist</button>
+              <button class="arena-filter-pill" data-persona="troubleshooter">🛠️ Troubleshooter</button>
+              <button class="arena-filter-pill" data-persona="investor">💼 Investor</button>
+            </div>
+
+            <!-- Node filter indicator if active -->
+            <div id="arena-active-node-filter" style="display:none;" class="arena-filter-group">
+              <div class="filter-divider"></div>
+              <span id="arena-node-filter-pill" class="card-node-pill" style="display:flex; align-items:center; gap:5px;">
+                <span>Node: <b id="arena-filtered-node-id">N01</b></span>
+                <span id="btn-clear-node-filter" style="cursor:pointer; font-weight:bold;">✕</span>
+              </span>
+            </div>
+
+            <div class="filter-divider"></div>
+
+            <!-- Search Input -->
+            <input type="text" id="arena-question-search" class="arena-search-input" placeholder="Search questions..." autocomplete="off">
           </div>
         </div>
-      </div>
-
-      <!-- Filter Strip: Difficulty, Persona, Node, Search -->
-      <div class="arena-filter-strip">
-        <div class="arena-filter-group" id="arena-diff-filters">
-          <span style="font-size:10px; color:var(--text-muted); font-weight:700;">LEVEL:</span>
-          <button class="arena-filter-pill active" data-level="all">All</button>
-          <button class="arena-filter-pill" data-level="beginner">🟢 Beginner</button>
-          <button class="arena-filter-pill" data-level="medium">🟡 Medium</button>
-          <button class="arena-filter-pill" data-level="expert">🔴 Expert</button>
-        </div>
-
-        <div class="filter-divider"></div>
-
-        <div class="arena-filter-group" id="arena-persona-filters">
-          <span style="font-size:10px; color:var(--text-muted); font-weight:700;">PERSONA:</span>
-          <button class="arena-filter-pill active" data-persona="all">All</button>
-          <button class="arena-filter-pill" data-persona="scientist">🧬 Scientist</button>
-          <button class="arena-filter-pill" data-persona="troubleshooter">🛠️ Troubleshooter</button>
-          <button class="arena-filter-pill" data-persona="investor">💼 Investor</button>
-        </div>
-
-        <!-- Node filter indicator if active -->
-        <div id="arena-active-node-filter" style="display:none;" class="arena-filter-group">
-          <div class="filter-divider"></div>
-          <span id="arena-node-filter-pill" class="card-node-pill" style="display:flex; align-items:center; gap:5px;">
-            <span>Node: <b id="arena-filtered-node-id">N01</b></span>
-            <span id="btn-clear-node-filter" style="cursor:pointer; font-weight:bold;">✕</span>
-          </span>
-        </div>
-
-        <div class="filter-divider"></div>
-
-        <!-- Search Input -->
-        <input type="text" id="arena-question-search" class="arena-search-input" placeholder="Search questions..." autocomplete="off">
       </div>
 
       <!-- Question Card Deck Scroll Area -->

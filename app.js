@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     onCanvasClick: () => {
       closeInspector();
+      if (typeof collapseHudShelf === "function") collapseHudShelf();
     }
   });
 
@@ -108,6 +109,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (mode === "coach") {
+      // On mobile / tablet screens, auto-collapse arena filters and HUD shelf
+      if (window.innerWidth <= 900) {
+        if (typeof collapseArenaShelf === "function") collapseArenaShelf();
+        if (typeof collapseHudShelf === "function") collapseHudShelf();
+      }
+
       // In coach view, focus graph on current question's primary node
       const currentQ = state.filteredQuestions[state.activeQuestionIndex];
       if (currentQ && currentQ.primaryNode) {
@@ -177,6 +184,72 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("arena-mastered-text").textContent = `${masteredCount} / ${total} Mastered (${pct}%)`;
     document.getElementById("arena-progress-bar-fill").style.width = `${pct}%`;
   }
+
+  // --- Collapsible HUD Shelf Logic (Stats & Tools) ---
+  const btnToggleHudShelf = document.getElementById("btn-toggle-hud-shelf");
+  const hudCollapsibleShelf = document.getElementById("hud-collapsible-shelf");
+  const hudShelfArrow = document.getElementById("hud-shelf-arrow");
+
+  function toggleHudShelf(forceOpen) {
+    if (!hudCollapsibleShelf) return;
+    const isCurrentlyOpen = hudCollapsibleShelf.classList.contains("open");
+    const willOpen = forceOpen !== undefined ? forceOpen : !isCurrentlyOpen;
+    hudCollapsibleShelf.classList.toggle("open", willOpen);
+    hudCollapsibleShelf.classList.toggle("collapsed", !willOpen);
+    btnToggleHudShelf?.classList.toggle("active", willOpen);
+    if (hudShelfArrow) hudShelfArrow.textContent = willOpen ? "▴" : "▾";
+  }
+
+  function collapseHudShelf() {
+    toggleHudShelf(false);
+  }
+
+  btnToggleHudShelf?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    toggleHudShelf();
+  });
+
+  // Mobile Shelf Quick Tools Actions
+  document.getElementById("btn-shelf-pathfinder")?.addEventListener("click", () => {
+    collapseHudShelf();
+    openPathfinderModal();
+  });
+  document.getElementById("btn-shelf-fit")?.addEventListener("click", () => {
+    collapseHudShelf();
+    graph.fitToScreen();
+  });
+  document.getElementById("btn-shelf-labels")?.addEventListener("click", () => {
+    graph.showLabels = !graph.showLabels;
+  });
+  document.getElementById("btn-shelf-flow")?.addEventListener("click", () => {
+    graph.animateFlow = !graph.animateFlow;
+  });
+  document.getElementById("btn-shelf-matrix")?.addEventListener("click", () => {
+    collapseHudShelf();
+    openQuestionMatrix();
+  });
+
+  // --- Collapsible Arena Filters & Metrics Shelf Logic ---
+  const btnToggleArenaShelf = document.getElementById("btn-toggle-arena-shelf");
+  const arenaCollapsibleShelf = document.getElementById("arena-collapsible-shelf");
+  const arenaShelfArrow = document.getElementById("arena-shelf-arrow");
+
+  function toggleArenaShelf(forceOpen) {
+    if (!arenaCollapsibleShelf) return;
+    const isCurrentlyCollapsed = arenaCollapsibleShelf.classList.contains("collapsed");
+    const willOpen = forceOpen !== undefined ? forceOpen : isCurrentlyCollapsed;
+    arenaCollapsibleShelf.classList.toggle("collapsed", !willOpen);
+    btnToggleArenaShelf?.classList.toggle("active", willOpen);
+    if (arenaShelfArrow) arenaShelfArrow.textContent = willOpen ? "▴" : "▾";
+  }
+
+  function collapseArenaShelf() {
+    toggleArenaShelf(false);
+  }
+
+  btnToggleArenaShelf?.addEventListener("click", () => {
+    toggleArenaShelf();
+  });
 
   // --- Sidebar Expand / Collapse Logic ---
   function expandSidebar() {
@@ -422,6 +495,11 @@ document.addEventListener("DOMContentLoaded", () => {
       // Priority 2: Close Concept Inspector drawer
       if (inspectorDrawer.classList.contains("open")) {
         closeInspector();
+        return;
+      }
+      // Priority 2.5: Collapse open HUD shelf
+      if (hudCollapsibleShelf && hudCollapsibleShelf.classList.contains("open")) {
+        collapseHudShelf();
         return;
       }
       // Priority 3: Collapse sidebar
