@@ -1,7 +1,8 @@
 # 🧬 Genomics & Precision Medicine Interactive Teaching Kit & Interview Arena
 ### *A Visual Knowledge Graph Atlas, Multi-Persona Interview Simulator & Educational Roadmap for Beginners and Aspiring Bioinformaticians*
 
-[![Live Web Demo](https://img.shields.io/badge/Live_Web_App-GitHub_Pages-success?style=for-the-badge&logo=github)](https://jaswanth-boddupalli.github.io/genomics-precision-medicine-teaching-kit/)
+[![Live Vercel App](https://img.shields.io/badge/Live_App-Vercel-black?style=for-the-badge&logo=vercel)](https://genomics-precision-medicine-teachin.vercel.app)
+[![Live GitHub Pages](https://img.shields.io/badge/Live_Mirror-GitHub_Pages-success?style=for-the-badge&logo=github)](https://jaswanth-boddupalli.github.io/genomics-precision-medicine-teaching-kit/)
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fjaswanth-boddupalli%2Fgenomics-precision-medicine-teaching-kit)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-Web_/_PC_/_Mobile-6366f1?style=for-the-badge)](#mobile--pc-responsive-design)
