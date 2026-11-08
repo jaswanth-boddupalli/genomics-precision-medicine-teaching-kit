@@ -1,7 +1,7 @@
 # 🧬 Genomics & Precision Medicine Interactive Teaching Kit & Interview Arena
 ### *A Visual Knowledge Graph Atlas, Multi-Persona Interview Simulator & Educational Roadmap for Beginners and Aspiring Bioinformaticians*
 
-[![Live Vercel App](https://img.shields.io/badge/Live_App-Vercel-black?style=for-the-badge&logo=vercel)](https://genomics-precision-medicine-teachin.vercel.app)
+[![Live Vercel App](https://img.shields.io/badge/Live_App-Vercel-black?style=for-the-badge&logo=vercel)](https://jaswanth-genomics.vercel.app)
 [![Live GitHub Pages](https://img.shields.io/badge/Live_Mirror-GitHub_Pages-success?style=for-the-badge&logo=github)](https://jaswanth-boddupalli.github.io/genomics-precision-medicine-teaching-kit/)
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fjaswanth-boddupalli%2Fgenomics-precision-medicine-teaching-kit)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
@@ -189,7 +189,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 - **Creator & Lead Architect**: [Dr. Jaswanth Boddupalli, Ph.D.](https://jaswanth-boddupalli.vercel.app/)
 - **Academic Portfolio**: [https://jaswanth-boddupalli.vercel.app/](https://jaswanth-boddupalli.vercel.app/)
 - **Institutional Fellowship**: Optics & Microfluidics Instrumentation (OMI) Laboratory, Department of Instrumentation & Applied Physics (IAP), Indian Institute of Science (IISc), Bengaluru
-- **Live Vercel Application**: [https://genomics-precision-medicine-teachin.vercel.app](https://genomics-precision-medicine-teachin.vercel.app)
+- **Live Vercel Application**: [https://jaswanth-genomics.vercel.app](https://jaswanth-genomics.vercel.app)
 - **GitHub Repository**: [https://github.com/jaswanth-boddupalli/genomics-precision-medicine-teaching-kit](https://github.com/jaswanth-boddupalli/genomics-precision-medicine-teaching-kit)
 
 ---
