@@ -178,10 +178,20 @@ Contributions to improve question explanations, add new biological nodes, or tra
 
 ---
 
-## 📄 License
+## 📄 License, Copyright & Trademark
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
+### ⚖️ Legal & Attribution Notice
+**Genomics & Precision Medicine Knowledge Graph Atlas™** and **Precision Medicine Interview Arena™**  
+**Copyright © 2026 Dr. Jaswanth Boddupalli, Ph.D. All Rights Reserved.**
+
+- **Creator & Lead Architect**: [Dr. Jaswanth Boddupalli, Ph.D.](https://jaswanth-boddupalli.vercel.app/)
+- **Academic Portfolio**: [https://jaswanth-boddupalli.vercel.app/](https://jaswanth-boddupalli.vercel.app/)
+- **Institutional Fellowship**: Optics & Microfluidics Instrumentation (OMI) Laboratory, Department of Instrumentation & Applied Physics (IAP), Indian Institute of Science (IISc), Bengaluru
+- **Live Vercel Application**: [https://genomics-precision-medicine-teachin.vercel.app](https://genomics-precision-medicine-teachin.vercel.app)
+- **GitHub Repository**: [https://github.com/jaswanth-boddupalli/genomics-precision-medicine-teaching-kit](https://github.com/jaswanth-boddupalli/genomics-precision-medicine-teaching-kit)
+
 ---
 
-*Crafted with precision for the next generation of bioinformaticians, geneticists, and precision oncology innovators.*
+*Crafted with scientific rigor & precision by Dr. Jaswanth Boddupalli, Ph.D. for the next generation of bioinformaticians, geneticists, and precision oncology innovators.*

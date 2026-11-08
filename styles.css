@@ -2666,3 +2666,110 @@ body.view-arena .floating-hud {
     display: none; /* Hide valuation to preserve room on 360px */
   }
 }
+
+/* ==========================================================================
+   AUTHOR ATTRIBUTION, COPYRIGHT & TRADEMARK BADGES
+   ========================================================================== */
+.status-divider {
+  color: rgba(148, 163, 184, 0.4);
+  margin: 0 4px;
+}
+
+.status-copyright-link {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.status-copyright-link:hover {
+  color: #7dd3fc;
+  text-decoration: underline;
+  text-shadow: 0 0 8px rgba(56, 189, 248, 0.5);
+}
+
+.sidebar-creator-badge {
+  font-size: 10px;
+  color: var(--text-muted);
+  margin-top: 3px;
+  display: block;
+}
+
+.sidebar-creator-badge a {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.sidebar-creator-badge a:hover {
+  text-decoration: underline;
+}
+
+.sidebar-creator-card {
+  padding: 10px 12px;
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 10px;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.creator-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.creator-badge {
+  font-size: 8.5px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.15);
+  padding: 1.5px 6px;
+  border-radius: 4px;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.creator-tm {
+  font-size: 9px;
+  font-weight: 700;
+  color: #fbbf24;
+}
+
+.creator-name {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+.creator-role {
+  font-size: 9.5px;
+  color: var(--text-muted);
+}
+
+.creator-legal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4px;
+  padding-top: 5px;
+  border-top: 1px solid rgba(75, 85, 99, 0.3);
+  font-size: 9px;
+  color: var(--text-muted);
+}
+
+.creator-links a {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.creator-links a:hover {
+  text-decoration: underline;
+}
